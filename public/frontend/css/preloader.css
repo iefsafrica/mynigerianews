@@ -1,0 +1,40 @@
+/*
+Theme Name: Maan News HTML5 Template
+Theme URI: https://maantheme.com/maan-news
+Author: Maan Theme
+Author URI: https://maantheme.com
+Desing by: Maan Theme
+Version: 1.0
+License:
+Tags:
+*/
+body {
+    overflow: hidden;
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+     background-color:rgba(3, 137, 255, 0.5);
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url('/public/maan/loader/status.gif');
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}

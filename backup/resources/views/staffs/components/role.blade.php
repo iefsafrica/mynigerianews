@@ -1,0 +1,1 @@
+{!! !empty($row->roles[0]) ? $row->roles[0]->display_name : 'N/A' !!}

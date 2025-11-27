@@ -1,0 +1,1 @@
+{{currencyFormat($row->plan_amount,$row->plan->currency->currency_icon) ?? 0}}

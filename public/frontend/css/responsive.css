@@ -1,0 +1,315 @@
+/*
+Theme Name: Maan News HTML5 Template
+Theme URI: https://maantheme.com/maan-news
+Author: Maan Theme
+Author URI: https://maantheme.com 
+Desing by: Maan Theme
+Version: 1.0
+License: 
+Tags: 
+*/
+/*================================================
+[  Table of contents  ]
+================================================
+
+    1 Theme Default
+
+======================================
+[ End table content ]
+======================================*/
+:root {
+  --maan-color-white: #FFFFFF;
+  --maan-color-white3: #F1F1F1;
+  --maan-color-black: #1F2024;
+  --maan-color-gray: #565656;
+  --maan-color-border: #EBEBEB;
+  --maan-color-blue: #0389FF;
+  --maan-color-tr: transparent;
+}
+
+@media (max-width: 1399px) {
+  .maan-widgets .social-media ul {
+    grid-template-columns: auto auto auto auto;
+  }
+  .maan-widgets .social-media ul li a {
+    width: 100%;
+  }
+
+  .maan-info-footer .row.maan-link-footer .maan-news-tags ul {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  section .maan-title-center.v2::before,
+section .maan-title-center.v2::after {
+    width: calc(100% - 60% + -17px);
+  }
+}
+@media (max-width: 991px) {
+  section .maan-title-center.v2::before,
+section .maan-title-center.v2::after {
+    width: calc(100% - 70% + 11px);
+  }
+
+  section,
+.maan-adds-banner {
+    padding: 40px 0px;
+  }
+
+  header.sticky-manu .maan-top-bar.sticky,
+header.sticky-mid-manu .maan-top-bar.sticky {
+    margin-bottom: 100px;
+  }
+
+  .maan-logo {
+    max-width: 120px;
+  }
+
+  .maan-mid-bar {
+    display: none;
+  }
+
+  .maan-manu-bar {
+    padding: 24px 0px;
+    background: var(--maan-color-white3);
+  }
+  .maan-manu-bar .close-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 24px;
+    right: 24px;
+    border: none;
+    border-radius: 50px;
+    background: var(--maan-color-tr);
+  }
+  .maan-manu-bar .close-btn span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 13px;
+    left: 0;
+    background: var(--maan-color-white);
+  }
+  .maan-manu-bar .close-btn span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .maan-manu-bar .close-btn span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .maan-manu-bar .overlay {
+    display: block;
+    position: fixed;
+    width: calc(100% - 320px);
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 8;
+    opacity: 0;
+    visibility: hidden;
+    background: var(--maan-color-black);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .maan-manu-bar .overlay.active {
+    opacity: 0.3;
+    left: 320px;
+    visibility: visible;
+  }
+  .maan-manu-bar .maan-main-manu {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--maan-color-black);
+    z-index: 5;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .maan-manu-bar .maan-main-manu.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .maan-manu-bar .maan-main-manu .maan-home-icon,
+.maan-manu-bar .maan-main-manu .maan-more-icon {
+    display: none;
+  }
+  .maan-manu-bar .maan-main-manu ul {
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .maan-manu-bar .maan-main-manu li {
+    display: block;
+    margin: 0px;
+  }
+  .maan-manu-bar .maan-main-manu li a {
+    display: block;
+    font-size: 12px;
+    padding: 10px 0px;
+  }
+  .maan-manu-bar .maan-main-manu li a:hover {
+    background: var(--maan-color-blue);
+  }
+  .maan-manu-bar .maan-main-manu li a:hover::before {
+    content: none;
+  }
+  .maan-manu-bar .maan-right-btns .maan-search-btn::before, .maan-manu-bar .maan-right-btns .maan-search-btn::before,
+.maan-manu-bar .maan-right-btns .maan-profile-btn::before,
+.maan-manu-bar .maan-right-btns .maan-profile-btn::before {
+    background: var(--maan-color-blue);
+  }
+  .maan-manu-bar .maan-right-btns .maan-search-btn:hover svg,
+.maan-manu-bar .maan-right-btns .maan-profile-btn:hover svg {
+    fill: var(--maan-color-white);
+  }
+
+  .maan-top-news-section {
+    padding-bottom: 24px;
+  }
+  .maan-top-news-section .maan-card-img {
+    margin-bottom: 24px;
+  }
+  .maan-top-news-section .row > div:last-child .maan-card-img {
+    margin-bottom: 0;
+  }
+
+  .maan-most-popular-section .card,
+.maan-most-popular-section .slick-list .card {
+    margin-bottom: 12px;
+  }
+
+  .politics-news .maan-card-img {
+    margin-bottom: 24px;
+  }
+
+  .maan-malti-news .maan-title {
+    margin-top: 24px;
+  }
+
+  .maan-lifestyle-news,
+.maan-entertainment-news {
+    padding-bottom: 40px;
+  }
+  .maan-lifestyle-news .maan-default-post,
+.maan-entertainment-news .maan-default-post {
+    margin-bottom: 24px;
+  }
+  .maan-lifestyle-news .row > div:last-child .maan-default-post,
+.maan-entertainment-news .row > div:last-child .maan-default-post {
+    margin-bottom: 0;
+  }
+
+  .maan-entertainment-news .maan-title {
+    margin-top: 24px;
+  }
+
+  .maan-video-news-section.maan-slide-section .maan-card-slide .slick-arrow,
+.maan-technology-news-section .maan-card-slide .slick-arrow {
+    top: -20px;
+  }
+  .maan-video-news-section.maan-slide-section .maan-title,
+.maan-technology-news-section .maan-title {
+    margin-bottom: 0px;
+  }
+
+  .maan-entertainment-news .maan-title {
+    margin-top: 0px;
+  }
+  .maan-entertainment-news .maan-news-list li {
+    margin: 0px 0px 24px 0px;
+  }
+  .maan-entertainment-news ~ .maan-video-news-section > .container {
+    margin-top: 0;
+  }
+
+  .maan-news-list li,
+.maan-widgets .recent-post li,
+.post-archive .maan-news-list ul li {
+    grid-template-columns: auto;
+  }
+
+  .maan-info-footer .logo {
+    margin-bottom: 24px;
+  }
+  .maan-info-footer .row {
+    padding: 40px 0px;
+  }
+  .maan-info-footer .row.maan-link-footer .maan-news-tags ul {
+    grid-template-columns: auto auto;
+    grid-gap: 12px;
+  }
+
+  .maan-breadcrumb {
+    display: none;
+  }
+  .maan-breadcrumb ~ .maan-archive-details {
+    padding-bottom: 0px;
+  }
+
+  .maan-widgets {
+    margin-bottom: 24px;
+  }
+  .maan-widgets:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  section .maan-title-center.v2::before,
+section .maan-title-center.v2::after {
+    content: none;
+  }
+
+  section .maan-title,
+section .maan-title-border-none,
+section .maan-title-center,
+.maan-info-footer .row.maan-link-footer .maan-news-link li:last-child {
+    margin-bottom: 24px;
+  }
+
+  .maan-breaking-news-section .maan-slide-text {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .maan-breaking-news-section .slick-slider .slick-arrow {
+    display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .maan-top-bar .maan-weider-news,
+.maan-top-bar .maan-current-date,
+.maan-top-bar .maan-social-link {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .maan-top-bar .maan-social-link {
+    margin-bottom: 0px;
+  }
+  .maan-top-bar .maan-social-link ul {
+    border-left: none;
+  }
+
+  .maan-entertainment-news .maan-stay-connected .maan-s-follower > div:nth-last-child(2) .follower-btn {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .maan-manu-bar .overlay,
+.maan-manu-bar .maan-main-manu {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

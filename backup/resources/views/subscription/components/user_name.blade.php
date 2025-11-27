@@ -1,0 +1,1 @@
+{{ !empty($row->user) ? $row->user->full_name : '' }}

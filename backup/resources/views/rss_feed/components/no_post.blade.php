@@ -1,0 +1,1 @@
+{{ count($row->posts) .'/' .$row->no_post}}

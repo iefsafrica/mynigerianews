@@ -1,0 +1,1 @@
+<a href="{{ $row->feed_url}}" target="_blank">{{ $row->feed_url}}</a>   

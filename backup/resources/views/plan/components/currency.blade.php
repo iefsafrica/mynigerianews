@@ -1,0 +1,1 @@
+{{ currencyFormat($row->price, $row->currency->currency_code) }}

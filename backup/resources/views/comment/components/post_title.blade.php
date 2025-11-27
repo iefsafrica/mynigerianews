@@ -1,0 +1,1 @@
+{!! !empty($row->posts->title) ? $row->posts->title : __('messages.menu.n_a') !!}

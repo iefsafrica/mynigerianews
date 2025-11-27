@@ -1,0 +1,1 @@
+{!! $row['posts_count'] !!}

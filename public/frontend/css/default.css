@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+/*
+Theme Name: Dshop Dashboard Teamplate
+Theme URI: 
+Developed by: Abdullah Al Numan 
+Version: 1.0
+License: 
+Tags: 
+*/
+
+
+/*====================
+	 Default
+======================*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul li,
+ol li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+}
+
+table th {
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+pre {
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+textarea {
+    border-radius: 0;
+    font-size: 13px;
+    resize: initial;
+    letter-spacing: 1.2px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1.4;
+    padding: 10px !important;
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    transition: all 0.4s ease;
+}
+
+strong {
+    font-weight: 700;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+select,
+textarea {
+    border-radius: 0;
+    font-size: 14px;
+    min-width: auto;
+    letter-spacing: 1.4px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    height: 40px;
+    padding: 0px 15px;
+    vertical-align: middle;
+    border: 1px solid #EEEEEE;
+    transition: all 0.4s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="file"],
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 0px rgba(13, 110, 253, .25) !important;
+}
+
+input[type="submit"] {
+    padding: 13px 15px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+input[type="submit"]:hover {
+    background: #444444;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.border-box {
+    box-sizing: border-box;
+}

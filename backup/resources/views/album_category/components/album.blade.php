@@ -1,0 +1,2 @@
+
+{!! $row->album->name !!}

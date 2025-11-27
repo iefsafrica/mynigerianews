@@ -1,0 +1,4090 @@
+/*
+Theme Name: Maan News HTML5 Template
+Theme URI: https://maantheme.com/maan-news
+Author: Maan Theme
+Author URI: https://maantheme.com
+Desing by: Maan Theme
+Version: 1.0
+License:
+Tags:
+*/
+/*================================================
+[  Table of contents  ]
+================================================
+
+    1 Theme Default
+
+    2 Maan Top Bar
+
+    3 Maan Mid Bar
+
+    4 Maan Manu Bar
+
+    5 Maan Breaking News
+
+    6 Maan Top News
+
+    7 Maan Top Categories
+
+    8 Maan Most Popular
+
+    9 Maan Adds Banner
+
+    10 Maan Politics News
+
+    11 Maan Entertainment News
+
+    12 Maan Video News
+
+    13 Maan Malti News
+
+    14 Maan Sports News
+
+    15 Maan Technology News
+
+    16 Maan Don't Miss
+
+    17 Maan Lifestyle News
+
+    18 Maan Info Footer
+
+    19 Maan Breadcrumb
+
+    20 Maan Post Archive
+
+    21 Maan Widgets
+
+    22 Maan Business
+
+    23 Maan Archive Details
+
+    24 Maan Pagination
+
+======================================
+[ End table content ]
+======================================*/
+/*=====================
+    1 Theme Default
+=======================*/
+:root {
+  --maan-color-white: #FFFFFF;
+  --maan-color-white2: #F8F8F8;
+  --maan-color-white3: #F1F1F1;
+  --maan-color-white4: #FBFBFB;
+  --maan-color-white5: #F6F6F6;
+  --maan-color-black: #0F2931;
+  --maan-color-black2: #1F2024;
+  --maan-color-black3: #1D1D1D;
+  --maan-color-gray: #565656;
+  --maan-color-gray2: #888888;
+  --maan-color-gray3: #606060;
+  --maan-color-gray4: #5A5A5A;
+  --maan-color-border: #EBEBEB;
+  --maan-color-border2: #CECECE;
+  --maan-color-orange: #FD6533;
+  --maan-color-green: #00C857;
+  --maan-color-red: #E12127;
+  --maan-color-blue: #0389FF;
+  --maan-color-lblue: #B2DBFF;
+  --maan-color-parpul: #5856D5;
+  --maan-color-fb: #3868CE;
+  --maan-color-ins: #C32AA3;
+  --maan-color-tw: #07ACDE;
+  --maan-color-yt: #E52D27;
+  --maan-color-tr: transparent;
+}
+
+#clock{
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+html {
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0 !important;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  word-wrap: break-word;
+  background: var(--maan-color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+  color: #0F2931;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 58px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  color: var(--maan-color-gray);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+a,
+button,
+.btn,
+ol li a,
+ul li a {
+  letter-spacing: 0;
+  text-decoration: none;
+  outline: none !important;
+  cursor: pointer;
+  color: #0F2931;
+  border: none;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+a:hover,
+.btn:hover,
+ol li a:hover,
+ul li a:hover {
+  outline: none !important;
+  text-decoration: none;
+  color: #0F2931;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: 0 0 0 0em rgba(0, 123, 255, 0.25) !important;
+  -moz-box-shadow: 0 0 0 0em rgba(0, 123, 255, 0.25) !important;
+  box-shadow: 0 0 0 0em rgba(0, 123, 255, 0.25) !important;
+}
+
+a.link-btn,
+.d-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  color: var(--maan-color-white);
+  border: 1px solid var(--maan-color-tr);
+  border-radius: 5px;
+  background: var(--maan-color-blue);
+}
+a.link-btn:hover,
+.d-btn:hover {
+  color: var(--maan-color-blue);
+  border-color: var(--maan-color-blue);
+  background: var(--maan-color-white);
+}
+
+.d-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.login-btn {
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 20px;
+  background: var(--maan-color-blue);
+  color: var(--maan-color-white);
+  border: 1px solid transparent;
+}
+
+.login-btn:hover{
+  background: transparent;
+  border-color: var(--maan-color-blue);
+  color: var(--maan-color-blue);
+}
+
+
+section {
+  padding: 70px 0px;
+}
+section .maan-title,
+section .maan-title-border-none,
+section .maan-title-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+section .maan-title .maan-title-icon,
+section .maan-title-border-none .maan-title-icon,
+section .maan-title-center .maan-title-icon {
+  margin-right: 12px;
+}
+section .maan-title .maan-title-icon svg,
+section .maan-title-border-none .maan-title-icon svg,
+section .maan-title-center .maan-title-icon svg {
+  fill: var(--maan-color-blue);
+  --svg-font-size: 28px;
+}
+section .maan-title .maan-title-text h2,
+section .maan-title-border-none .maan-title-text h2,
+section .maan-title-center .maan-title-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  text-transform: capitalize;
+}
+section .maan-title,
+section .maan-title-center {
+  position: relative;
+  padding-bottom: 20px;
+}
+section .maan-title::before, section .maan-title::after,
+section .maan-title-center::before,
+section .maan-title-center::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+section .maan-title::before,
+section .maan-title-center::before {
+  width: 100%;
+  background: var(--maan-color-border);
+}
+section .maan-title::after,
+section .maan-title-center::after {
+  width: 120px;
+  background: var(--maan-color-blue);
+}
+section .maan-title-center {
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+section .maan-title-center::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+section .maan-title-center.v2 {
+  padding-bottom: 0px;
+}
+section .maan-title-center.v2 .maan-title-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--maan-color-blue);
+  border-radius: 50px;
+}
+section .maan-title-center.v2 .maan-title-icon::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  background: var(--maan-color-blue);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section .maan-title-center.v2 .maan-title-icon svg {
+  display: none;
+}
+section .maan-title-center.v2 .maan-title-text ~ .maan-title-icon {
+  margin: 0px 0px 0px 12px;
+}
+section .maan-title-center.v2::before, section .maan-title-center.v2::after {
+  width: calc(100% - 60%);
+  height: 1px;
+  bottom: inherit;
+  background: var(--maan-color-blue);
+}
+section .maan-title-center.v2::after {
+  left: inherit;
+  right: 0;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  transform: translateX(0%);
+}
+section.maan-slide-section .maan-title {
+  width: calc(100% - 101px);
+}
+section.maan-slide-section .maan-slide .slick-arrow,
+section.maan-slide-section .maan-card-slide .slick-arrow {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -60px;
+  padding: 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50px;
+  border: 1px solid var(--maan-color-border);
+  background: var(--maan-color-tr);
+}
+section.maan-slide-section .maan-slide .slick-arrow svg,
+section.maan-slide-section .maan-card-slide .slick-arrow svg {
+  fill: var(--maan-color-border);
+  --svg-font-size: 12px;
+}
+section.maan-slide-section .maan-slide .slick-arrow:hover,
+section.maan-slide-section .maan-card-slide .slick-arrow:hover {
+  background: var(--maan-color-blue);
+}
+section.maan-slide-section .maan-slide .slick-arrow:hover svg,
+section.maan-slide-section .maan-card-slide .slick-arrow:hover svg {
+  fill: var(--maan-color-white);
+}
+section.maan-slide-section .maan-slide .slick-arrow.btn-prev,
+section.maan-slide-section .maan-card-slide .slick-arrow.btn-prev {
+  right: 45px;
+}
+section.maan-slide-section .maan-slide .slick-arrow.btn-next,
+section.maan-slide-section .maan-card-slide .slick-arrow.btn-next {
+  right: 0px;
+}
+section.maan-slide-section .maan-big-post {
+  margin-bottom: 0px;
+}
+
+svg {
+  fill: var(--maan-color-black);
+  --svg-font-size: 14px;
+  width: var(--svg-font-size);
+  height: var(--svg-font-size);
+  margin-top: -4px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  background: var(--maan-color-white);
+}
+.card.maan-card-img .card-body {
+  height: 100%;
+}
+.card.maan-card-img .card-body::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: calc(100% - 80px);
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  background: var(--maan-color-black);
+  background: linear-gradient(180deg, rgba(15, 41, 49, 0) 0%, var(--maan-color-black) 100%);
+  border-radius: 0px 0px 10px 10px;
+  z-index: 2;
+}
+.card.maan-card-img .card-body.maan-big-img::before {
+  background: var(--maan-color-blue);
+  background: linear-gradient(180deg, rgba(15, 41, 49, 0) 0%, var(--maan-color-blue) 100%);
+}
+.card.maan-card-img .maan-text {
+  position: absolute;
+  width: 100%;
+  padding: 48px 24px;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+}
+.card.maan-card-img .maan-text li .maan-icon svg {
+  fill: var(--maan-color-white);
+}
+.card.maan-card-img .maan-text li .maan-item-text {
+  color: var(--maan-color-white);
+}
+.card.maan-card-img .maan-text li .maan-item-text a {
+  color: var(--maan-color-white);
+}
+.card.maan-card-img .maan-text li .maan-item-text a:hover {
+  color: var(--maan-color-blue);
+}
+.card.maan-card-img .maan-text h4 a {
+  color: var(--maan-color-white);
+}
+.card.maan-card-img .maan-text h4 a:hover {
+  color: var(--maan-color-blue);
+}
+.card .card-header,
+.card .card-body {
+  padding: 12px 4px;
+}
+.card.maan-card-img, .card.maan-big-post .maan-post-img {
+  overflow: hidden;
+}
+.card.maan-card-img img, .card.maan-big-post .maan-post-img img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+
+  object-position: top center;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.card.maan-card-img .maan-tag-parpul,
+.card.maan-card-img .maan-tag-green,
+.card.maan-card-img .maan-tag-blue,
+.card.maan-card-img .maan-tag-red, .card.maan-big-post .maan-post-img .maan-tag-parpul,
+.card.maan-big-post .maan-post-img .maan-tag-green,
+.card.maan-big-post .maan-post-img .maan-tag-blue,
+.card.maan-big-post .maan-post-img .maan-tag-red {
+  position: absolute;
+  left: 20px;
+  padding: 2px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--maan-color-white);
+  z-index: 2;
+}
+.card.maan-card-img .maan-tag-parpul, .card.maan-big-post .maan-post-img .maan-tag-parpul {
+  background: var(--maan-color-parpul);
+}
+.card.maan-card-img .maan-tag-green, .card.maan-big-post .maan-post-img .maan-tag-green {
+  background: var(--maan-color-green);
+}
+.card.maan-card-img .maan-tag-blue, .card.maan-big-post .maan-post-img .maan-tag-blue {
+  background: var(--maan-color-blue);
+}
+.card.maan-card-img .maan-tag-red, .card.maan-big-post .maan-post-img .maan-tag-red {
+  background: var(--maan-color-red);
+}
+.card .maan-post-img {
+  position: relative;
+  overflow: hidden;
+}
+.card .maan-post-img img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.card .maan-post-img a.venobox {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  z-index: 2;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: var(--maan-color-white);
+}
+.card .maan-post-img a.venobox svg {
+  fill: var(--maan-color-orange);
+  --svg-font-size: 12px;
+}
+.card.maan-card-img:hover img, .card.maan-big-post:hover img {
+  /* filter: grayscale(50%) blur(0.8px); */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.card.maan-card-img .maan-tag-parpul,
+.card.maan-card-img .maan-tag-green,
+.card.maan-card-img .maan-tag-blue,
+.card.maan-card-img .maan-tag-red {
+  top: 20px;
+}
+.card.maan-card-img .maan-card-body {
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.card.maan-big-post .maan-tag-parpul,
+.card.maan-big-post .maan-tag-green,
+.card.maan-big-post .maan-tag-blue,
+.card.maan-big-post .maan-tag-red {
+  bottom: 20px;
+}
+.card.maan-big-post .maan-post-img {
+  position: relative;
+  border-radius: 10px;
+}
+.card .maan-card-body .maan-text ul ~ h4 {
+  margin-top: 12px;
+}
+.card .maan-card-body .maan-text li {
+  display: inline-block;
+  margin-right: 8px;
+}
+.card .maan-card-body .maan-text li:last-child {
+  margin-right: 0px;
+}
+.card .maan-card-body .maan-text li .maan-icon {
+  margin-right: 4px;
+}
+.card .maan-card-body .maan-text h4 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card .maan-card-body .maan-text h4 a:hover {
+  color: var(--maan-color-blue);
+}
+.card .maan-card-body .maan-text .maan-icon svg {
+  fill: var(--maan-color-gray2);
+}
+.card .maan-card-body .maan-text .maan-item-text {
+  color: var(--maan-color-gray2);
+}
+.card .maan-card-body .maan-text .maan-item-text a {
+  color: var(--maan-color-gray2);
+}
+.card .maan-card-body .maan-text .maan-item-text a:hover {
+  color: var(--maan-color-blue);
+}
+.card.maan-big-post {
+  margin-bottom: 24px;
+}
+/*maan news list start */
+.maan-news-list li {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.maan-news-list li .maan-list-img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.maan-news-list li .maan-list-img img {
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-news-list li .maan-list-text .maan-tag-parpul,
+.maan-news-list li .maan-list-text .maan-tag-green,
+.maan-news-list li .maan-list-text .maan-tag-blue,
+.maan-news-list li .maan-list-text .maan-tag-red {
+  position: relative;
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  z-index: 2;
+}
+.maan-news-list li .maan-list-text .maan-tag-parpul::before,
+.maan-news-list li .maan-list-text .maan-tag-green::before,
+.maan-news-list li .maan-list-text .maan-tag-blue::before,
+.maan-news-list li .maan-list-text .maan-tag-red::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  border-radius: 50px;
+  z-index: -2;
+}
+.maan-news-list li .maan-list-text .maan-tag-parpul {
+  color: var(--maan-color-parpul);
+}
+.maan-news-list li .maan-list-text .maan-tag-parpul::before {
+  background: var(--maan-color-parpul);
+}
+.maan-news-list li .maan-list-text .maan-tag-green {
+  color: var(--maan-color-green);
+}
+.maan-news-list li .maan-list-text .maan-tag-green::before {
+  background: var(--maan-color-green);
+}
+.maan-news-list li .maan-list-text .maan-tag-blue {
+  color: var(--maan-color-blue);
+}
+.maan-news-list li .maan-list-text .maan-tag-blue::before {
+  background: var(--maan-color-blue);
+}
+.maan-news-list li .maan-list-text .maan-tag-red {
+  color: var(--maan-color-red);
+}
+.maan-news-list li .maan-list-text .maan-tag-red::before {
+  background: var(--maan-color-red);
+}
+.maan-news-list li .maan-list-text .maan-tag-parpul ~ h4,
+.maan-news-list li .maan-list-text .maan-tag-green ~ h4,
+.maan-news-list li .maan-list-text .maan-tag-blue ~ h4,
+.maan-news-list li .maan-list-text .maan-tag-red ~ h4,
+.maan-news-list li .maan-list-text h4 ~ ul {
+  margin-top: 8px;
+}
+.maan-news-list li .maan-list-text h4 {
+  font-weight: 700;
+}
+.maan-news-list li .maan-list-text a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-news-list li .maan-list-text li {
+  display: inline-block;
+  margin: 0px 8px 0px 0px;
+}
+.maan-news-list li .maan-list-text li:last-child {
+  margin-right: 0px;
+}
+.maan-news-list li .maan-list-text li .maan-icon {
+  margin-right: 4px;
+}
+.maan-news-list li .maan-list-text .maan-icon svg {
+  fill: var(--maan-color-gray2);
+}
+.maan-news-list li .maan-list-text .maan-item-text {
+  color: var(--maan-color-gray2);
+}
+.maan-news-list li .maan-list-text .maan-item-text a {
+  color: var(--maan-color-gray2);
+}
+.maan-news-list li .maan-list-text .maan-item-text a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-news-list li:hover .maan-list-img img {
+  /* filter: grayscale(50%) blur(0.8px); */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*maan news list ens */
+.card.maan-default-post .maan-post-img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card.maan-default-post .maan-post-img img {
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.card.maan-default-post .maan-text .maan-tag-parpul,
+.card.maan-default-post .maan-text .maan-tag-green,
+.card.maan-default-post .maan-text .maan-tag-blue,
+.card.maan-default-post .maan-text .maan-tag-red {
+  position: relative;
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  z-index: 2;
+}
+.card.maan-default-post .maan-text .maan-tag-parpul::before,
+.card.maan-default-post .maan-text .maan-tag-green::before,
+.card.maan-default-post .maan-text .maan-tag-blue::before,
+.card.maan-default-post .maan-text .maan-tag-red::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  border-radius: 50px;
+  z-index: -2;
+}
+.card.maan-default-post .maan-text .maan-tag-parpul {
+  color: var(--maan-color-parpul);
+}
+.card.maan-default-post .maan-text .maan-tag-parpul::before {
+  background: var(--maan-color-parpul);
+}
+.card.maan-default-post .maan-text .maan-tag-green {
+  color: var(--maan-color-green);
+}
+.card.maan-default-post .maan-text .maan-tag-green::before {
+  background: var(--maan-color-green);
+}
+.card.maan-default-post .maan-text .maan-tag-blue {
+  color: var(--maan-color-blue);
+}
+.card.maan-default-post .maan-text .maan-tag-blue::before {
+  background: var(--maan-color-blue);
+}
+.card.maan-default-post .maan-text .maan-tag-red {
+  color: var(--maan-color-red);
+}
+.card.maan-default-post .maan-text .maan-tag-red::before {
+  background: var(--maan-color-red);
+}
+.card.maan-default-post .maan-text .maan-tag-parpul ~ h4,
+.card.maan-default-post .maan-text .maan-tag-green ~ h4,
+.card.maan-default-post .maan-text .maan-tag-blue ~ h4,
+.card.maan-default-post .maan-text .maan-tag-red ~ h4,
+.card.maan-default-post .maan-text h4 ~ ul {
+  margin-top: 8px;
+}
+/* .card.maan-default-post .maan-text h4 {
+  font-size: 18px;
+  line-height: 28px;
+} */
+.card.maan-default-post .maan-text a:hover {
+  color: var(--maan-color-blue);
+}
+.card.maan-default-post .maan-text li {
+  display: inline-block;
+  margin: 0px 8px 0px 0px;
+}
+.card.maan-default-post .maan-text li:last-child {
+  margin-right: 0px;
+}
+.card.maan-default-post .maan-text li .maan-icon {
+  margin-right: 4px;
+}
+.card.maan-default-post .maan-text .maan-icon svg {
+  fill: var(--maan-color-gray2);
+}
+.card.maan-default-post .maan-text .maan-item-text {
+  color: var(--maan-color-gray2);
+}
+.card.maan-default-post .maan-text .maan-item-text a {
+  color: var(--maan-color-gray2);
+}
+.card.maan-default-post .maan-text .maan-item-text a:hover {
+  color: var(--maan-color-blue);
+}
+.card.maan-default-post:hover .maan-post-img img {
+  /* filter: grayscale(50%) blur(0.8px); */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*=====================
+    2 Maan Top Bar
+=======================*/
+.maan-top-bar {
+  padding: 12px 0px;
+  background: var(--maan-color-black2);
+}
+.maan-top-bar .maan-weider-news .icon svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 18px;
+}
+.maan-top-bar .maan-weider-news .maan-city,
+.maan-top-bar .maan-weider-news .maan-celsius {
+  display: inline-block;
+  color: var(--maan-color-white);
+}
+.maan-top-bar .maan-weider-news .maan-city {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0px 4px;
+}
+.maan-top-bar .maan-weider-news .maan-celsius {
+  font-size: 12px;
+  line-height: 22px;
+}
+.maan-top-bar .maan-current-date {
+  color: var(--maan-color-white);
+  text-align: right;
+}
+.maan-top-bar .maan-current-date .icon svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 12px;
+  margin-right: 8px;
+}
+.maan-top-bar .maan-current-date .maan-current-week,
+.maan-top-bar .maan-current-date .maan-current-day {
+  font-size: 14px;
+}
+.maan-top-bar .maan-social-link {
+  text-align: right;
+  max-width: 163px;
+  margin-left: auto;
+}
+
+.maan-top-bar .maan-social-link ul {
+  border-left: 1px solid var(--maan-color-white);
+}
+.maan-top-bar .maan-social-link li {
+  display: inline-block;
+  margin-right: 14px;
+}
+.maan-top-bar .maan-social-link li:last-child {
+  margin-right: 0px;
+}
+.maan-top-bar .maan-social-link li a {
+  color: var(--maan-color-white);
+}
+.maan-top-bar .maan-social-link li a:hover{
+  color: var(--maan-color-blue);
+}
+.date-time{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.maan-current-date{
+  margin-right: 15px;
+}
+/*=====================
+    3 Maan Mid Bar
+=======================*/
+.maan-mid-bar {
+  padding: 24px 0px;
+  background: var(--maan-color-white);
+}
+.maan-mid-bar .maan-logo a {
+  display: inline-block;
+  max-width: 180px;
+}
+.maan-mid-bar .maan-logo a img {
+  width: 100%;
+}
+.maan-mid-bar .maan-header-adds img {
+  width: 100%;
+}
+
+/*=====================
+    4 Maan Manu Bar
+=======================*/
+.modal-backdrop {
+  z-index: 4;
+}
+
+.maan-manu-bar {
+  padding: 12px 0px;
+  background: var(--maan-color-blue);
+}
+.maan-manu-bar .modal .modal-dialog {
+  margin: 0 auto;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+  -moz-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+.maan-manu-bar .maan-main-manu .maan-home-icon {
+  margin-right: 24px;
+}
+.maan-manu-bar .maan-main-manu .maan-home-icon svg {
+  fill: var(--maan-color-white);
+}
+.maan-manu-bar .maan-main-manu ul,
+.maan-manu-bar .maan-main-manu li {
+  display: inline-block;
+}
+.maan-manu-bar .maan-main-manu li {
+  margin-right: 24px;
+}
+.maan-manu-bar .maan-main-manu li a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--maan-color-white);
+}
+.maan-manu-bar .maan-main-manu li a::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--maan-color-white);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-manu-bar .maan-main-manu li a:hover::before, .maan-manu-bar .maan-main-manu li.active a::before {
+  width: 90%;
+  opacity: 1;
+  visibility: visible;
+}
+.maan-manu-bar .maan-main-manu .maan-more-icon a svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 18px;
+}
+.maan-manu-bar .manu-btn {
+  position: relative;
+  padding: 0;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background: var(--maan-color-tr);
+}
+.maan-manu-bar .manu-btn span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  border-radius: 5px;
+  background: var(--maan-color-black);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-manu-bar .manu-btn span:nth-child(1) {
+  top: -6px;
+}
+.maan-manu-bar .manu-btn span:nth-child(2) {
+  top: 3px;
+}
+.maan-manu-bar .manu-btn span:nth-child(3) {
+  top: 12px;
+}
+.maan-manu-bar .manu-btn.active span:nth-child(1) {
+  top: 5px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.maan-manu-bar .manu-btn.active span:nth-child(2) {
+  width: 0px;
+  opacity: 0;
+}
+.maan-manu-bar .manu-btn.active span:nth-child(3) {
+  top: 5px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.maan-manu-bar .maan-right-btns {
+  text-align: right;
+}
+.maan-manu-bar .maan-right-btns li {
+  display: inline-block;
+  margin-left: 12px;
+}
+.maan-manu-bar .maan-right-btns li:first-child {
+  margin-left: 0px;
+}
+.maan-manu-bar .maan-right-btns .maan-search-btn,
+.maan-manu-bar .maan-right-btns .maan-profile-btn {
+  position: relative;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border: none;
+  line-height: 35px;
+  background: var(--maan-color-tr);
+  z-index: 2;
+  text-align: center;
+  cursor: pointer;
+}
+.maan-manu-bar .maan-right-btns .maan-search-btn::before,
+.maan-manu-bar .maan-right-btns .maan-profile-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -2;
+  border-radius: 50px;
+  background: var(--maan-color-white);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-manu-bar .maan-right-btns .maan-search-btn svg,
+.maan-manu-bar .maan-right-btns .maan-profile-btn svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 14px;
+}
+.maan-manu-bar .maan-right-btns .maan-search-btn:hover::before,
+.maan-manu-bar .maan-right-btns .maan-profile-btn:hover::before {
+  opacity: 1;
+}
+.maan-manu-bar .maan-right-btns .maan-search-btn:hover svg,
+.maan-manu-bar .maan-right-btns .maan-profile-btn:hover svg {
+  fill: var(--maan-color-blue);
+}
+.maan-manu-bar .maan-right-btns .modal-content {
+  display: block;
+  border-radius: 5px;
+  padding: 30px;
+}
+.maan-manu-bar .maan-right-btns .modal-content form {
+  text-align: left;
+}
+.maan-manu-bar .maan-right-btns .modal-content input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px 0px 0px 5px;
+}
+.maan-manu-bar .maan-right-btns .modal-content input:focus {
+  border-color: var(--maan-color-blue);
+}
+.modal-content button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid var(--maan-color-blue);
+  background: var(--maan-color-blue) !important;
+}
+.modal-content button:hover {
+  color: var(--maan-color-blue);
+  background: transparent !important;
+  border-color: var(--maan-color-blue);
+}
+
+header.sticky-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+header.sticky-header ~ main {
+  margin-top: 262px;
+}
+
+header.sticky-mid-manu .maan-top-bar.sticky {
+  margin-bottom: 214px;
+}
+header.sticky-mid-manu .maan-wrap-manu {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+header.sticky-mid-manu .maan-wrap-manu.sticky {
+  position: fixed;
+}
+
+.maan-mid-bar.sticky {
+  margin-bottom: 60px;
+}
+.maan-manu-bar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.maan-manu-bar.sticky {
+  position: fixed;
+}
+
+/*=========================
+    5 Maan Breaking News
+===========================*/
+.maan-breaking-news-section p{
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.maan-breaking-news-section {
+  padding: 40px 0px;
+}
+.maan-breaking-news-section .maan-slide-title {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 8px;
+  z-index: 2;
+}
+.maan-breaking-news-section .maan-slide-title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  background: var(--maan-color-blue);
+  z-index: -2;
+}
+.maan-breaking-news-section .maan-slide-title .icon {
+  margin-right: 8px;
+}
+.maan-breaking-news-section .maan-slide-title .icon svg {
+  fill: var(--maan-color-blue);
+}
+.maan-breaking-news-section .maan-slide-text {
+  width: calc(100% - 85px);
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow {
+  position: absolute;
+  width: 35px;
+  height: 40px;
+  top: -9px;
+  padding: 0;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid var(--maan-color-border);
+  background: var(--maan-color-white);
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow svg {
+  fill: var(--maan-color-border);
+  --svg-font-size: 14px;
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow:hover {
+  background: var(--maan-color-blue);
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow:hover svg {
+  fill: var(--maan-color-white);
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow.btn-prev {
+  right: -45px;
+}
+.maan-breaking-news-section .maan-slide-text .slick-arrow.btn-next {
+  right: -85px;
+}
+
+/*=====================
+    6 Maan Top News
+=======================*/
+.maan-top-news-section {
+  padding: 0px 0px 40px 0px;
+}
+
+/*=========================
+   7 Maan Top Categories
+===========================*/
+.maan-top-categories-section {
+  padding-top: 0px;
+}
+.maan-top-categories-section.maan-slide .maan-title {
+  width: calc(100% - 102px);
+}
+.maan-top-categories-section.maan-slide .slick-arrow {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -60px;
+  padding: 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50px;
+  border: 1px solid var(--maan-color-border);
+  background: var(--maan-color-white);
+}
+.maan-top-categories-section.maan-slide .slick-arrow svg {
+  fill: var(--maan-color-border);
+  --svg-font-size: 12px;
+}
+.maan-top-categories-section.maan-slide .slick-arrow:hover {
+  background: var(--maan-color-blue);
+}
+.maan-top-categories-section.maan-slide .slick-arrow:hover svg {
+  fill: var(--maan-color-white);
+}
+.maan-top-categories-section.maan-slide .slick-arrow.btn-prev {
+  right: 55px;
+}
+.maan-top-categories-section.maan-slide .slick-arrow.btn-next {
+  right: 10px;
+}
+.maan-top-categories-section.maan-slide .maan-card-img {
+  margin: 0px 12px;
+}
+.maan-top-categories-section .row > div:nth-last-child(1) .maan-card-img,
+.maan-top-categories-section .row > div:nth-last-child(2) .maan-card-img,
+.maan-top-categories-section .row > div:nth-last-child(3) .maan-card-img,
+.maan-top-categories-section .row > div:nth-last-child(4) .maan-card-img {
+  margin-bottom: 0px;
+}
+.maan-top-categories-section .maan-card-img {
+  margin-bottom: 24px;
+}
+.maan-top-categories-section .maan-card-img .maan-card-body {
+  padding: 12px 24px;
+  height: inherit;
+}
+.maan-top-categories-section .maan-card-img a {
+  position: relative;
+  display: grid;
+  padding: 12px 24px;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+  text-transform: capitalize;
+  color: var(--maan-color-black);
+  border-radius: 50px;
+  background: var(--maan-color-lblue);
+}
+.maan-top-categories-section .maan-card-img a span:first-child {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.maan-top-categories-section .maan-card-img a span:last-child {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  text-align: right;
+}
+.maan-top-categories-section .maan-card-img a:hover {
+  background: var(--maan-color-white);
+}
+
+/*=========================
+   8 Maan Most Popular
+===========================*/
+.maan-most-popular-section {
+  background: var(--maan-color-white2);
+}
+.maan-most-popular-section .slick-list {
+  margin: 0px -12px;
+}
+.maan-most-popular-section .slick-list .card {
+  margin: 0px 12px;
+}
+.maan-most-popular-section .card {
+  background: var(--maan-color-tr);
+}
+.maan-most-popular-section .news-tab .nav-pills {
+  position: relative;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 12px;
+  z-index: 2;
+}
+.maan-most-popular-section .news-tab .nav-pills::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  border-radius: 5px;
+  background: var(--maan-color-blue);
+  z-index: -2;
+}
+.maan-most-popular-section .news-tab .nav-pills button {
+  position: relative;
+  padding: 0;
+  text-transform: capitalize;
+  color: var(--maan-color-black);
+}
+.maan-most-popular-section .news-tab .nav-pills button::before {
+  position: absolute;
+  content: "";
+  width: 10%;
+  height: 3px;
+  left: 50%;
+  bottom: -20px;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--maan-color-blue);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-most-popular-section .news-tab .nav-pills button.active {
+  background: var(--maan-color-tr);
+}
+.maan-most-popular-section .news-tab .nav-pills button.active::before {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.maan-most-popular-section .news-tab .maan-news-list > ul {
+  margin-top: 40px;
+}
+.maan-most-popular-section .maan-post-groop {
+  padding: 0;
+  margin: 0;
+  border-top: 1.5px dashed var(--maan-color-gray2);
+}
+.maan-most-popular-section .maan-post-groop .card {
+  margin-top: 24px;
+}
+
+/*=====================
+    9 Maan Adds Banner
+=======================*/
+.maan-adds-banner {
+  padding: 80px 0px;
+}
+.maan-adds-banner .maan-add img {
+  width: 100%;
+}
+
+/*==========================
+    10 Maan Politics News
+============================*/
+.politics-news {
+  padding-top: 0px;
+}
+.politics-news .card.maan-card-img .card-body::before {
+  height: 40%;
+  background: var(--maan-color-blue);
+  background: linear-gradient(0deg, var(--maan-color-blue) 20%, rgba(15, 41, 49, 0) 100%);
+}
+.politics-news .maan-news-list {
+  padding: 20px 24px;
+  border-left: 4px solid var(--maan-color-blue);
+  border-radius: 10px;
+  background: var(--maan-color-black3);
+}
+.politics-news .maan-news-list li {
+  grid-template-columns: auto;
+}
+.politics-news .maan-news-list li:last-child {
+  margin-bottom: 0px;
+}
+.politics-news .maan-news-list .maan-list-text h4 a {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--maan-color-white);
+}
+.politics-news .maan-news-list .maan-list-text h4 a:hover {
+  color: var(--maan-color-blue);
+}
+.politics-news .maan-default-post {
+  margin-top: 24px;
+}
+
+/*==============================
+    11 Maan Entertainment News
+================================*/
+.maan-entertainment-news {
+  padding: 0px 0px 24% 0px;
+}
+.maan-entertainment-news .slick-list {
+  margin: 0px -12px;
+}
+.maan-entertainment-news .slick-list .row {
+  margin: 0px;
+}
+.maan-entertainment-news ~ .maan-video-news-section {
+  background: var(--maan-color-white3);
+}
+.maan-entertainment-news ~ .maan-video-news-section > .container {
+  margin-top: -24%;
+}
+.maan-entertainment-news .maan-news-list li {
+  margin: 24px 0px 0px 0px;
+}
+.maan-entertainment-news .maan-news-list h4 a {
+  font-size: 18px;
+  line-height: 28px;
+}
+.maan-entertainment-news .maan-stay-connected .maan-s-follower {
+  padding: 12px 0px;
+  margin: 0px auto;
+  background: var(--maan-color-border);
+  /* display: grid; */
+  /* grid-template-columns: 48% 48%; */
+  /* gap:15px 4%; */
+}
+.maan-entertainment-news .maan-stay-connected .maan-s-follower > div:nth-last-child(1) .follower-btn, .maan-entertainment-news .maan-stay-connected .maan-s-follower > div:nth-last-child(2) .follower-btn {
+  margin-bottom: 0px;
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn {
+  padding: 8px 24px;
+  margin: 5px 0;
+
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-facebook {
+  background: var(--maan-color-fb);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-facebook i {
+  color: var(--maan-color-fb);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-instagram {
+  background: var(--maan-color-ins);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-instagram i {
+  color: var(--maan-color-ins);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-twitter {
+  background: var(--maan-color-tw);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-twitter i {
+  color: var(--maan-color-tw);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-youtube {
+  background: var(--maan-color-yt);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-youtube i {
+  color: var(--maan-color-yt);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-facebook svg {
+  fill: var(--maan-color-fb);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-instagram {
+  background: var(--maan-color-ins);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-instagram svg {
+  fill: var(--maan-color-ins);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-twitter {
+  background: var(--maan-color-tw);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-twitter svg {
+  fill: var(--maan-color-tw);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-youtube {
+  background: var(--maan-color-yt);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn.maan-youtube svg {
+  fill: var(--maan-color-yt);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn a {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-icon {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 40px;
+  background: var(--maan-color-white);
+  font-size: 16px;
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-icon svg {
+  --svg-font-size: 20px;
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-text {
+  margin-left: 12px;
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-text .maan-f-text,
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-text .maan-f-numbber {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: var(--maan-color-white);
+}
+.maan-entertainment-news .maan-stay-connected .follower-btn .maan-text .maan-f-numbber {
+  font-weight: 700;
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide {
+  margin-top: 24px;
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .slick-list {
+  margin: 0px -12px;
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .slick-arrow {
+  top: 50%;
+  border: none;
+  background: var(--maan-color-white);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .slick-arrow svg {
+  fill: var(--maan-color-blue);
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .slick-arrow.btn-prev {
+  left: calc(18px + 24px);
+  right: inherit;
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .slick-arrow.btn-next {
+  left: inherit;
+  right: calc(-18px + 24px);
+}
+.maan-entertainment-news .maan-stay-connected .maan-slide .card {
+  margin: 0px 12px;
+}
+
+/*=====================
+    12 Maan Video News
+=======================*/
+.maan-video-news-section .slick-slide {
+  margin: 0px 12px;
+}
+.maan-video-news-section .maan-default-post {
+  background: var(--maan-color-tr);
+  margin-top: 24px;
+}
+.maan-video-news-section .maan-default-post a.venobox {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+}
+.maan-video-news-section .big-card {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--maan-color-white);
+}
+.maan-video-news-section .big-card a.venobox {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.maan-video-news-section .big-card a.venobox svg {
+  --svg-font-size: 14px;
+}
+
+/*=====================
+    13 Maan Malti News
+=======================*/
+.maan-malti-news .maan-title {
+  width: calc(100% - 100px);
+}
+.maan-malti-news .maan-news-list li {
+  margin: 24px 0px 0px 0px;
+}
+.maan-malti-news .maan-news-list h4 a {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/*=========================
+    14 Maan Sports News
+===========================*/
+.maan-sports-news-section {
+  background: var(--maan-color-white4);
+}
+.maan-sports-news-section .maan-default-post {
+  margin-bottom: 24px;
+  background: var(--maan-color-tr);
+}
+.maan-sports-news-section .maan-news-list > ul {
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 24px;
+  -webkit-box-align: center;
+  align-items: center;
+  border-top: 1px solid var(--maan-color-border2);
+}
+.maan-sports-news-section .maan-news-list > ul li:nth-last-child(1),
+.maan-sports-news-section .maan-news-list > ul li:nth-last-child(2) {
+  margin-bottom: 0px;
+}
+
+/*=============================
+    15 Maan Technology News
+===============================*/
+.maan-technology-news-section .col-lg-3 .maan-default-post {
+  margin-top: 24px;
+}
+
+/*=============================
+    16 Maan Don't Miss
+===============================*/
+.maan-don-t-miss-section {
+  padding-top: 0px;
+}
+.maan-don-t-miss-section .container-fluid {
+  padding: 0;
+}
+.maan-don-t-miss-section .container-fluid .row > div {
+  padding: 0;
+}
+.maan-don-t-miss-section .container-fluid .maan-card-img,
+.maan-don-t-miss-section .container-fluid .maan-card-body::before,
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-tag-parpul,
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-tag-green,
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-tag-blue,
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-tag-red {
+  border-radius: 0;
+}
+.maan-don-t-miss-section .container-fluid .maan-card-body {
+  opacity: 0;
+  visibility: hidden;
+  bottom: -100%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-text {
+  padding: 24px;
+}
+.maan-don-t-miss-section .container-fluid .maan-card-body .maan-text h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.maan-don-t-miss-section .container-fluid .slick-list .slick-center .maan-card-body,
+.maan-don-t-miss-section .container-fluid .maan-card-img:hover .maan-card-body {
+  opacity: 1;
+  visibility: visible;
+  bottom: 0;
+}
+
+/*=============================
+    17 Maan Lifestyle News
+===============================*/
+.maan-lifestyle-news {
+  padding-top: 0px;
+}
+.maan-lifestyle-news .maan-post-groop .maan-default-post {
+  margin-top: 24px;
+}
+.maan-lifestyle-news .maan-post-groop > div:nth-child(1) .maan-default-post, .maan-lifestyle-news .maan-post-groop > div:nth-child(2) .maan-default-post, .maan-lifestyle-news .maan-post-groop > div:nth-child(3) .maan-default-post, .maan-lifestyle-news .maan-post-groop > div:nth-child(4) .maan-default-post {
+  margin-top: 0;
+}
+
+/*=============================
+    18 Maan Info Footer
+===============================*/
+.footer-app-download a img{
+  height: 50px;
+  object-fit: content;
+}
+.footer-app-download a{
+  display: block;
+  margin-right: 15px;
+}
+.footer-app-download{
+  display: flex;
+  align-items: center;
+}
+.maan-info-footer {
+  padding: 0;
+  background: var(--maan-color-black2);
+}
+.maan-info-footer .logo a {
+  display: inline-block;
+  max-width: 180px;
+}
+.maan-info-footer .logo a img {
+  width: 100%;
+}
+.maan-info-footer .maan-text h6 {
+  color: var(--maan-color-white);
+  text-align: justify;
+}
+.maan-info-footer .row {
+  padding: 60px 0px;
+}
+.maan-info-footer .row.maan-link-footer {
+  border-top: 1px solid var(--maan-color-border);
+}
+.maan-info-footer .row.maan-link-footer .maan-title::before {
+  content: none;
+}
+.maan-info-footer .row.maan-link-footer .maan-title::after {
+  background: var(--maan-color-white);
+}
+.maan-info-footer .row.maan-link-footer .maan-title h2 {
+  color: var(--maan-color-white);
+  font-size: 20px;
+  line-height: 30px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-list h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-list h4 a {
+  color: var(--maan-color-white);
+}
+.maan-info-footer .row.maan-link-footer .maan-news-list h4 a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-info-footer .row.maan-link-footer .maan-news-link li {
+  margin-bottom: 12px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-link li:last-child {
+  margin-bottom: 0px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-link li a {
+  color: var(--maan-color-white);
+  font-size: 18px;
+  line-height: 28px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-link li a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-info-footer .row.maan-link-footer .maan-news-tags ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+  grid-gap: 8px;
+  margin-bottom: 30px;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-tags ul li a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--maan-color-white);
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid var(--maan-color-gray);
+}
+.maan-info-footer .row.maan-link-footer .maan-news-tags ul li a:hover {
+  border-color: var(--maan-color-blue);
+  background: var(--maan-color-blue);
+}
+.maan-info-footer .row.maan-link-footer .maan-email {
+  margin-top: 30px;
+}
+.maan-info-footer .row.maan-link-footer .maan-email h4{
+  font-size: 16px;
+  color: #fff;
+  margin-top: 5px;
+}
+.maan-info-footer .row.maan-link-footer .maan-email .input-group {
+  position: relative;
+}
+.maan-info-footer .row.maan-link-footer .maan-email .input-group input {
+  width: 100%;
+  height: 50px;
+  padding-left: 55px;
+  border-radius: 5px !important;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--maan-color-border2);
+  border: 1px solid var(--maan-color-border2);
+  background: var(--maan-color-tr);
+}
+.maan-info-footer .row.maan-link-footer .maan-email .input-group .maan-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.maan-info-footer .row.maan-link-footer .maan-email .input-group .maan-icon svg {
+  fill: var(--maan-color-border2);
+}
+.maan-info-footer .row.maan-link-footer .maan-email button {
+  padding: 18px 40px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+.maan-info-footer .maan-main-footer {
+  padding: 24px 0px;
+  text-align: center;
+  border-top: 1px solid var(--maan-color-border);
+}
+.maan-info-footer .maan-main-footer h6 {
+  font-weight: 400;
+  color: var(--maan-color-white);
+}
+.maan-info-footer .maan-main-footer h6 a {
+  color: var(--maan-color-white);
+}
+.maan-info-footer .maan-main-footer h6 a:hover {
+  color: var(--maan-color-blue);
+}
+.middle-footer-items{
+  max-width: 160px;
+  margin: 0 auto;
+}
+.blog-details-social h6{
+  font-size: 16px;
+}
+.blog-details-social {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-details-social li a:hover i{
+  transform: scale(1.1);
+  color: #fff;
+}
+.blog-details-social li a i{
+  display: block;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  color: #fff;
+  background: #07acde;
+}
+.blog-details-social li a i.fa-facebook-f{
+  background: #3868ce;
+}
+.blog-details-social li a i.fa-twitter{
+  background: #07acde;
+}
+.blog-details-social li a i.fa-linkedin-in{
+  background: #07acde;
+}
+.blog-details-social li a i.fa-instagram{
+  background: #c32aa3;
+}
+.blog-details-social li a i.fa-youtube{
+  background: red;
+}
+.blog-details-social li{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/*=============================
+    19 Maan Breadcrumb
+===============================*/
+.maan-breadcrumb {
+  padding: 60px 0px;
+  background: var(--maan-color-white3);
+}
+.maan-breadcrumb ol {
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.maan-breadcrumb ol li {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+.maan-breadcrumb ol li::before, .maan-breadcrumb ol li.active {
+  color: var(--maan-color-black) !important;
+}
+.maan-breadcrumb ol li a:hover {
+  color: var(--maan-color-blue);
+}
+
+/*=============================
+    20 Maan Post Archive
+===============================*/
+.post-archive .maan-news-list ul li {
+  grid-template-columns: 40% auto;
+  margin: 24px 8px 0px 0px;
+}
+.post-archive .maan-news-list ul li h4 {
+  font-size: 22px;
+  line-height: 32px;
+}
+.post-archive .maan-news-list ul li:first-child {
+  margin-top: 0px;
+}
+.post-archive .maan-news-list ul li ul, .post-archive .maan-news-list ul li ul ~ p, .post-archive .maan-news-list ul li ul ~ a {
+  margin-top: 12px;
+}
+.post-archive .maan-news-list ul li ul li {
+  margin-top: 0px;
+}
+.post-archive .maan-news-list ul li .maan-icon svg {
+  fill: var(--maan-color-blue);
+}
+.post-archive .maan-title {
+  margin-top: 24px;
+}
+
+/*=============================
+    21 Maan Widgets
+===============================*/
+.maan-widgets {
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--maan-color-white2);
+  margin-bottom: 50px;
+}
+.maan-widgets.maan-bg-tr {
+  padding: 0;
+  border-radius: 0px;
+  background: var(--maan-color-tr);
+}
+.maan-widgets .maan-list-text .maan-icon svg {
+  fill: var(--maan-color-blue) !important;
+}
+.maan-widgets form.search .form-control {
+  padding: 0px 24px;
+  height: 50px;
+  border: 1px solid var(--maan-color-border2);
+  border-right: 0px;
+  border-radius: 5px 0px 0px 5px !important;
+}
+.maan-widgets form.search .d-btn {
+  padding: 0;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border: none;
+}
+.maan-widgets form.search .d-btn svg {
+  fill: var(--maan-color-white);
+}
+.maan-widgets form.search .d-btn:hover {
+  background: var(--maan-color-blue);
+}
+.maan-widgets .category-link li {
+  margin-bottom: 12px;
+}
+.maan-widgets .category-link li:last-child {
+  margin-bottom: 0px;
+}
+.maan-widgets .category-link li a {
+  position: relative;
+  padding-left: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.maan-widgets .category-link li a::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 0;
+  border-top: 2px solid var(--maan-color-blue);
+  border-right: 2px solid var(--maan-color-blue);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+.maan-widgets .category-link li a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-widgets .widgets-gallery ul {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: auto auto auto;
+}
+.maan-widgets .widgets-gallery ul li {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.maan-widgets .widgets-gallery ul img {
+  width: 100%;
+  height: 100%;
+  object-position:top center;
+  object-fit: cover;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-widgets .widgets-gallery ul li:hover img {
+  /* filter: grayscale(50%) blur(0.8px); */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.maan-widgets .widgets-tags ul {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: auto auto auto auto;
+}
+.maan-widgets .widgets-tags ul li a {
+  display: block;
+  padding: 5px 6px;
+  color: var(--maan-color-gray);
+  text-align: center;
+  border-radius: 5px;
+  background: var(--maan-color-border);
+}
+.maan-widgets .widgets-tags ul li a:hover {
+  color: var(--maan-color-white);
+  background: var(--maan-color-blue);
+}
+.maan-widgets .recent-post li {
+  grid-template-columns: 40% auto;
+}
+.maan-widgets .social-media ul {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+.maan-widgets .social-media ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: var(--maan-color-gray);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  background: var(--maan-color-border);
+}
+.maan-widgets .social-media ul li a:hover {
+  background: var(--maan-color-blue);
+  color: #fff;
+}
+.maan-widgets .social-media ul li a:hover svg {
+  fill: var(--maan-color-white);
+}
+.maan-widgets .popular-post {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: auto auto;
+}
+.maan-widgets .popular-post .maan-default-post {
+  margin-top: 0px;
+}
+.maan-widgets .popular-post .maan-default-post .maan-card-body {
+  padding-bottom: 0px;
+}
+
+/*=============================
+    22 Maan Business
+===============================*/
+.business .maan-default-post {
+  margin-top: 24px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--maan-color-border2);
+}
+.business .maan-default-post .maan-text .maan-icon svg {
+  fill: var(--maan-color-blue);
+}
+.business .maan-default-post .maan-text ul ~ h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.business .maan-default-post .maan-text h4 ~ p {
+  margin-top: 24px;
+}
+.business.maan-slide-section .maan-title {
+  width: 100%;
+}
+.business.maan-slide-section .maan-slide .slick-list {
+  margin: 0px -12px;
+}
+.business.maan-slide-section .maan-slide .slick-arrow {
+  top: 50%;
+  border: 1px solid var(--maan-color-white);
+  background: var(--maan-color-tr);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.business.maan-slide-section .maan-slide .slick-arrow.btn-prev {
+  left: calc(18px + 24px);
+  right: inherit;
+}
+.business.maan-slide-section .maan-slide .slick-arrow.btn-next {
+  left: inherit;
+  right: calc(-18px + 24px);
+}
+.business.maan-slide-section .maan-slide .maan-default-post {
+  margin: 0px 12px;
+}
+.business .maan-widgets .maan-default-post {
+  border-bottom: none;
+}
+
+/*=============================
+    23 Maan Archive Details
+===============================*/
+.maan-archive-details .maan-card-body {
+  padding: 0;
+}
+.maan-archive-details .maan-default-post p {
+  margin: 24px 0px;
+}
+.maan-archive-details .maan-default-post .tag {
+  padding-top: 24px;
+  border-top: 1px solid var(--maan-color-border);
+}
+.maan-archive-details .maan-default-post .tag a {
+  display: block;
+  padding: 10px 24px;
+  border-radius: 5px;
+  border: 1px solid var(--maan-color-border);
+  color: var(--maan-color-gray4);
+}
+.maan-archive-details .maan-default-post .tag a svg {
+  fill: var(--maan-color-gray4);
+  margin-right: 5px;
+}
+.maan-archive-details .maan-default-post .tag a:hover {
+  color: var(--maan-color-gray4);
+  background: var(--maan-color-border);
+}
+.maan-archive-details .maan-card-body .row {
+  padding: 12px 0px;
+  border-bottom: 1px solid var(--maan-color-border);
+  margin: 0px 0px 12px 0px;
+}
+.maan-archive-details .maan-card-body .row > div {
+  padding: 0;
+}
+.maan-archive-details .maan-card-body .row .maan-icon svg {
+  fill: var(--maan-color-blue);
+}
+.maan-archive-details .maan-card-body .social-media {
+  text-align: right;
+}
+.maan-archive-details .maan-card-body .social-media li a svg {
+  fill: var(--maan-color-gray2);
+}
+.maan-archive-details .maan-card-body .social-media li a:hover svg {
+  fill: var(--maan-color-blue);
+}
+.maan-archive-details .maan-pro-card {
+  position: relative;
+  padding: 24px;
+  background: var(--maan-color-white5);
+}
+.maan-archive-details .maan-pro-card h6 {
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.maan-archive-details .maan-pro-card .maan-profile {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 24px;
+}
+.maan-archive-details .maan-pro-card .maan-profile .maan-profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  overflow: hidden;
+}
+.maan-archive-details .maan-pro-card .maan-profile .maan-profile-img img {
+  object-position: top center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.maan-archive-details .maan-pro-card .maan-profile .maan-profile-text {
+  margin-left: 24px;
+}
+.maan-archive-details .maan-pro-card .maan-profile .maan-profile-text h6 {
+  margin-bottom: 5px;
+}
+.maan-archive-details .maan-pro-card .maan-profile .maan-profile-text p {
+  margin: 0;
+}
+.maan-archive-details .maan-post-adds {
+  margin: 24px 0;
+}
+.maan-archive-details .maan-post-adds img {
+  width: 100%;
+}
+.maan-archive-details .maan-news-form h4 {
+  margin-bottom: 12px;
+}
+.maan-archive-details .maan-news-form p {
+  margin-bottom: 24px;
+}
+.maan-archive-details .maan-news-form input,
+.maan-archive-details .maan-news-form textarea {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.maan-archive-details .maan-news-form textarea {
+  height: 160px;
+}
+.maan-archive-details .maan-news-form button {
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--maan-color-tr);
+  color: var(--maan-color-white);
+  background: var(--maan-color-blue);
+}
+.maan-archive-details .maan-news-form button:hover {
+  color: var(--maan-color-blue);
+  border-color: var(--maan-color-blue);
+  background: var(--maan-color-white);
+}
+
+/*=============================
+    24 Maan Pagination
+===============================*/
+.maan-pagination {
+  margin-bottom: 80px;
+}
+.maan-pagination ul li {
+  display: inline-block;
+  margin-left: 8px;
+}
+.maan-pagination ul li:first-child {
+  margin-left: 0;
+}
+.maan-pagination ul li a {
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--maan-color-gray3);
+  border: 1px solid var(--maan-color-gray3);
+  border-radius: 5px;
+}
+.maan-pagination ul li a svg {
+  --svg-font-size: 16px;
+  fill: var(--maan-color-gray3);
+}
+.maan-pagination ul li.active a,
+.maan-pagination ul li a:hover {
+  color: var(--maan-color-white);
+  border-color: var(--maan-color-blue);
+  background: var(--maan-color-blue);
+}
+.maan-pagination ul li.active a svg,
+.maan-pagination ul li a:hover svg {
+  fill: var(--maan-color-white);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+
+/*=============================
+    server css dev/wadud
+===============================*/
+
+.maan-news-list li .maan-list-img img{
+  height: 110px;
+  object-fit: cover;
+  object-position: top center;
+}
+.maan-top-news-section .card.maan-card-img img{
+  height: 440px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-top-categories-section .card.maan-card-img img{
+  height: 160px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-most-popular-section .maan-news-list li .maan-list-img img {
+  height: 130px;
+  object-position: top center;
+  object-fit: cover;
+}
+
+.maan-most-popular-section .card.maan-default-post .maan-post-img img{
+  height: 180px;
+  object-fit: cover;
+  object-position: top center;
+}
+.maan-most-popular-section .card.maan-default-post  .maan-card-body{
+  padding-bottom: 0;
+  margin-bottom: -4px;
+}
+
+.politics-news .card.maan-default-post .maan-post-img img{
+  height: 270px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-entertainment-news .maan-news-list li .maan-list-img img{
+  height: 110px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-entertainment-news .card.maan-default-post .maan-post-img img{
+  height: 400px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-video-news-section .card.maan-default-post .maan-post-img img{
+  height: 160px;
+  object-fit: cover;
+  object-position: top center;
+}
+.maan-video-news-section .card.maan-default-post .maan-card-body{
+  padding-bottom: 0;
+  margin-bottom: -5px;
+}
+.maan-video-news-section .card.big-card .maan-post-img img{
+  height: 330px;
+  object-fit: cover;
+  object-position: top center;
+}
+.maan-malti-news .card.maan-default-post .maan-post-img img{
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-malti-news .maan-news-list li .maan-list-img img{
+  height: 100px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+.maan-technology-news-section .card.maan-default-post{
+  margin: 0;
+  margin-top: 30px;
+}
+.maan-technology-news-section .card.maan-default-post .maan-card-body {
+  padding-bottom: 0;
+  margin-bottom: -4px;
+}
+.maan-technology-news-section .card.maan-default-post .maan-post-img img {
+  height: 300px;
+}
+
+.maan-don-t-miss-section .card.maan-card-img img{
+  height: 355px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-lifestyle-news .card.maan-default-post .maan-post-img img{
+  height: 170px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-lifestyle-news .card.maan-default-post .maan-card-body{
+padding-bottom: 0;
+margin-bottom: -5px;
+}
+
+.maan-most-popular-section .maan-slide .card.maan-big-post .maan-post-img img{
+  height: 370px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.politics-news .maan-default-post .maan-card-body{
+  padding-bottom: 0;
+  margin-bottom: -4px;
+}
+
+.maan-sports-news-section .maan-title{
+  margin-bottom: 10px;
+}
+.maan-sports-news-section .maan-default-post{
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.maan-sports-news-section .maan-default-post .maan-card-body{
+ padding-bottom: 0;
+ margin-bottom: -5px;
+}
+
+.popular-post .card.maan-default-post .maan-post-img img{
+  height: 120px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-news-post .card.maan-default-post .maan-post-img img{
+  height: 400px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-video-news-section .maan-card-slide .slick-arrow.btn-next{
+    right: 20px !important;
+}
+.maan-video-news-section .maan-card-slide .slick-arrow.btn-prev {
+  right: 65px !important;
+}
+
+
+.maan-video-news-section .maan-title{
+  margin-bottom: 0;
+}
+.maan-breadcrumb ol{
+  margin: 0;
+}
+.maan-breadcrumb ol li{
+  line-height: 18px;
+}
+div .maan-widgets:last-child{
+  margin-bottom: 0;
+}
+.maan-archive-details{
+  padding-bottom: 0;
+}
+.maan-pagination{
+  margin-bottom: 30px;
+}
+.maan-related-posts .card-body{
+  padding-bottom: 0;
+  margin-bottom: -4px;
+}
+
+
+/* dropdown css  */
+.dropdown, li {
+  position: relative;
+  padding: 0;
+}
+.dropdown:hover .dropdown-menu, .dropdown:focus .dropdown-menu, li:hover .dropdown-menu, li:focus .dropdown-menu {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown:hover .dropdown-menu ul li a, .dropdown:focus .dropdown-menu ul li a, li:hover .dropdown-menu ul li a, li:focus .dropdown-menu ul li a {
+  color: #000;
+}
+.dropdown .dropdown-menu, li .dropdown-menu {
+  display: block;
+  border-radius: 0;
+  padding: 0;
+  min-width: 200px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  top: 120%;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown .dropdown-menu li, li .dropdown-menu li {
+  display: block;
+  padding: 0;
+}
+.dropdown .dropdown-menu li a, li .dropdown-menu li a {
+  color: #000;
+  padding: 10px;
+}
+.dropdown .dropdown-menu li a:hover, .dropdown .dropdown-menu li a:focus, li .dropdown-menu li a:hover, li .dropdown-menu li a:focus {
+  background: #B97654;
+  color: #fff;
+  padding-left: 20px;
+}
+.dropdown .dropdown-menu li .dropdown-menu, li .dropdown-menu li .dropdown-menu {
+  left: 100%;
+  top: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown .dropdown-menu li .dropdown-menu li a:hover, .dropdown .dropdown-menu li .dropdown-menu li a:focus, li .dropdown-menu li .dropdown-menu li a:hover, li .dropdown-menu li .dropdown-menu li a:focus {
+  color: #fff;
+}
+.dropdown .dropdown-menu li:hover .dropdown-menu, .dropdown .dropdown-menu li:focus .dropdown-menu, li .dropdown-menu li:hover .dropdown-menu, li .dropdown-menu li:focus .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+.dropdown .dropdown-menu li:hover .dropdown-menu li .dropdown-menu, .dropdown .dropdown-menu li:focus .dropdown-menu li .dropdown-menu, li .dropdown-menu li:hover .dropdown-menu li .dropdown-menu, li .dropdown-menu li:focus .dropdown-menu li .dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  top: 10px;
+}
+.dropdown .dropdown-menu li:hover .dropdown-menu li:hover .dropdown-menu, .dropdown .dropdown-menu li:hover .dropdown-menu li:focus .dropdown-menu, .dropdown .dropdown-menu li:focus .dropdown-menu li:hover .dropdown-menu, .dropdown .dropdown-menu li:focus .dropdown-menu li:focus .dropdown-menu, li .dropdown-menu li:hover .dropdown-menu li:hover .dropdown-menu, li .dropdown-menu li:hover .dropdown-menu li:focus .dropdown-menu, li .dropdown-menu li:focus .dropdown-menu li:hover .dropdown-menu, li .dropdown-menu li:focus .dropdown-menu li:focus .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+.maan-user-avatar, .maan-user-avatar {
+  left: -160px;
+  min-width: 230px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.maan-user-avatar .maan-login-header, .maan-user-avatar .maan-login-header {
+  font-size: 16px;
+  font-weight: 600;
+  background: #eee;
+  color: #000;
+  padding: 5px 15px;
+  text-align: center;
+}
+.maan-user-avatar .maan-user-avatar-form, .maan-user-avatar .maan-user-avatar-form {
+  padding: 10px;
+}
+.maan-user-avatar .maan-user-avatar-form .maan-input-group, .maan-user-avatar .maan-user-avatar-form .maan-input-group {
+  margin-bottom: 15px;
+}
+.maan-user-avatar-form .maan-btn, .maan-user-avatar-form .maan-btn {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.maan-user-avatar .maan-user-avatar-form span,  .maan-user-avatar .maan-user-avatar-form span {
+  font-size: 15px;
+}
+.maan-user-avatar .maan-user-avatar-form span a,  .maan-user-avatar .maan-user-avatar-form span a {
+  color: #0389ff;
+}
+.maan-user-avatar .maan-user-avatar-form span a:hover,  .maan-user-avatar .maan-user-avatar-form span a :focus,  .maan-user-avatar .maan-user-avatar-form span a:hover,  .maan-user-avatar .maan-user-avatar-form span a :focus {
+  text-decoration: underline;
+}
+.maan-user-avatar .maan-user-avatar-form .forgot, .maan-user-avatar .maan-user-avatar-form .forgot {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  color: #0389ff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/*dropdown css end */
+
+
+
+/* signup signin form start css*/
+.maan-signup-section {
+  background: #eee;
+}
+
+.maan-signup-signin-form {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.maan-signup-signin-form h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.maan-signup-signin-form .maan-input-group {
+  margin-bottom: 15px;
+}
+.maan-signup-signin-form .maan-input-group label {
+  margin-bottom: 5px;
+}
+.maan-signup-signin-form .maan-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 40px;
+  font-weight: 700;
+  background: #0389ff;
+  color: #fff;
+  border-radius: 5px;
+}
+.maan-signup-signin-form .maan-btn:hover, .maan-signup-signin-form .maan-btn:focus {
+  background: #000;
+}
+.maan-signup-signin-form span {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.maan-signup-signin-form span a {
+  color: #0389ff;
+}
+.maan-signup-signin-form span a:hover, .maan-signup-signin-form span a:focus {
+  text-decoration: underline;
+}
+
+.password-area {
+  position: relative;
+}
+.password-area .field-icon {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-10px, -50%);
+          transform: translate(-10px, -50%);
+  cursor: pointer;
+}
+.password-area .field-icon .eye-close {
+  display: none;
+}
+.password-area .field-icon.passwordShow .eye-show {
+  display: none;
+}
+.password-area .field-icon.passwordShow .eye-close {
+  display: block;
+}
+
+/* signup signin form end css*/
+
+/* comment css*/
+.maan-archive-details .maan-news-form form {
+  margin-bottom: 80px;
+}
+.maan-archive-details .custom-group{
+  padding: 20px 0;
+}
+.maan-archive-details .custom-group .col-md-10{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.maan-archive-details .custom-group .col-md-10 p{
+  padding: 0;
+  margin: 0;
+}
+.maan-archive-details .custom-group .icon{
+  height: 40px;
+  width: 40px;
+  border: 1px solid #eee;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 37px;
+  margin-left: auto;
+}
+.maan-archive-details .custom-group .icon svg{
+  height: 20px;
+  width: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/*=============================
+    server css responsive dev/wadud
+===============================*/
+
+@media (max-width: 1400px){
+  .maan-top-categories-section .maan-card-img a{
+    padding: 8px;
+  }
+  .maan-top-categories-section .maan-card-img a span:first-child{
+    font-size: 14px;
+  }
+  .maan-entertainment-news .maan-stay-connected .follower-btn {
+    padding: 8px 10px;
+}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px){
+  section .maan-title .maan-title-text h2, section .maan-title-border-none .maan-title-text h2, section .maan-title-center .maan-title-text h2 {
+    font-size: 18px;
+  }
+}
+@media(max-width: 991px){
+  .maan-news-list li, .maan-widgets .recent-post li, .post-archive .maan-news-list ul li {
+    grid-template-columns: 30% auto !important;
+  }
+  section .maan-title .maan-title-text h2, section .maan-title-border-none .maan-title-text h2, section .maan-title-center .maan-title-text h2 {
+    font-size: 18px;
+  }
+}
+
+
+/*=============================
+    server details add css dev/wadud
+===============================*/
+
+.maan-archive-details .card.maan-default-post .maan-post-img img{
+  height: 380px;
+  object-fit: cover;
+  object-position: top center;
+}
+.maan-widgets .widgets-gallery ul img {
+  height: 130px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.maan-related-posts .card.maan-default-post .maan-post-img img{
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+}
+@media(max-width: 991px){
+  .maan-related-posts .card.maan-default-post{
+    margin-top: 30px;
+  }
+  .maan-related-posts .maan-title{
+    margin-bottom: 10px;
+  }
+}
+
+.maan-video-news-section .slick-arrow{
+  top: -20px !important;
+}
+
+
+
+
+
+
+
+/*maan news list start */
+.maan-news-list .maan-news-post-list-card {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.maan-news-list .maan-news-post-list-card{
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-img img {
+  width: 100%;
+  height: 100px;
+  object-position: top center;
+  object-fit: cover;
+  filter: grayscale(0%) blur(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-parpul,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-green,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-blue,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-red {
+  position: relative;
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  z-index: 2;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-parpul::before,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-green::before,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-blue::before,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-red::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  border-radius: 50px;
+  z-index: -2;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-parpul {
+  color: var(--maan-color-parpul);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-parpul::before {
+  background: var(--maan-color-parpul);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-green {
+  color: var(--maan-color-green);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-green::before {
+  background: var(--maan-color-green);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-blue {
+  color: var(--maan-color-blue);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-blue::before {
+  background: var(--maan-color-blue);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-red {
+  color: var(--maan-color-red);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-red::before {
+  background: var(--maan-color-red);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-parpul ~ h4,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-green ~ h4,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-blue ~ h4,
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-tag-red ~ h4,
+.maan-news-list .maan-news-post-list-card .maan-list-text h4 ~ ul {
+  margin-top: 8px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text h4 a{
+    display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text h4 {
+  font-weight: 700;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text li {
+  display: inline-block;
+  margin: 0px 8px 0px 0px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text li:last-child {
+  margin-right: 0px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text li .maan-icon {
+  margin-right: 4px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-icon svg {
+  fill: var(--maan-color-gray2);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-item-text {
+  color: var(--maan-color-gray2);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-item-text a {
+  color: var(--maan-color-gray2);
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text .maan-item-text a:hover {
+  color: var(--maan-color-blue);
+}
+.maan-news-list .maan-news-post-list-card:hover .maan-list-img img {
+  /* filter: grayscale(50%) blur(0.8px); */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*maan news list ens */
+.card .maan-card-body .maan-text h4 a{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+h4 a{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.card.maan-default-post.maansports-big-card .maan-post-img img{
+  height: 460px;
+}
+.card.maan-default-post.maansports-small-card .maan-post-img img{
+  height: 180px;
+}
+
+.card.maan-card-img.politicsnews-card img{
+  height: 450px;
+}
+
+
+.maan-technology-news-section .technologysmall-card-wrp .card.maan-default-post .maan-post-img img {
+  height: 140px;
+}
+.card.maan-card-img.politicsnews-card img {
+  height: 468px;
+}
+.politics-news .card.maan-default-post .maan-post-img img {
+  height: 200px;
+}
+.maan-entertainment-news .card.maan-default-post .maan-post-img img{
+  height: 200px;
+}
+
+.maan-entertainmentslide .slick-slide{
+  padding: 0 15px !important;
+}
+
+
+section.maan-entertainment-news .maan-title {
+  width: calc(100% - 101px);
+}
+
+.maan-entertainmentslide .slick-arrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -60px;
+  padding: 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50px;
+  border: 1px solid var(--maan-color-border);
+  background: var(--maan-color-tr);
+}
+.maan-entertainmentslide .slick-arrow svg {
+  fill: var(--maan-color-border);
+  --svg-font-size: 12px;
+}
+.maan-entertainmentslide .slick-arrow:hover {
+  background: var(--maan-color-blue);
+}
+.maan-entertainmentslide .slick-arrow:hover svg {
+  fill: var(--maan-color-white);
+}
+.maan-entertainmentslide .slick-arrow.btn-prev{
+  right: 55px;
+}
+.maan-entertainmentslide .slick-arrow.btn-next  {
+  right: 0px;
+}
+
+
+
+
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -60px;
+  padding: 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50px;
+  border: 1px solid var(--maan-color-border);
+  background: var(--maan-color-tr);
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow svg {
+  fill: var(--maan-color-border);
+  --svg-font-size: 12px;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow:hover {
+  background: var(--maan-color-blue);
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow:hover svg {
+  fill: var(--maan-color-white);
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow.btn-prev{
+  right: 55px;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow.btn-next  {
+  right: 0px;
+}
+
+
+
+.maan-slide-section.maan-stay-connected .maan-slide {
+  margin-top: 24px;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-list {
+  margin: 0px -12px;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow {
+  top: 50%;
+  border: none;
+  background: var(--maan-color-white);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow svg {
+  fill: var(--maan-color-blue);
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow.btn-prev {
+  left: calc(18px + 24px);
+  right: inherit;
+}
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow.btn-next {
+  left: inherit;
+  right: calc(-18px + 24px);
+}
+
+
+.maan-manu-bar .maan-main-manu li a {
+  font-size: 16px;
+}
+
+
+.maan-widgets .widgets-gallery ul img {
+  height: 100px;
+}
+
+@media(max-width: 991px){
+  .politics-news .maan-news-list li {
+    grid-template-columns: auto !important;
+  }
+}
+
+
+.politics-news .card.maan-card-img .card-body::before {
+  height: 40%;
+  background: var(--maan-color-blue);
+  background: linear-gradient(0deg, var(--maan-color-black) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+img{
+  width: 100% !important;
+  /* object-fit: fill !important; */
+  object-fit: cover !important;
+  object-position: top center !important;
+}
+
+.maan-top-categories-section .card.maan-card-img .topcategories-thumb{
+  padding: 0;
+  border-radius: 0;
+  display: block;
+}
+
+.maan-top-news-section .card.maan-card-img .maan-card-body{
+  height: auto;
+}
+
+.politics-news .card.maan-card-img.politicsnews-card .maan-card-body{
+  height: auto;
+}
+@media(max-width: 991px){
+  .maan-top-bar{
+    display: none;
+  }
+}
+@media(max-width: 500px){
+  .maan-most-popular-section .news-tab .nav-pills {
+    padding: 20px 5px;
+  }
+  .maan-most-popular-section .news-tab .nav-pills button {
+    font-size: 10px;
+}
+}
+
+.maan-top-news-section .card.maan-card-img .card-body::before {
+  height: 200px;
+}
+
+
+.politics-news .card.maan-card-img .card-body::before {
+  height: 140px;
+}
+.card.maan-default-post.maansports-big-card .maan-post-img img {
+  height: 486px;
+}
+.maan-stay-connected .card.maan-card-img img, .card.maan-big-post .maan-post-img img {
+  height: 510px;
+}
+
+
+/* extra css start*/
+.maan-entertainment-news .maan-news-list li .maan-list-img img {
+  height: 100px;
+}
+.maan-news-list li .maan-list-text h4{
+  font-weight: 500;
+}
+.maan-stay-connected .card.maan-card-img img{
+  height: 490px;
+}
+.maan-news-list .maan-news-post-list-card .maan-list-text h4 {
+  font-weight: 500;
+}
+.card.maan-default-post.maansports-big-card .maan-post-img img {
+  height: 495px;
+}
+.card .maan-card-body .maan-text h4 {
+  font-weight: 600;
+}
+.maan-top-news-section .card .maan-card-body .maan-text h4 a:hover{
+  color: #fff;
+}
+
+.card.maan-card-img.politicsnews-card .maan-card-body .maan-text h4 a:hover{
+  color: #fff;
+}
+
+.maan-widgets .card .maan-card-body .maan-text h4{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+
+
+/* extra css end*/
+
+/* top news section start */
+.maan-top-news-section {
+  padding: 0px 0px 60px 0px;
+}
+.maan-top-news-section .card.maan-card-img .card-body::before {
+  height: 130px;
+  display: none !important;
+}
+.maan-top-news-section .card.maan-card-img .maan-text {
+  padding: 20px 24px;
+}
+
+.maan-top-news-section .topnews-big-card .card .maan-card-body .maan-text h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.maan-top-news-section .card .maan-card-body .maan-text h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 26px;
+}
+.maan-top-news-section .topnews-big-card .card.maan-card-img .topnews-thumb{
+  position: relative;
+  display: block;
+}
+
+.maan-top-news-section .card.maan-card-img .topnews-thumb:before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(15, 41, 49, 0) 0%, var(--maan-color-black) 100%);
+}
+
+.maan-top-news-section .topnews-big-card .card.maan-card-img .topnews-thumb:before {
+  background: linear-gradient(0deg, var(--maan-color-blue) 0%, rgba(15, 41, 49, 0) 100%);
+}
+
+.maan-top-news-section .topnews-big-card .card.maan-card-img .card-body::before {
+  display: none !important;
+}
+/* top news section end */
+
+/* maan-top-categories-section start */
+.maan-top-categories-section .maan-title-border-none{
+  margin-top: -6px;
+}
+
+/* maan-most-popular-section */
+.maan-most-popular-section .maan-title{
+  margin-top: -4px;
+}
+
+/* maan-most-popular-section */
+
+.maan-most-popular-section .news-tab .maan-news-list li:last-child{
+  margin-bottom: 0;
+}
+.maan-most-popular-section .news-tab .maan-news-list{
+  margin-top: -6px;
+}
+.maan-most-popular-section .maan-big-post.card .maan-card-body .maan-text ul{
+  margin-bottom: -4px;
+}
+.maan-most-popular-section .maan-big-post.card .maan-card-body .maan-text h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.maan-most-popular-section .maan-news-list li .maan-list-img img {
+  height: 115px;
+}
+.maan-most-popular-section
+.maan-news-list li .maan-list-text .maan-tag-parpul::before,
+.maan-news-list li .maan-list-text .maan-tag-green::before,
+.maan-news-list li .maan-list-text .maan-tag-blue::before,
+.maan-news-list li .maan-list-text .maan-tag-red::before {
+  background: transparent !important;
+}
+.maan-most-popular-section .maan-news-list li {
+  grid-template-columns: 27% auto;
+}
+.maan-most-popular-section .maan-news-list li .maan-list-text h4 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.maan-most-popular-section .maan-slide .card.maan-big-post .maan-post-img img {
+  height: 295px;
+}
+
+
+/* politic news  */
+.maan-politics-section .maan-title{
+  margin-bottom: 10px;
+  margin-top: -4px;
+}
+
+.politics-news-big-items .card .maan-card-body .maan-text h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.technologysmall-card-wrp .maan-card-body .maan-text h4{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.maan-politics-section .card.maan-default-post .maan-post-img img{
+  height: 205px !important;
+}
+.maan-politics-section .politics-news-big-items .card.maan-default-post .maan-post-img img{
+  height: 350px !important;
+}
+.politics-news-big-items{
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.politics-news-big-items:after{
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 99%;
+  background: #C5C5C5;
+}
+.politics-news-big-items:first-child::after{
+  position: absolute;
+  content: "";
+  display: block;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  height: 1px;
+  width: 99%;
+  background: #C5C5C5;
+}
+@media(max-width: 991px){
+
+  .politics-news-big-items{
+    padding-bottom: 0;
+  }
+
+  .politics-news-big-items:after{
+    display: none;
+  }
+
+  .politics-news-big-items:first-child::after{
+    display: none;
+  }
+}
+
+
+/* maan-entertainment-news */
+.maan-entertainment-news {
+  padding: 70px 0;
+  background: #f8f8f8;
+}
+.maan-entertainment-news ~ .maan-video-news-section{
+  background: transparent;
+}
+.maan-entertainment-news ~ .maan-video-news-section > .container {
+  margin-top: 0;
+}
+.maan-entertainmentslide .card .maan-card-body .maan-text h4{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.maan-entertainmentslide .card.maan-default-post{
+  background: transparent;
+}
+.maan-entertainmentslide .card.maan-default-post .card-body.maan-card-body{
+  padding-bottom: 0;
+}
+
+.maan-entertainment-news .maan-news-list h4 a {
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.maan-news-side-add{
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.side-add-thumb img{
+  width: 100%;
+  height: 338px;
+  object-fit: cover;
+}
+.side-add-thumb:after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgb(0,79,238);
+  background: linear-gradient(190deg, rgba(0,79,238,1) 0%, rgba(143,0,203,1) 100%);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.maan-news-side-add .add-text .add-btn{
+  display: block;
+  text-align: center;
+  max-width: 140px;
+  margin: 0 auto;
+  padding: 12px 0;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+.maan-news-side-add .add-text .add-title{
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.maan-news-side-add .add-text{
+  position: absolute;
+  max-width: 250px;
+  height: 100%;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 40px;
+
+}
+.side-add-thumb{
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.maan-video-news-section .card .maan-card-body .maan-text h4{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.maan-video-news-section .big-card.card .maan-card-body .maan-text h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.maan-video-news-section .big-card{
+  background: #F1F5F8;
+}
+.maan-video-news-section .card.big-card .maan-post-img img {
+  height: 280px;
+}
+
+section .maan-title .maan-title-text h2 svg{
+  width: 35px;
+}
+.maan-video-news-section .maan-title{
+  margin-bottom: 10px;
+  margin-top: -4px;
+  width: 100% !important;
+}
+
+section.maan-video-news-section.maan-slide-section .maan-card-slide .slick-arrow.btn-prev {
+  right: auto;
+  left: 13px;
+  top: -60px !important;
+}
+section.maan-video-news-section.maan-slide-section .maan-card-slide .slick-arrow.btn-next {
+  top: -60px !important;
+}
+
+
+.maan-sports-news-section .maansports-big-card{
+  margin-top: 8px;
+}
+.card.maan-default-post.maansports-big-card .maan-post-img img{
+  height: 410px;
+}
+.maansports-big-card .maan-card-body .maan-text h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.maansports-small-card .maan-card-body .maan-text h4{
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.card.maan-default-post.maansports-small-card .maan-post-img img {
+  height: 149px;
+}
+
+.maan-slide-section.maan-stay-connected .maan-slide .slick-arrow {
+  top: 40%;
+}
+
+.maan-don-t-miss-section .maan-title{
+  justify-content: center;
+}
+
+.maan-lifestyle-news .maan-title{
+  justify-content: center;
+}
+.maan-lifestyle-news .card .maan-card-body .maan-text h4{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.business .maan-default-post .maan-text .maan-icon svg path{
+  fill: #0389ff;
+}
+.maan-archive-details .maan-card-body .row .maan-icon svg path{
+
+  fill: #0389ff;
+}
+.maan-widgets .card .maan-card-body .maan-text h4{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.maan-sports-news-section .maan-title::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.maan-politics-section .maan-title::after {
+
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.maan-video-news-section .maan-title::after {
+
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.maan-don-t-miss-section .maan-title::after {
+
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.maan-lifestyle-news .maan-title::after {
+
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.maan-news-list li .maan-list-text span{
+  padding-left: 0  !important;
+}
+
+.maan-info-footer{
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: relative;
+  z-index: 1;
+}
+.maan-info-footer::after{
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(31, 32, 36, .9);
+  z-index: -1;
+}
+.maan-info-footer .row.maan-link-footer .maan-news-tags ul li a {
+  padding: 5px 10px;
+  background: #1E1F23;
+  border-color: #383838;
+}
+
+
+
+
+
+
+/* additional page css start w */
+
+/* section heading */
+.maan-section-title-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.maan-section-title-center h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3a3a3a;
+  line-height: 26px;
+}
+@media screen and (min-width: 768px) {
+  .maan-section-title-center h3 {
+    font-size: 32px;
+  }
+}
+.maan-section-title-center p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3a3a3a;
+  margin-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .maan-section-title-center p {
+    font-size: 16px;
+  }
+}
+
+
+/* team css start */
+.maan-team-section {
+  padding: 50px 0;
+}
+@media screen and (min-width: 992px) {
+  .maan-team-section {
+    padding: 70px 0;
+  }
+}
+.maan-team-section .maan-team-wrapper.grid-3 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: 1fr 2rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 992px) {
+  .maan-team-section .maan-team-wrapper.grid-3 {
+    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.maan-team-section .maan-team-item {
+  position: relative;
+  overflow: hidden;
+}
+.maan-team-section .maan-team-item .maan-inner-box {
+  position: relative;
+}
+.maan-team-section .maan-team-item .maan-inner-box .maan-image-box figure {
+  margin: 0;
+}
+.maan-team-section .maan-team-item .maan-inner-box .maan-image-box figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .maan-team-section .maan-team-item .maan-inner-box .maan-image-box figure img {
+    width: 370px;
+    height: 383px;
+  }
+}
+.maan-team-section .maan-team-item .maan-inner-box .maan-image-box:hover .maan-info-box {
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+@media screen and (min-width: 992px) {
+  .maan-team-section .maan-team-item .maan-inner-box .maan-image-box:hover .maan-info-box {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+.maan-team-section .maan-team-item .maan-info-box {
+  bottom: -30px;
+  position: absolute;
+  left: auto;
+  right: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 10px 25px rgba(3, 137, 255, 0.15);
+          box-shadow: 0px 10px 25px rgba(3, 137, 255, 0.15);
+  padding: 30px;
+  margin: 0 28px;
+  width: 83%;
+  height: auto;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+@media screen and (min-width: 992px) {
+  .maan-team-section .maan-team-item .maan-info-box {
+    margin: 0 30px;
+  }
+}
+.maan-team-section .maan-team-item .maan-info-box .maan-name {
+  font-size: 18px;
+  line-height: 16px;
+  color: #3a3a3a;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .maan-team-section .maan-team-item .maan-info-box .maan-name {
+    font-size: 22px;
+  }
+}
+.maan-team-section .maan-team-item .maan-info-box .maan-name:hover {
+  color: #0389FF;
+}
+.maan-team-section .maan-team-item .maan-info-box .maan-designation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #3a3a3a;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one {
+  position: relative;
+  padding: 14px 0 0;
+  text-align: center;
+  border-top: 1px dashed #DFDFDF;
+  padding-top: 15px;
+}
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one li {
+  position: relative;
+  display: inline-block;
+  margin-right: 14px;
+}
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one li a i,
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one li a svg {
+  position: relative;
+  display: block;
+  line-height: 27px;
+  text-align: center;
+  font-size: 16px;
+  fill: #888888;
+  color: #888888;
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one li a:hover i,
+.maan-team-section .maan-team-item .maan-info-box .social-icon-one li a:hover svg {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #0389FF;
+  fill: #0389FF;
+}
+
+@media (max-width: 600px) {
+  .maan-team-section .maan-team-item .maan-info-box {
+    padding: 15px;
+    margin: 0 22px;
+  }
+
+  .maan-team-section .maan-team-wrapper.grid-3 {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .maan-section-title-center h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .maan-team-section .maan-team-item .maan-info-box {
+    padding: 15px;
+    margin: 0 30px;
+  }
+}
+@media (max-width: 376px) {
+  .maan-team-section .maan-team-item .maan-info-box {
+    padding: 15px;
+    margin: 0 24px;
+  }
+}
+/* team css end */
+/*-------------------------------------------------------
+20. About css
+---------------------------------------------------------*/
+
+.maan-about-section {
+  padding-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .maan-about-section {
+   padding-top: 0;
+  }
+}
+.maan-about-section .maan-about-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .maan-about-section .maan-about-image img {
+    width: 1170px;
+    height: 581px;
+  }
+}
+
+.maan-content {
+  padding: 30px 0;
+}
+.maan-content .maan-content-title h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .maan-content .maan-content-title h3 {
+    font-size: 32px;
+  }
+}
+.maan-content .maan-content-title p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #3a3a3a;
+}
+.maan-content .maan-blockqoute .maan-blockqoute-content {
+  background: #e9f5ff;
+  padding: 30px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0px;
+  gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .maan-content .maan-blockqoute .maan-blockqoute-content {
+    padding: 50px 110px;
+  }
+}
+.maan-content .maan-blockqoute .maan-blockqoute-content .blockqoute {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 35px;
+  color: #3a3a3a;
+  margin-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .maan-content .maan-blockqoute .maan-blockqoute-content .blockqoute {
+    font-size: 22px;
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .maan-content .maan-blockqoute .maan-blockqoute-content .block-qoute {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .maan-content .maan-blockqoute .maan-blockqoute-content .block-qoute img {
+    width: 35px;
+    height: 27px;
+  }
+}
+
+@media (max-width: 576px) {
+  .maan-content .maan-blockqoute .maan-blockqoute-content {
+    padding: 18px;
+    gap: 10px;
+  }
+}
+
+/* gallary css start */
+.maan-blog-section {
+  background: #F6F6F6;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .maan-blog-section {
+    padding: 70px 0;
+  }
+}
+.maan-blog-section .container-fluid {
+  width: 100%;
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .maan-blog-section .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+}
+.maan-blog-section .maan-slider {
+  margin-right: 20px;
+}
+.maan-blog-section .maan-slider .maan-blog-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .maan-blog-section .maan-slider .maan-blog-image img {
+    width: 370px;
+    height: 306px;
+  }
+}
+
+/* gallary css end */
+/* about css end */
+
+
+/* contact css start */
+.maan-contact-section {
+  padding: 50px 0;
+}
+@media screen and (min-width: 992px) {
+  .maan-contact-section {
+    padding: 70px 0;
+  }
+}
+
+.maan-contact-content .maan-contact-title {
+  position: relative;
+}
+.maan-contact-content .maan-contact-title h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3a3a3a;
+  line-height: 26px;
+}
+.maan-contact-content .maan-contact-title h3::before {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  right: auto;
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: #0389FF;
+}
+@media screen and (min-width: 768px) {
+  .maan-contact-content .maan-contact-title h3 {
+    font-size: 24px;
+  }
+}
+.maan-contact-content .maan-contact-title p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .maan-contact-content .maan-contact-title p {
+    font-size: 16px;
+  }
+}
+
+.g-map--wrapper iframe {
+  width: 100%;
+  height: 40rem;
+  border: none;
+}
+
+.maan-contact-us {
+  padding: 70px 0;
+}
+.maan-contact-us .input-style-2 {
+  height: 67px;
+  padding: 15px;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3a3a3a;
+  width: 100%;
+  border: 1px solid #D2D2D2;
+}
+.maan-contact-us .input-style-2:hover, .maan-contact-us .input-style-2:focus {
+  border: 1px solid #0389FF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.maan-contact-us textarea.input-style-2 {
+  height: 15rem;
+}
+.maan-contact-us .login-btns {
+  margin-top: 0px;
+}
+
+/* contact css end */
+
+
+
+/* policy css start */
+.maan-privacy-section {
+  padding-top: 0;
+}
+@media screen and (min-width: 992px) {
+  .maan-privacy-section {
+   padding-top: 0;
+  }
+}
+
+.maan-content {
+  padding: 30px 0;
+}
+.maan-content .maan-content-title h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .maan-content .maan-content-title h3 {
+    font-size: 32px;
+  }
+}
+.maan-content .maan-content-title p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+}
+.maan-content .maan-privacy-list {
+  margin-bottom: 20px;
+}
+.maan-content .maan-privacy-list ul {
+  color: #343434;
+}
+.maan-content .maan-privacy-list ul li {
+  list-style: disc;
+  color: #0389FF;
+  margin-left: 13px;
+  font-size: 20px;
+}
+.maan-content .maan-privacy-list ul li a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.0025em;
+  color: #3a3a3a;
+}
+
+/* policy css end */
+
+@media(max-width: 1200px){
+  .maan-manu-bar .maan-main-manu li {
+    margin-right: 16px;
+  }
+  .maan-manu-bar .maan-main-manu li a {
+    font-size: 14px;
+  }
+}
+@media(max-width: 991px){
+  .maan-contact-content .maan-contact-title{
+    margin-bottom: 30px;
+  }
+  .middle-footer-items{
+    max-width: 100%;
+  }
+}
+@media(max-width: 360px){
+  .maan-entertainment-news .maan-stay-connected .maan-s-follower{
+    grid-template-columns: auto;
+  }
+}
+
+.modal-content .maan-signup-signin-form{
+  max-width: 100%;
+  width: 100%;
+}
+
+.maan-video-news-section.maan-slide-section{
+  display: none;
+}

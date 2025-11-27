@@ -1,0 +1,2272 @@
+@charset "utf-8";
+
+/*
+Theme Name: Maan News HTML5 Template
+Theme URI: https://maantheme.com/maan-news
+Author: Maan Theme
+Author URI: https://maantheme.com
+Desing by: Maan Theme
+Version: 1.0
+License:
+Tags:
+*/
+
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+    1 Theme Default
+
+    2 Maan Top Bar
+
+    3 Maan Mid Bar
+
+    4 Maan Manu Bar
+
+    5 Maan Breaking News
+
+    6 Maan Top News
+
+    7 Maan Top Categories
+
+    8 Maan Most Popular
+
+    9 Maan Adds Banner
+
+    10 Maan Politics News
+
+    11 Maan Entertainment News
+
+    12 Maan Video News
+
+    13 Maan Malti News
+
+    14 Maan Sports News
+
+    15 Maan Technology News
+
+    16 Maan Don't Miss
+
+    17 Maan Lifestyle News
+
+    18 Maan Info Footer
+
+    19 Maan Breadcrumb
+
+    20 Maan Post Archive
+
+    21 Maan Widgets
+
+    22 Maan Business
+
+    23 Maan Archive Details
+
+    24 Maan Pagination
+
+======================================
+[ End table content ]
+======================================*/
+
+
+/*=====================
+    1 Theme Default
+=======================*/
+
+ :root {
+    --maan-color-white: #FFFFFF;
+    --maan-color-white2: #F8F8F8;
+    --maan-color-white3: #F1F1F1;
+    --maan-color-white4: #FBFBFB;
+    --maan-color-white5: #F6F6F6;
+    --maan-color-black: #090036;
+    --maan-color-black2: #1F2024;
+    --maan-color-black3: #1D1D1D;
+    --maan-color-gray: #565656;
+    --maan-color-gray2: #888888;
+    --maan-color-gray3: #606060;
+    --maan-color-gray4: #5A5A5A;
+    --maan-color-border: #EBEBEB;
+    --maan-color-border2: #CECECE;
+    --maan-color-orange: #FD6533;
+    --maan-color-green: #00C857;
+    --maan-color-red: #E12127;
+    --maan-color-blue: #0389FF;
+    --maan-color-lblue: #B2DBFF;
+    --maan-color-parpul: #5856D5;
+    --maan-color-fb: #3868CE;
+    --maan-color-ins: #C32AA3;
+    --maan-color-tw: #07ACDE;
+    --maan-color-yt: #E52D27;
+    --maan-color-tr: transparent;
+}
+
+//Color
+$maan-color-white: var(--maan-color-white);
+$maan-color-white2: var(--maan-color-white2);
+$maan-color-white3: var(--maan-color-white3);
+$maan-color-white4: var(--maan-color-white4);
+$maan-color-white5: var(--maan-color-white5);
+$maan-color-black: var(--maan-color-black);
+$maan-color-black2: var(--maan-color-black2);
+$maan-color-black3: var(--maan-color-black3);
+$maan-color-gray: var(--maan-color-gray);
+$maan-color-gray2: var(--maan-color-gray2);
+$maan-color-gray3: var(--maan-color-gray3);
+$maan-color-gray4: var(--maan-color-gray4);
+$maan-color-border: var(--maan-color-border);
+$maan-color-border2: var(--maan-color-border2);
+$maan-color-orange: var(--maan-color-orange);
+$maan-color-green: var(--maan-color-green);
+$maan-color-red: var(--maan-color-red);
+$maan-color-blue: var(--maan-color-blue);
+$maan-color-lblue: var(--maan-color-lblue);
+$maan-color-parpul: var(--maan-color-parpul);
+$maan-color-fb: var(--maan-color-fb);
+$maan-color-ins: var(--maan-color-ins);
+$maan-color-tw: var(--maan-color-tw);
+$maan-color-yt: var(--maan-color-yt);
+$maan-color-tr: var(--maan-color-tr);
+//Prefix Mixin
+@mixin maan_transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    transform: $property;
+}
+
+@mixin maan_transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    transition: $property;
+}
+
+@mixin maan_transition-delay($property) {
+    -webkit-transition-delay: $property;
+    -moz-transition-delay: $property;
+    transition-delay: $property;
+}
+
+@mixin maan_animation($property) {
+    -webkit-animation: $property;
+    -moz-animation: $property;
+    animation: $property;
+}
+
+@mixin maan_box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
+
+html {
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    margin: 0;
+    padding: 0 !important;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    word-wrap: break-word;
+    background: $maan-color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Jost', sans-serif;
+    color: $maan-color-black;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 58px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+    color: $maan-color-gray;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+a,
+button,
+.btn,
+ol li a,
+ul li a {
+    letter-spacing: 0;
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    color: $maan-color-black;
+    border: none;
+    @include maan_transition(all 0.4s ease);
+}
+
+a:hover,
+.btn:hover,
+ol li a:hover,
+ul li a:hover {
+    outline: none !important;
+    text-decoration: none;
+    color: $maan-color-black;
+}
+
+.btn,
+.btn:focus {
+    outline: none !important;
+    @include maan_box-shadow(0 0 0 .0em rgba(0, 123, 255, .25) !important);
+}
+
+a.link-btn,
+.d-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: $maan-color-white;
+    border: 1px solid $maan-color-tr;
+    border-radius: 5px;
+    background: $maan-color-blue;
+    &:hover {
+        color: $maan-color-blue;
+        border-color: $maan-color-blue;
+        background: $maan-color-white;
+    }
+}
+
+.d-btn {
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    padding: 80px 0px;
+    .maan-title,
+    .maan-title-border-none,
+    .maan-title-center {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 40px;
+        .maan-title-icon {
+            margin-right: 12px;
+            svg {
+                fill: $maan-color-blue;
+                --svg-font-size: 28px;
+            }
+        }
+        .maan-title-text h2 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+            text-transform: capitalize;
+        }
+    }
+    .maan-title,
+    .maan-title-center {
+        position: relative;
+        padding-bottom: 20px;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            left: 0;
+            bottom: 0;
+        }
+        &::before {
+            width: 100%;
+            background: $maan-color-border;
+        }
+        &::after {
+            width: 120px;
+            background: $maan-color-blue;
+        }
+    }
+    .maan-title-center {
+        -webkit-box-pack: center;
+        justify-content: center;
+        &::after {
+            left: 50%;
+            @include maan_transform(translateX(-50%));
+        }
+        &.v2 {
+            padding-bottom: 0px;
+            .maan-title-icon {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $maan-color-blue;
+                border-radius: 50px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 50%;
+                    height: 50%;
+                    top: 50%;
+                    left: 50%;
+                    border-radius: 50px;
+                    background: $maan-color-blue;
+                    @include maan_transform(translate(-50%, -50%));
+                }
+                svg {
+                    display: none;
+                }
+            }
+            .maan-title-text~.maan-title-icon {
+                margin: 0px 0px 0px 12px;
+            }
+            &::before,
+            &::after {
+                width: calc(100% - 60%);
+                height: 1px;
+                bottom: inherit;
+                background: $maan-color-blue;
+            }
+            &::after {
+                left: inherit;
+                right: 0;
+                @include maan_transform(translateX(0%));
+            }
+        }
+    }
+    &.maan-slide-section {
+        .maan-title {
+            width: calc(100% - 101px);
+        }
+        .maan-slide .slick-arrow,
+        .maan-card-slide .slick-arrow {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: -60px;
+            padding: 0;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50px;
+            border: 1px solid $maan-color-border;
+            background: $maan-color-tr;
+            svg {
+                fill: $maan-color-border;
+                --svg-font-size: 12px;
+            }
+            &:hover {
+                background: $maan-color-blue;
+                svg {
+                    fill: $maan-color-white;
+                }
+            }
+            &.btn-prev {
+                right: 45px;
+            }
+            &.btn-next {
+                right: 0px;
+            }
+        }
+        .maan-big-post {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+svg {
+    fill: $maan-color-black;
+    --svg-font-size: 14px;
+    width: var(--svg-font-size);
+    height: var(--svg-font-size);
+    margin-top: -4px;
+    @include maan_transition(all 0.4s ease);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    background: $maan-color-white;
+    &.maan-card-img {
+        .card-body {
+            height: 100%;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: calc(100% - 80px);
+                bottom: 0;
+                left: 0;
+                opacity: 0.8;
+                background: $maan-color-black;
+                background: linear-gradient(180deg, rgba(15, 41, 49, 0) 0%, var(--maan-color-black) 100%);
+                border-radius: 0px 0px 10px 10px;
+                z-index: 2;
+            }
+            &.maan-big-img::before {
+                background: $maan-color-blue;
+                background: linear-gradient(180deg, rgba(15, 41, 49, 0) 0%, var(--maan-color-blue) 100%);
+            }
+        }
+        .maan-text {
+            position: absolute;
+            width: 100%;
+            padding: 48px 24px;
+            bottom: 0;
+            left: 0;
+            z-index: 4;
+            li {
+                .maan-icon {
+                    svg {
+                        fill: $maan-color-white;
+                    }
+                }
+                .maan-item-text {
+                    color: $maan-color-white;
+                    a {
+                        color: $maan-color-white;
+                        &:hover {
+                            color: $maan-color-blue;
+                        }
+                    }
+                }
+            }
+            h4 a {
+                color: $maan-color-white;
+                &:hover {
+                    color: $maan-color-blue;
+                }
+            }
+        }
+    }
+    .card-header,
+    .card-body {
+        padding: 12px 4px;
+    }
+    &.maan-card-img,
+    &.maan-big-post .maan-post-img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            // height: 100%;
+            height: 440px !important;
+            object-position: center;
+            object-fit: cover;
+            filter: grayscale(0%)blur(0);
+            @include maan_transform(scale(1));
+            @include maan_transition(all 0.4s ease);
+        }
+        .maan-tag-parpul,
+        .maan-tag-green,
+        .maan-tag-blue,
+        .maan-tag-red {
+            position: absolute;
+            left: 20px;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 14px;
+            line-height: 24px;
+            color: $maan-color-white;
+            z-index: 2;
+        }
+        .maan-tag-parpul {
+            background: $maan-color-parpul;
+        }
+        .maan-tag-green {
+            background: $maan-color-green;
+        }
+        .maan-tag-blue {
+            background: $maan-color-blue;
+        }
+        .maan-tag-red {
+            background: $maan-color-red;
+        }
+    }
+    .maan-post-img {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            filter: grayscale(0%)blur(0);
+            @include maan_transform(scale(1));
+            @include maan_transition(all 0.4s ease);
+        }
+        a.venobox {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            border-radius: 50px;
+            z-index: 2;
+            text-align: center;
+            line-height: 50px;
+            @include maan_transform(translate(-50%, -50%));
+            background: $maan-color-white;
+            svg {
+                fill: $maan-color-orange;
+                --svg-font-size: 12px;
+            }
+        }
+    }
+    &.maan-card-img,
+    &.maan-big-post {
+        &:hover img {
+            filter: grayscale(50%)blur(0.8px);
+            @include maan_transform(scale(1.1));
+        }
+    }
+    &.maan-card-img {
+        .maan-tag-parpul,
+        .maan-tag-green,
+        .maan-tag-blue,
+        .maan-tag-red {
+            top: 20px;
+        }
+        .maan-card-body {
+            position: absolute;
+            padding: 0;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &.maan-big-post {
+        .maan-tag-parpul,
+        .maan-tag-green,
+        .maan-tag-blue,
+        .maan-tag-red {
+            bottom: 20px;
+        }
+        .maan-post-img {
+            position: relative;
+            border-radius: 10px;
+        }
+    }
+    .maan-card-body {
+        .maan-text {
+            ul~h4 {
+                margin-top: 12px;
+            }
+            li {
+                display: inline-block;
+                margin-right: 8px;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                .maan-icon {
+                    margin-right: 4px;
+                }
+            }
+            h4 {
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 700;
+                a:hover {
+                    color: $maan-color-blue;
+                }
+            }
+            .maan-icon svg {
+                fill: $maan-color-gray2;
+            }
+            .maan-item-text {
+                color: $maan-color-gray2;
+                a {
+                    color: $maan-color-gray2;
+                    &:hover {
+                        color: $maan-color-blue;
+                    }
+                }
+            }
+        }
+    }
+    &.maan-big-post {
+        margin-bottom: 24px;
+    }
+}
+
+.maan-news-list li {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 20px;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 24px;
+    .maan-list-img {
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            filter: grayscale(0%)blur(0);
+            @include maan_transform(scale(1));
+            @include maan_transition(all 0.4s ease);
+        }
+    }
+    .maan-list-text {
+        .maan-tag-parpul,
+        .maan-tag-green,
+        .maan-tag-blue,
+        .maan-tag-red {
+            position: relative;
+            padding: 2px 12px;
+            font-size: 14px;
+            line-height: 24px;
+            z-index: 2;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.2;
+                border-radius: 50px;
+                z-index: -2;
+            }
+        }
+        .maan-tag-parpul {
+            color: $maan-color-parpul;
+            &::before {
+                background: $maan-color-parpul;
+            }
+        }
+        .maan-tag-green {
+            color: $maan-color-green;
+            &::before {
+                background: $maan-color-green;
+            }
+        }
+        .maan-tag-blue {
+            color: $maan-color-blue;
+            &::before {
+                background: $maan-color-blue;
+            }
+        }
+        .maan-tag-red {
+            color: $maan-color-red;
+            &::before {
+                background: $maan-color-red;
+            }
+        }
+        .maan-tag-parpul~h4,
+        .maan-tag-green~h4,
+        .maan-tag-blue~h4,
+        .maan-tag-red~h4,
+        h4~ul {
+            margin-top: 8px;
+        }
+        h4 {
+            font-weight: 700;
+        }
+        a:hover {
+            color: $maan-color-blue;
+        }
+        li {
+            display: inline-block;
+            margin: 0px 8px 0px 0px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            .maan-icon {
+                margin-right: 4px;
+            }
+        }
+        .maan-icon svg {
+            fill: $maan-color-gray2;
+        }
+        .maan-item-text {
+            color: $maan-color-gray2;
+            a {
+                color: $maan-color-gray2;
+                &:hover {
+                    color: $maan-color-blue;
+                }
+            }
+        }
+    }
+    &:hover {
+        .maan-list-img img {
+            filter: grayscale(50%)blur(0.8px);
+            @include maan_transform(scale(1.1));
+        }
+    }
+}
+
+.card.maan-default-post {
+    .maan-post-img {
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            filter: grayscale(0%)blur(0);
+            @include maan_transform(scale(1));
+            @include maan_transition(all 0.4s ease);
+        }
+    }
+    .maan-text {
+        .maan-tag-parpul,
+        .maan-tag-green,
+        .maan-tag-blue,
+        .maan-tag-red {
+            position: relative;
+            padding: 2px 12px;
+            font-size: 14px;
+            line-height: 24px;
+            z-index: 2;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.2;
+                border-radius: 50px;
+                z-index: -2;
+            }
+        }
+        .maan-tag-parpul {
+            color: $maan-color-parpul;
+            &::before {
+                background: $maan-color-parpul;
+            }
+        }
+        .maan-tag-green {
+            color: $maan-color-green;
+            &::before {
+                background: $maan-color-green;
+            }
+        }
+        .maan-tag-blue {
+            color: $maan-color-blue;
+            &::before {
+                background: $maan-color-blue;
+            }
+        }
+        .maan-tag-red {
+            color: $maan-color-red;
+            &::before {
+                background: $maan-color-red;
+            }
+        }
+        .maan-tag-parpul~h4,
+        .maan-tag-green~h4,
+        .maan-tag-blue~h4,
+        .maan-tag-red~h4,
+        h4~ul {
+            margin-top: 8px;
+        }
+        h4 {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        a:hover {
+            color: $maan-color-blue;
+        }
+        li {
+            display: inline-block;
+            margin: 0px 8px 0px 0px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            .maan-icon {
+                margin-right: 4px;
+            }
+        }
+        .maan-icon svg {
+            fill: $maan-color-gray2;
+        }
+        .maan-item-text {
+            color: $maan-color-gray2;
+            a {
+                color: $maan-color-gray2;
+                &:hover {
+                    color: $maan-color-blue;
+                }
+            }
+        }
+    }
+    &:hover {
+        .maan-post-img img {
+            filter: grayscale(50%)blur(0.8px);
+            @include maan_transform(scale(1.1));
+        }
+    }
+}
+
+
+/*=====================
+    2 Maan Top Bar
+=======================*/
+
+.maan-top-bar {
+    padding: 12px 0px;
+    background: $maan-color-black2;
+    .maan-weider-news {
+        .icon svg {
+            fill: $maan-color-white;
+            --svg-font-size: 18px;
+        }
+        .maan-city,
+        .maan-celsius {
+            display: inline-block;
+            color: $maan-color-white;
+        }
+        .maan-city {
+            font-size: 14px;
+            line-height: 24px;
+            margin: 0px 4px;
+        }
+        .maan-celsius {
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+    .maan-current-date {
+        color: $maan-color-white;
+        text-align: right;
+        .icon svg {
+            fill: $maan-color-white;
+            --svg-font-size: 12px;
+            margin-right: 8px;
+        }
+        .maan-current-week,
+        .maan-current-day {
+            font-size: 14px;
+        }
+    }
+    .maan-social-link {
+        text-align: right;
+        ul {
+            border-left: 1px solid $maan-color-white;
+        }
+        li {
+            display: inline-block;
+            margin-right: 14px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            svg {
+                fill: $maan-color-white;
+            }
+            a:hover svg {
+                fill: $maan-color-blue;
+            }
+        }
+    }
+}
+
+
+/*=====================
+    3 Maan Mid Bar
+=======================*/
+
+.maan-mid-bar {
+    padding: 24px 0px;
+    background: $maan-color-white;
+    .maan-logo a {
+        display: inline-block;
+        max-width: 180px;
+        img {
+            width: 100%;
+        }
+    }
+    .maan-header-adds img {
+        width: 100%;
+    }
+}
+
+
+/*=====================
+    4 Maan Manu Bar
+=======================*/
+
+.modal-backdrop {
+    z-index: 4;
+}
+
+.maan-manu-bar {
+    padding: 12px 0px;
+    background: $maan-color-blue;
+    .modal .modal-dialog {
+        margin: 0 auto;
+        top: 30%;
+        @include maan_transform(translateY(-30%));
+    }
+    .maan-main-manu {
+        .maan-home-icon {
+            margin-right: 24px;
+            svg {
+                fill: $maan-color-white;
+            }
+        }
+        ul,
+        li {
+            display: inline-block;
+        }
+        li {
+            margin-right: 24px;
+            a {
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 24px;
+                color: $maan-color-white;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 30%;
+                    height: 2px;
+                    left: 50%;
+                    bottom: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    background: $maan-color-white;
+                    @include maan_transform(translateX(-50%));
+                    @include maan_transition(all 0.4s ease);
+                }
+            }
+            a:hover::before,
+            &.active a::before {
+                width: 90%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .maan-more-icon a svg {
+            fill: $maan-color-white;
+            --svg-font-size: 18px;
+        }
+    }
+    .manu-btn {
+        position: relative;
+        padding: 0;
+        width: 30px;
+        height: 20px;
+        border: none;
+        background: $maan-color-tr;
+        span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            border-radius: 5px;
+            background: $maan-color-black;
+            @include maan_transition(all 0.4s ease);
+            &:nth-child(1) {
+                top: -6px;
+            }
+            &:nth-child(2) {
+                top: 3px;
+            }
+            &:nth-child(3) {
+                top: 12px;
+            }
+        }
+        &.active span {
+            &:nth-child(1) {
+                top: 5px;
+                @include maan_transform(rotate(135deg));
+            }
+            &:nth-child(2) {
+                width: 0px;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                top: 5px;
+                @include maan_transform(rotate(-135deg));
+            }
+        }
+    }
+    .maan-right-btns {
+        text-align: right;
+        li {
+            display: inline-block;
+            margin-left: 12px;
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+        .maan-search-btn,
+        .maan-profile-btn {
+            position: relative;
+            padding: 0;
+            width: 35px;
+            height: 35px;
+            border: none;
+            line-height: 35px;
+            background: $maan-color-tr;
+            z-index: 2;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                z-index: -2;
+                border-radius: 50px;
+                background: $maan-color-white;
+                @include maan_transition(all 0.4s ease);
+            }
+            svg {
+                fill: $maan-color-white;
+                --svg-font-size: 14px;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+                svg {
+                    fill: $maan-color-blue;
+                }
+            }
+        }
+        .modal-content {
+            display: block;
+            border-radius: 5px;
+            padding: 30px;
+            form {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+            input {
+                width: 100%;
+                height: 40px;
+                border-radius: 5px 0px 0px 5px;
+                &:focus {
+                    border-color: $maan-color-blue;
+                }
+            }
+            button {
+                width: 200px;
+                height: 40px;
+                border: none;
+                border-radius: 0px 5px 5px 0px;
+                &:hover {
+                    color: $maan-color-white;
+                    background: $maan-color-blue;
+                }
+            }
+        }
+    }
+}
+
+header.sticky-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    &~main {
+        margin-top: 262px;
+    }
+}
+
+header.sticky-mid-manu {
+    .maan-top-bar.sticky {
+        margin-bottom: 214px;
+    }
+    .maan-wrap-manu {
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        &.sticky {
+            position: fixed;
+        }
+    }
+}
+
+header.sticky-manu {
+    .maan-mid-bar.sticky {
+        margin-bottom: 60px;
+    }
+    .maan-manu-bar {
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        &.sticky {
+            position: fixed;
+        }
+    }
+}
+
+
+/*=========================
+    5 Maan Breaking News
+===========================*/
+
+.maan-breaking-news-section {
+    padding: 40px 0px;
+    .maan-slide-title {
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding: 8px;
+        z-index: 2;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.1;
+            background: $maan-color-blue;
+            z-index: -2;
+        }
+        .icon {
+            margin-right: 8px;
+            svg {
+                fill: $maan-color-blue;
+            }
+        }
+    }
+    .maan-slide-text {
+        width: calc(100% - 85px);
+        .slick-arrow {
+            position: absolute;
+            width: 35px;
+            height: 40px;
+            top: -9px;
+            padding: 0;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid $maan-color-border;
+            background: $maan-color-white;
+            svg {
+                fill: $maan-color-border;
+                --svg-font-size: 14px;
+            }
+            &:hover {
+                background: $maan-color-blue;
+                svg {
+                    fill: $maan-color-white;
+                }
+            }
+            &.btn-prev {
+                right: -45px;
+            }
+            &.btn-next {
+                right: -85px;
+            }
+        }
+    }
+}
+
+
+/*=====================
+    6 Maan Top News
+=======================*/
+
+.maan-top-news-section {
+    padding: 0px 0px 40px 0px;
+}
+
+
+/*=========================
+   7 Maan Top Categories
+===========================*/
+
+.maan-top-categories-section {
+    padding-top: 0px;
+    &.maan-slide {
+        .maan-title {
+            width: calc(100% - 102px);
+        }
+        .slick-arrow {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: -60px;
+            padding: 0;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50px;
+            border: 1px solid $maan-color-border;
+            background: $maan-color-white;
+            svg {
+                fill: $maan-color-border;
+                --svg-font-size: 12px;
+            }
+            &:hover {
+                background: $maan-color-blue;
+                svg {
+                    fill: $maan-color-white;
+                }
+            }
+            &.btn-prev {
+                right: 55px;
+            }
+            &.btn-next {
+                right: 10px;
+            }
+        }
+        .maan-card-img {
+            margin: 0px 12px;
+        }
+    }
+    .row>div:nth-last-child(1) .maan-card-img,
+    .row>div:nth-last-child(2) .maan-card-img,
+    .row>div:nth-last-child(3) .maan-card-img,
+    .row>div:nth-last-child(4) .maan-card-img {
+        margin-bottom: 0px;
+    }
+    .maan-card-img {
+        margin-bottom: 24px;
+        .maan-card-body {
+            padding: 12px 24px;
+            height: inherit;
+        }
+        a {
+            position: relative;
+            display: grid;
+            padding: 12px 24px;
+            grid-template-columns: auto auto;
+            grid-gap: 12px;
+            text-transform: capitalize;
+            color: $maan-color-black;
+            border-radius: 50px;
+            background: $maan-color-lblue;
+            span {
+                &:first-child {
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-weight: 700;
+                }
+                &:last-child {
+                    font-size: 15px;
+                    line-height: 25px;
+                    font-weight: 500;
+                    text-align: right;
+                }
+            }
+            &:hover {
+                background: $maan-color-white;
+            }
+        }
+    }
+}
+
+
+/*=========================
+   8 Maan Most Popular
+===========================*/
+
+.maan-most-popular-section {
+    background: $maan-color-white2;
+    .slick-list {
+        margin: 0px -12px;
+        .card {
+            margin: 0px 12px;
+        }
+    }
+    .card {
+        background: $maan-color-tr;
+    }
+    .news-tab {
+        .nav-pills {
+            position: relative;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-gap: 12px;
+            z-index: 2;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.1;
+                border-radius: 5px;
+                background: $maan-color-blue;
+                z-index: -2;
+            }
+            button {
+                position: relative;
+                padding: 0;
+                text-transform: capitalize;
+                color: $maan-color-black;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 10%;
+                    height: 3px;
+                    left: 50%;
+                    bottom: -20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    background: $maan-color-blue;
+                    @include maan_transform(translateX(-50%));
+                    @include maan_transition(all 0.4s ease);
+                }
+                &.active {
+                    background: $maan-color-tr;
+                    &::before {
+                        width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .maan-news-list>ul {
+            margin-top: 40px;
+        }
+    }
+    .maan-post-groop {
+        padding: 0;
+        margin: 0;
+        border-top: 1.5px dashed $maan-color-gray2;
+        .card {
+            margin-top: 24px;
+        }
+    }
+}
+
+
+/*=====================
+    9 Maan Adds Banner
+=======================*/
+
+.maan-adds-banner {
+    padding: 80px 0px;
+    .maan-add img {
+        width: 100%;
+    }
+}
+
+
+/*==========================
+    10 Maan Politics News
+============================*/
+
+.politics-news {
+    padding-top: 0px;
+    .card.maan-card-img .card-body::before {
+        height: 30%;
+        background: $maan-color-blue;
+        background: linear-gradient(0deg, var(--maan-color-blue) 0%, rgba(15, 41, 49, 0) 100%);
+    }
+    .maan-news-list {
+        padding: 20px 24px;
+        border-left: 4px solid $maan-color-blue;
+        border-radius: 10px;
+        background: $maan-color-black3;
+        li {
+            grid-template-columns: auto;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        .maan-list-text h4 a {
+            font-size: 18px;
+            line-height: 28px;
+            color: $maan-color-white;
+            &:hover {
+                color: $maan-color-blue;
+            }
+        }
+    }
+    .maan-default-post {
+        margin-top: 24px;
+    }
+}
+
+
+/*==============================
+    11 Maan Entertainment News
+================================*/
+
+.maan-entertainment-news {
+    padding: 0px 0px 24% 0px;
+    .slick-list {
+        margin: 0px -12px;
+        .row {
+            margin: 0px;
+        }
+    }
+    &~.maan-video-news-section {
+        background: $maan-color-white3;
+        &>.container {
+            margin-top: -24%;
+        }
+    }
+    .maan-news-list {
+        li {
+            margin: 24px 0px 0px 0px;
+        }
+        h4 a {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .maan-stay-connected {
+        .maan-s-follower {
+            padding: 12px 0px;
+            margin: 0px auto;
+            background: $maan-color-border;
+            &>div:nth-last-child(1) .follower-btn,
+            &>div:nth-last-child(2) .follower-btn {
+                margin-bottom: 0px;
+            }
+        }
+        .follower-btn {
+            padding: 8px 24px;
+            margin-bottom: 24px;
+            &.maan-facebook {
+                background: $maan-color-fb;
+                svg {
+                    fill: $maan-color-fb;
+                }
+            }
+            &.maan-instagram {
+                background: $maan-color-ins;
+                svg {
+                    fill: $maan-color-ins;
+                }
+            }
+            &.maan-twitter {
+                background: $maan-color-tw;
+                svg {
+                    fill: $maan-color-tw;
+                }
+            }
+            &.maan-youtube {
+                background: $maan-color-yt;
+                svg {
+                    fill: $maan-color-yt;
+                }
+            }
+            a {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+            .maan-icon {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 40px;
+                background: $maan-color-white;
+                svg {
+                    --svg-font-size: 20px;
+                }
+            }
+            .maan-text {
+                margin-left: 12px;
+                .maan-f-text,
+                .maan-f-numbber {
+                    font-size: 16px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    color: $maan-color-white;
+                }
+                .maan-f-numbber {
+                    font-weight: 700;
+                }
+            }
+        }
+        .maan-slide {
+            margin-top: 24px;
+            .slick-list {
+                margin: 0px -12px;
+            }
+            .slick-arrow {
+                top: 50%;
+                border: none;
+                background: $maan-color-white;
+                @include maan_transform(translateX(-50%));
+                z-index: 2;
+                svg {
+                    fill: $maan-color-blue;
+                }
+                &.btn-prev {
+                    left: calc(18px + 24px);
+                    right: inherit;
+                }
+                &.btn-next {
+                    left: inherit;
+                    right: calc(-18px + 24px);
+                }
+            }
+            .card {
+                margin: 0px 12px;
+            }
+        }
+    }
+}
+
+
+/*=====================
+    12 Maan Video News
+=======================*/
+
+.maan-video-news-section {
+    .slick-slide {
+        margin: 0px 12px;
+    }
+    .maan-default-post {
+        background: $maan-color-tr;
+        margin-top: 24px;
+        a.venobox {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+        }
+    }
+    .big-card {
+        padding: 20px;
+        border-radius: 10px;
+        background: $maan-color-white;
+        a.venobox {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            svg {
+                --svg-font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/*=====================
+    13 Maan Malti News
+=======================*/
+
+.maan-malti-news {
+    .maan-title {
+        width: calc(100% - 100px);
+    }
+    .maan-news-list {
+        li {
+            margin: 24px 0px 0px 0px;
+        }
+        h4 a {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}
+
+
+/*=========================
+    14 Maan Sports News
+===========================*/
+
+.maan-sports-news-section {
+    background: $maan-color-white4;
+    .maan-default-post {
+        margin-bottom: 24px;
+        background: $maan-color-tr;
+    }
+    .maan-news-list>ul {
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 24px;
+        -webkit-box-align: center;
+        align-items: center;
+        border-top: 1px solid $maan-color-border2;
+        li:nth-last-child(1),
+        li:nth-last-child(2) {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+/*=============================
+    15 Maan Technology News
+===============================*/
+
+.maan-technology-news-section .col-lg-3 .maan-default-post {
+    margin-top: 24px;
+}
+
+
+/*=============================
+    16 Maan Don't Miss
+===============================*/
+
+.maan-don-t-miss-section {
+    padding-top: 0px;
+    .container-fluid {
+        padding: 0;
+        .row>div {
+            padding: 0;
+        }
+        .maan-card-img,
+        .maan-card-body::before,
+        .maan-card-body .maan-tag-parpul,
+        .maan-card-body .maan-tag-green,
+        .maan-card-body .maan-tag-blue,
+        .maan-card-body .maan-tag-red {
+            border-radius: 0;
+        }
+        .maan-card-body {
+            opacity: 0;
+            visibility: hidden;
+            bottom: -100%;
+            @include maan_transition(all 0.4s ease);
+            .maan-text {
+                padding: 24px;
+                h4 {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .slick-list .slick-center .maan-card-body,
+        .maan-card-img:hover .maan-card-body {
+            opacity: 1;
+            visibility: visible;
+            bottom: 0;
+        }
+    }
+}
+
+
+/*=============================
+    17 Maan Lifestyle News
+===============================*/
+
+.maan-lifestyle-news {
+    padding-top: 0px;
+    .maan-post-groop {
+        .maan-default-post {
+            margin-top: 24px;
+        }
+        &>div:nth-child(1) .maan-default-post,
+        &>div:nth-child(2) .maan-default-post,
+        &>div:nth-child(3) .maan-default-post,
+        &>div:nth-child(4) .maan-default-post {
+            margin-top: 0;
+        }
+    }
+}
+
+
+/*=============================
+    18 Maan Info Footer
+===============================*/
+
+.maan-info-footer {
+    padding: 0;
+    background: $maan-color-black2;
+    .logo a {
+        display: inline-block;
+        max-width: 180px;
+        img {
+            width: 100%;
+        }
+    }
+    .maan-text h6 {
+        color: $maan-color-white;
+        text-align: justify;
+    }
+    .row {
+        padding: 60px 0px;
+        &.maan-link-footer {
+            border-top: 1px solid $maan-color-border;
+            .maan-title {
+                &::before {
+                    content: none;
+                }
+                &::after {
+                    background: $maan-color-white;
+                }
+                h2 {
+                    color: $maan-color-white;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            .maan-news-list h4 {
+                font-size: 18px;
+                line-height: 28px;
+                a {
+                    color: $maan-color-white;
+                    &:hover {
+                        color: $maan-color-blue;
+                    }
+                }
+            }
+            .maan-news-link li {
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                a {
+                    color: $maan-color-white;
+                    font-size: 18px;
+                    line-height: 28px;
+                    &:hover {
+                        color: $maan-color-blue;
+                    }
+                }
+            }
+            .maan-news-tags ul {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                grid-gap: 8px;
+                li a {
+                    display: block;
+                    padding: 8px 10px;
+                    color: $maan-color-white;
+                    text-align: center;
+                    border-radius: 5px;
+                    border: 1px solid $maan-color-gray;
+                    &:hover {
+                        border-color: $maan-color-blue;
+                        background: $maan-color-blue;
+                    }
+                }
+            }
+            .maan-email {
+                margin-top: 30px;
+                .input-group {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        height: 50px;
+                        padding-left: 55px;
+                        border-radius: 5px !important;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: $maan-color-border2;
+                        border: 1px solid $maan-color-border2;
+                        background: $maan-color-tr;
+                    }
+                    .maan-icon {
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        svg {
+                            fill: $maan-color-border2;
+                        }
+                    }
+                }
+                button {
+                    padding: 18px 40px;
+                    font-weight: 600;
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+    .maan-main-footer {
+        padding: 24px 0px;
+        text-align: center;
+        border-top: 1px solid $maan-color-border;
+        h6 {
+            font-weight: 400;
+            color: $maan-color-white;
+            a {
+                color: $maan-color-white;
+                &:hover {
+                    color: $maan-color-blue;
+                }
+            }
+        }
+    }
+}
+
+
+/*=============================
+    19 Maan Breadcrumb
+===============================*/
+
+.maan-breadcrumb {
+    padding: 60px 0px;
+    background: $maan-color-white3;
+    ol {
+        -webkit-box-pack: center;
+        justify-content: center;
+        li {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            &::before,
+            &.active {
+                color: $maan-color-black !important;
+            }
+            a:hover {
+                color: $maan-color-blue;
+            }
+        }
+    }
+}
+
+
+/*=============================
+    20 Maan Post Archive
+===============================*/
+
+.post-archive {
+    .maan-news-list ul li {
+        grid-template-columns: 40% auto;
+        margin: 24px 8px 0px 0px;
+        h4 {
+            font-size: 22px;
+            line-height: 32px;
+        }
+        &:first-child {
+            margin-top: 0px;
+        }
+        ul {
+            &,
+            &~p,
+            &~a {
+                margin-top: 12px;
+            }
+            li {
+                margin-top: 0px;
+            }
+        }
+        .maan-icon svg {
+            fill: $maan-color-blue;
+        }
+    }
+    .maan-title {
+        margin-top: 24px;
+    }
+}
+
+
+/*=============================
+    21 Maan Widgets
+===============================*/
+
+.maan-widgets {
+    padding: 24px;
+    border-radius: 10px;
+    background: $maan-color-white2;
+    margin-bottom: 50px;
+    &.maan-bg-tr {
+        padding: 0;
+        border-radius: 0px;
+        background: $maan-color-tr;
+    }
+    .maan-list-text .maan-icon svg {
+        fill: $maan-color-blue !important;
+    }
+    form.search {
+        .form-control {
+            padding: 0px 24px;
+            height: 50px;
+            border: 1px solid $maan-color-border2;
+            border-right: 0px;
+            border-radius: 5px 0px 0px 5px !important;
+        }
+        .d-btn {
+            padding: 0;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: none;
+            svg {
+                fill: $maan-color-white;
+            }
+            &:hover {
+                background: $maan-color-blue;
+            }
+        }
+    }
+    .category-link li {
+        margin-bottom: 12px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        a {
+            position: relative;
+            padding-left: 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 8px;
+                top: 50%;
+                left: 0;
+                border-top: 2px solid $maan-color-blue;
+                border-right: 2px solid $maan-color-blue;
+                @include maan_transform(translateY(-50%)rotate(45deg));
+            }
+            &:hover {
+                color: $maan-color-blue;
+            }
+        }
+    }
+    .widgets-gallery ul {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: auto auto auto;
+        li {
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            filter: grayscale(0%)blur(0);
+            @include maan_transform(scale(1));
+            @include maan_transition(all 0.4s ease);
+        }
+        li:hover {
+            img {
+                filter: grayscale(50%)blur(0.8px);
+                @include maan_transform(scale(1.1));
+            }
+        }
+    }
+    .widgets-tags ul {
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: auto auto auto auto;
+        li a {
+            display: block;
+            padding: 8px 10px;
+            color: $maan-color-gray;
+            text-align: center;
+            border-radius: 5px;
+            background: $maan-color-border;
+            &:hover {
+                color: $maan-color-white;
+                background: $maan-color-blue;
+            }
+        }
+    }
+    .recent-post li {
+        grid-template-columns: 40% auto;
+    }
+    .social-media ul {
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        li a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            color: $maan-color-gray;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            background: $maan-color-border;
+            &:hover {
+                background: $maan-color-blue;
+                svg {
+                    fill: $maan-color-white;
+                }
+            }
+        }
+    }
+    .popular-post {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: auto auto;
+        .maan-default-post {
+            margin-top: 0px;
+            .maan-card-body {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
+
+
+/*=============================
+    22 Maan Business
+===============================*/
+
+.business {
+    .maan-default-post {
+        margin-top: 24px;
+        border-radius: 0;
+        border-bottom: 1px solid $maan-color-border2;
+        .maan-text {
+            .maan-icon svg {
+                fill: $maan-color-blue;
+            }
+            ul~h4 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            h4~p {
+                margin-top: 24px;
+            }
+        }
+    }
+    &.maan-slide-section {
+        .maan-title {
+            width: 100%;
+        }
+        .maan-slide {
+            .slick-list {
+                margin: 0px -12px;
+            }
+            .slick-arrow {
+                top: 50%;
+                border: 1px solid $maan-color-white;
+                background: $maan-color-tr;
+                @include maan_transform(translate(-50%, -50%));
+                z-index: 2;
+                &.btn-prev {
+                    left: calc(18px + 24px);
+                    right: inherit;
+                }
+                &.btn-next {
+                    left: inherit;
+                    right: calc(-18px + 24px);
+                }
+            }
+            .maan-default-post {
+                margin: 0px 12px;
+            }
+        }
+    }
+    .maan-widgets .maan-default-post {
+        border-bottom: none;
+    }
+}
+
+
+/*=============================
+    23 Maan Archive Details
+===============================*/
+
+.maan-archive-details {
+    .maan-card-body {
+        padding: 0;
+    }
+    .maan-default-post {
+        p {
+            margin: 24px 0px;
+        }
+        .tag {
+            padding-top: 24px;
+            border-top: 1px solid $maan-color-border;
+            a {
+                display: block;
+                padding: 10px 24px;
+                border-radius: 5px;
+                border: 1px solid $maan-color-border;
+                color: $maan-color-gray4;
+                svg {
+                    fill: $maan-color-gray4;
+                    margin-right: 5px;
+                }
+                &:hover {
+                    color: $maan-color-gray4;
+                    background: $maan-color-border;
+                }
+            }
+        }
+    }
+    .maan-card-body {
+        .row {
+            padding: 12px 0px;
+            border-bottom: 1px solid $maan-color-border;
+            margin: 0px 0px 12px 0px;
+            &>div {
+                padding: 0;
+            }
+            .maan-icon svg {
+                fill: $maan-color-blue;
+            }
+        }
+        .social-media {
+            text-align: right;
+            li a {
+                svg {
+                    fill: $maan-color-gray2;
+                }
+                &:hover svg {
+                    fill: $maan-color-blue;
+                }
+            }
+        }
+    }
+    .maan-pro-card {
+        position: relative;
+        padding: 24px;
+        background: $maan-color-white5;
+        h6 {
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .maan-profile {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            margin-top: 24px;
+            .maan-profile-img {
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                overflow: hidden;
+                img {
+                    object-position: center;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .maan-profile-text {
+                margin-left: 24px;
+                h6 {
+                    margin-bottom: 5px;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .maan-post-adds {
+        margin: 24px 0;
+        img {
+            width: 100%;
+        }
+    }
+    .maan-news-form {
+        h4 {
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 24px;
+        }
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        textarea {
+            height: 160px;
+        }
+        button {
+            padding: 12px 30px;
+            border-radius: 5px;
+            border: 1px solid $maan-color-tr;
+            color: $maan-color-white;
+            background: $maan-color-blue;
+            &:hover {
+                color: $maan-color-blue;
+                border-color: $maan-color-blue;
+                background: $maan-color-white;
+            }
+        }
+    }
+}
+
+
+/*=============================
+    24 Maan Pagination
+===============================*/
+
+.maan-pagination {
+    margin-bottom: 80px;
+    ul li {
+        display: inline-block;
+        margin-left: 8px;
+        &:first-child {
+            margin-left: 0;
+        }
+        a {
+            padding: 6px 8px;
+            text-align: center;
+            font-size: 16px;
+            color: $maan-color-gray3;
+            border: 1px solid $maan-color-gray3;
+            border-radius: 5px;
+            svg {
+                --svg-font-size: 16px;
+                fill: $maan-color-gray3;
+            }
+        }
+        &.active a,
+        a:hover {
+            color: $maan-color-white;
+            border-color: $maan-color-blue;
+            background: $maan-color-blue;
+            svg {
+                fill: $maan-color-white;
+            }
+        }
+    }
+}

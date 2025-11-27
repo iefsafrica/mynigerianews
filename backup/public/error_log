@@ -1,0 +1,2 @@
+[29-Oct-2025 07:11:23 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.0.30. in /home/premwroo/mynigerianews.premegagetech.com/vendor/composer/platform_check.php on line 28
+[29-Oct-2025 07:11:33 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.0.30. in /home/premwroo/mynigerianews.premegagetech.com/vendor/composer/platform_check.php on line 28

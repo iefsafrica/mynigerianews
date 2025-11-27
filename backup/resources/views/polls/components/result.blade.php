@@ -1,0 +1,1 @@
+<a class="text-decoration-none" href="{{ route('polls-vote-result',$row->id) }}">   {{ __('messages.poll.show_result') }} </a>

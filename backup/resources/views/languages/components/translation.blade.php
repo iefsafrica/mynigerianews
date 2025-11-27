@@ -1,0 +1,1 @@
+<a class="text-decoration-none" id="languageTranslation" href="{{ route('languages.translation',$row->id) }}">   {{ __('messages.language.edit_translation') }} </a>

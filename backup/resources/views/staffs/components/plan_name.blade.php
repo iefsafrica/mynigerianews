@@ -1,0 +1,1 @@
+{!! !empty($row->subscription) ? $row->subscription->plan->name : 'N/A' !!}
