@@ -123,3 +123,4 @@ function themeActivation(){
       return $activeTheme;
     }
 }
+

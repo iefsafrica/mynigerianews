@@ -2,6 +2,19 @@
 @php
     $assetBase = app()->environment('local') ? '' : 'public/';
     $fallbackImage = $assetBase.'maan/images/26.png';
+    $fallbackVideo = $assetBase.'uploads/videos/videogallery/fallback.mp4';
+    $normalizeAssetPath = static function ($path, $fallback) {
+        $path = trim((string) $path);
+        if ($path === '') {
+            return $fallback;
+        }
+
+        if (strpos($path, 'public/') === 0) {
+            return substr($path, 7);
+        }
+
+        return $path;
+    };
 @endphp
 @section('meta_content')
     <meta name="keywords" content="{{ $seooptimization->keywords }}">
@@ -36,7 +49,7 @@
                             " class="new-card-thumb">
                             @php
                                 $images = json_decode($lastnews->image, true) ?: [];
-                                $imagePath = $images[0] ?? $fallbackImage;
+                                $imagePath = $normalizeAssetPath($images[0] ?? '', $fallbackImage);
                             @endphp
                             <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
@@ -68,7 +81,7 @@
                         @endif" class="card-thumb">
                             @php
                                 $image = json_decode($popularnews->image, true) ?: [];
-                                $imagePath = $image[0] ?? $fallbackImage;
+                                $imagePath = $normalizeAssetPath($image[0] ?? '', $fallbackImage);
                             @endphp
                             <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
@@ -130,7 +143,7 @@
                         @endif" class="card-thumb">
                             @php
                                 $image = json_decode($lastnewssports->image, true) ?: [];
-                                $imagePath = $image[0] ?? $fallbackImage;
+                                $imagePath = $normalizeAssetPath($image[0] ?? '', $fallbackImage);
                             @endphp
                             <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
@@ -187,7 +200,7 @@
                                 @endif" class="card-thumb">
                                     @php
                                         $image = json_decode($reviewNews->image, true) ?: [];
-                                        $imagePath = $image[0] ?? $fallbackImage;
+                                        $imagePath = $normalizeAssetPath($image[0] ?? '', $fallbackImage);
                                     @endphp
                                     <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                                     <span class="news-ctg-link">{{$reviewNews->category->name}}</span>
@@ -232,7 +245,10 @@
                                 <div class="card news10-topnews-card maantop-news-card">
                                     <div class="new-card-thumb">
 
-                                        <img loading="lazy" src="{{ asset($latestphotogallery->image) }}" alt="">
+                                        @php
+                                            $editorImage = $normalizeAssetPath($latestphotogallery->image ?? '', $fallbackImage);
+                                        @endphp
+                                        <img loading="lazy" src="{{ asset($editorImage) }}" alt="">
 
                                     </div>
                                     <div class="card-body">
@@ -263,7 +279,7 @@
                                             " class="thumb">
                                             @php
                                                 $image = json_decode($feature->image, true) ?: [];
-                                                $imagePath = $image[0] ?? $fallbackImage;
+                                                $imagePath = $normalizeAssetPath($image[0] ?? '', $fallbackImage);
                                             @endphp
                                             <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                                         </a>
@@ -304,7 +320,7 @@
     <!-- Featured video  start -->
     <section class="news10-feature-video-section">
         <div class="top-bg">
-            <img loading="lazy" src="{{asset('/public/maan/images/feature-video-bg.svg')}}" alt="">
+            <img loading="lazy" src="{{asset('maan/images/feature-video-bg.svg')}}" alt="">
         </div>
         <div class="container-xxl container-lg">
             <div class="news10-sec-title">
@@ -313,20 +329,23 @@
             <div class="video-section-grid">
                 @foreach($latestVideoGalleries as $video)
                     @if($loop->iteration==1)
+                        @php
+                            $iframeVideo = $normalizeAssetPath($video->video ?? '', $fallbackVideo);
+                        @endphp
                 <div class="card iframe-video-wrapper">
-                    <iframe src="{{asset($video->video)}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="{{ asset($iframeVideo) }}" title="Featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                     @endif
 
                     <div class="card trending-news-card weekly-review-card">
                         <div class="card-thumb">
-                            @if($video->image!=null)
-                                <img loading="lazy" src="{{asset($video->image)}}" alt="">
-                            @else
-                            <img loading="lazy" src="{{asset('/public/maan/images/26.png')}}" alt="">
-                            @endif
+                            @php
+                                $videoImage = $normalizeAssetPath($video->image ?? '', $fallbackImage);
+                                $videoSource = $normalizeAssetPath($video->video ?? '', $fallbackVideo);
+                            @endphp
+                            <img loading="lazy" src="{{ asset($videoImage) }}" alt="">
                             <a href="" class="news-ctg-link">{{$video->title}}</a>
-                            <a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href="{{asset($video->video)}}"><i class="fas fa-play"></i></a>
+                            <a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href="{{ asset($videoSource) }}"><i class="fas fa-play"></i></a>
                         </div>
                         <div class="card-body">
                             <a href="" class="news-title">{{$video->description}}</a>
@@ -360,7 +379,7 @@
 
                             @php
                                 $image = json_decode($wholenews->image, true) ?: [];
-                                $imagePath = $image[0] ?? $fallbackImage;
+                                $imagePath = $normalizeAssetPath($image[0] ?? '', $fallbackImage);
                             @endphp
                             @if ($loop->iteration==1)
                                 <div class="card trending-news-card">

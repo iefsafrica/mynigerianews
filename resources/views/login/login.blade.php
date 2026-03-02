@@ -12,14 +12,14 @@
     <title>{{ $settings->title }}</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="{{ asset('public/admin/fonts/google-font-sans.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/fonts/google-font-sans.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('public/admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{ asset('public/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('public/admin/dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/admin/css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/login.css') }}">
     <style>
         .forgetsec a{
             color: black;
@@ -40,14 +40,14 @@
 <div class="new-login-section">
     <div class="row">
         <div class="col-md-6">
-            <div class="login-bg"><img src="{{ asset('public/admin/img/login/login-bgjpg.jpg') }}" alt=""></div>
+            <div class="login-bg"><img src="{{ asset('admin/img/login/login-bgjpg.jpg') }}" alt=""></div>
         </div>
     </div>
     <div class="login-form-section">
         <div class="row">
             <div class="col-md-6">
                 <div class="login-left-img">
-                    <img src="{{ asset('public/admin/img/login/login-left.png') }}" alt="">
+                    <img src="{{ asset('admin/img/login/login-left.png') }}" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -67,17 +67,17 @@
                         <p> {{ __('Welcome back, Please login in to your account') }}</p>
                         <div class="login-input-item">
                             <div class="input-group">
-                                <span class="left-img"><img src="{{ asset('public/admin/img/login/user.svg') }}" alt="icon"></span>
+                                <span class="left-img"><img src="{{ asset('admin/img/login/user.svg') }}" alt="icon"></span>
                                 <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                             </div>
                         </div>
                         <div class="login-input-item">
                             <div class="input-group">
-                                <span class="left-img"><img src="{{ asset('public/admin/img/login/lock.svg') }}" alt="icon"></span>
+                                <span class="left-img"><img src="{{ asset('admin/img/login/lock.svg') }}" alt="icon"></span>
                                 <div class="input-wrp">
                                     <input type="password"  name="password" id="password"  class="form-control passwordhide" placeholder="Password">
-                                    <span class="hide-pass"><img src="{{ asset('public/admin/img/login/eye-slash.svg') }}" alt="icon"></span>
-                                    <span class="hideicon"><img src="{{ asset('public/admin/img/login/eye-slash.svg') }}" alt="icon"></span>
+                                    <span class="hide-pass"><img src="{{ asset('admin/img/login/eye-slash.svg') }}" alt="icon"></span>
+                                    <span class="hideicon"><img src="{{ asset('admin/img/login/eye-slash.svg') }}" alt="icon"></span>
                                 </div>
                             </div>
                         </div>
@@ -90,25 +90,25 @@
                         </div>
                         <button type="submit" class="login-btn">{{ __('LogIn') }}</button>
                         <div class="login-button-group">
-                            <a href="#" class="login-btn" onclick="copy('superadmin21@gmail.com', 'superadmin21')" data-toggle="tooltip" data-placement="top">
+                            <a href="#" class="login-btn quick-login-btn" data-email="superadmin21@gmail.com" data-password="superadmin21" data-toggle="tooltip" data-placement="top">
                                 <i class="fas fa-lock"></i>
                                 {{ __('Super Admin') }}
                             </a>
 
-                            <a href="#"  class="login-btn" onclick="copy('admin21@gmail.com', 'admin21')" data-toggle="tooltip" data-placement="top">
+                            <a href="#" class="login-btn quick-login-btn" data-email="admin21@gmail.com" data-password="admin21" data-toggle="tooltip" data-placement="top">
                                 <i class="fas fa-lock"></i>
                                 {{ __('Admin') }}
                             </a>
 
-                            <a href="#"  class="login-btn" onclick="copy('editor21@gmail.com', 'editor21')" data-toggle="tooltip" data-placement="top">
+                            <a href="#" class="login-btn quick-login-btn" data-email="editor21@gmail.com" data-password="editor21" data-toggle="tooltip" data-placement="top">
                                 <i class="fas fa-lock"></i>
                                 {{ __('Editor') }}
                             </a>
-                            <a href="#"  class="login-btn" onclick="copy('reporter21@gmail.com', 'reporter21')" data-toggle="tooltip" data-placement="top">
+                            <a href="#" class="login-btn quick-login-btn" data-email="reporter21@gmail.com" data-password="reporter21" data-toggle="tooltip" data-placement="top">
                                 <i class="fas fa-lock"></i>
                                 {{ __('Reporter') }}
                             </a>
-                            <a href="#"  class="login-btn" onclick="copy('accountant21@gmail.com', 'accountant21')" data-toggle="tooltip" data-placement="top">
+                            <a href="#" class="login-btn quick-login-btn" data-email="accountant21@gmail.com" data-password="accountant21" data-toggle="tooltip" data-placement="top">
                                 <i class="fas fa-lock"></i>
                                 {{ __('Accountant') }}
                             </a>
@@ -121,13 +121,13 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{ asset('public/admin/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('public/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('public/admin/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 <!-- Login JS -->
-<script src="{{ asset('public/admin/js/login.js') }}"></script>
+<script src="{{ asset('admin/js/login.js') }}"></script>
 
 <script>
         $(".hide-pass").click(function() {

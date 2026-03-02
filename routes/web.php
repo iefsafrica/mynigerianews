@@ -62,9 +62,13 @@ Route::get('/subscribe/ajax',[HomeController::class,'subscribeAjax'])->name('sub
 //route search
 Route::get('/search',[SearchController::class,'maanSearch'])->name('search');
 
-foreach (newscategories() as $newscategory){
-    Route::get($newscategory->slug.'/{newscategory?}',[\App\Http\Controllers\Frontend\NewsController::class,'maanNews'])->name($newscategory->slug);
-    Route::get($newscategory->slug.'/details/{id}/{slug?}',[\App\Http\Controllers\Frontend\NewsController::class,'maanNewsDetails'])->name($newscategory->slug.'.details');
+try {
+    foreach (newscategories() as $newscategory){
+        Route::get($newscategory->slug.'/{newscategory?}',[\App\Http\Controllers\Frontend\NewsController::class,'maanNews'])->name($newscategory->slug);
+        Route::get($newscategory->slug.'/details/{id}/{slug?}',[\App\Http\Controllers\Frontend\NewsController::class,'maanNewsDetails'])->name($newscategory->slug.'.details');
+    }
+} catch (\Throwable $e) {
+    // Skip DB-backed dynamic routes when DB is unavailable (e.g. composer/artisan bootstrap).
 }
 
 Route::get('/photogallery',[\App\Http\Controllers\Frontend\PhotogalleryController::class,'maanPhotogalleryIndex'])->name('photogallery');

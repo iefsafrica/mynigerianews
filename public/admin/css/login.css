@@ -236,7 +236,7 @@
       max-width: 470px;
     }
   }
-  @media (max-width: 575px) {
+@media (max-width: 575px) {
     .new-login-form .login-button-group {
       -ms-grid-columns: 1fr [2];
       grid-template-columns: repeat(2, 1fr);
@@ -246,5 +246,156 @@
       margin-top: 0;
     }
   }
-  /* new dgn css end */
+
+/* login polish overrides */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ecf1f9;
+}
+
+.new-login-section {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  padding: 28px 0;
+}
+
+.new-login-section .login-form-section {
+  width: calc(100% - 36px);
+  max-width: 960px;
+  padding: 34px 32px;
+  border: 1px solid #e6edf8;
+}
+
+.new-login-form {
+  padding-left: 6px;
+}
+
+.new-login-form h2 {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.new-login-form p {
+  margin-bottom: 18px;
+}
+
+.new-login-form .login-input-item {
+  margin-bottom: 14px;
+}
+
+.new-login-form .form-control {
+  height: 46px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+}
+
+.new-login-form .form-control::placeholder {
+  color: #98a2b3;
+}
+
+.new-login-form .form-control:focus {
+  border-color: #1570ef;
+  box-shadow: 0 0 0 3px rgba(21, 112, 239, 0.15);
+}
+
+.new-login-form .login-input-item .left-img {
+  border-radius: 8px 0 0 8px;
+}
+
+.remember-check {
+  margin-top: 2px;
+  gap: 10px;
+}
+
+.remember-check label {
+  font-size: 14px;
+}
+
+.new-login-form .forget-pass {
+  font-size: 13px;
+}
+
+.login-btn {
+  margin-top: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.new-login-form .login-button-group {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.new-login-form .login-button-group .quick-login-btn {
+  height: 42px;
+  margin-top: 0;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+#loginMessage .alert {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+@media (max-width: 1199px) {
+  .new-login-section .login-form-section {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 991px) {
+  .new-login-section {
+    padding: 14px 0;
+  }
+
+  .new-login-section .login-form-section {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    padding: 22px 16px;
+  }
+
+  .new-login-section .login-bg {
+    display: none;
+  }
+
+  .new-login-form {
+    padding-left: 0;
+  }
+
+  .login-left-img {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .new-login-form h2 {
+    font-size: 20px;
+  }
+
+  .remember-check {
+    flex-wrap: wrap;
+  }
+
+  .new-login-form .login-button-group {
+    grid-template-columns: 1fr;
+  }
+}
+/* new dgn css end */
 /* login css end */

@@ -32,7 +32,7 @@
 
                 @can('isSuperAdmin')
                 <li class="nav-item {{ Request::routeIs('admin.role')||Request::routeIs('admin.role.edit') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.role')||Request::routeIs('admin.role.edit') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user-lock"></i>
                         <p>
                             {{ __('Role Manage') }}
@@ -52,7 +52,7 @@
                 @endcan
                 @canany(['isSuperAdmin','isAdmin','isEditor'])
                 <li class="nav-item  {{ Request::routeIs('admin.user')|| Request::routeIs('admin.user.create')||Request::routeIs('admin.user.edit')||Request::routeIs('admin.subscriber') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.user')|| Request::routeIs('admin.user.create')||Request::routeIs('admin.user.edit')||Request::routeIs('admin.subscriber') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             {{ __('User Manage') }}
@@ -79,7 +79,7 @@
                 @endcanany
                 @canany(['isSuperAdmin','isAdmin','isEditor','isReporter'])
                 <li class="nav-item {{ Request::routeIs('admin.news.category')||Request::routeIs('admin.news.subcategory')||Request::routeIs('admin.news.speciality')||Request::routeIs('admin.news')||Request::routeIs('admin.news.create')||Request::routeIs('admin.news.edit') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.news.category')||Request::routeIs('admin.news.subcategory')||Request::routeIs('admin.news.speciality')||Request::routeIs('admin.news')||Request::routeIs('admin.news.create')||Request::routeIs('admin.news.edit') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             {{ __('News Manage') }}
@@ -116,7 +116,7 @@
                     </ul>
                 </li>
                 <li class="nav-item {{ Request::routeIs('admin.photogallery')||Request::routeIs('admin.photogallery.edit')||Request::routeIs('admin.videogallery')||Request::routeIs('admin.videogallery.create')||Request::routeIs('admin.videogallery.edit') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.photogallery')||Request::routeIs('admin.photogallery.edit')||Request::routeIs('admin.videogallery')||Request::routeIs('admin.videogallery.create')||Request::routeIs('admin.videogallery.edit') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-photo-video"></i>
                         <p>
                             {{ __('Media') }}
@@ -144,7 +144,7 @@
                 @endcanany
                 @canany(['isSuperAdmin','isAdmin','isEditor','isReporter','isAccountent'])
                 <li class="nav-item {{ Request::routeIs('admin.blog.category')||Request::routeIs('admin.blog.subcategory')||Request::routeIs('admin.blog')||Request::routeIs('admin.blog.create')||Request::routeIs('admin.blog.edit') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.blog.category')||Request::routeIs('admin.blog.subcategory')||Request::routeIs('admin.blog')||Request::routeIs('admin.blog.create')||Request::routeIs('admin.blog.edit') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-blog"></i>
                         <p>
                             {{ __('Blog Manage') }}
@@ -175,7 +175,7 @@
                     </ul>
                 </li>
                 <li class="nav-item {{ Request::routeIs('admin.reporter')||Request::routeIs('admin.reporter.create')||Request::routeIs('admin.reporter.edit') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::routeIs('admin.reporter')||Request::routeIs('admin.reporter.create')||Request::routeIs('admin.reporter.edit') ? 'active' : '' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             {{ __('News Reporters') }}
@@ -195,7 +195,7 @@
                     </ul>
                 </li>
                     <li class="nav-item {{ Request::routeIs('admin.contact') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::routeIs('admin.contact') ? 'active' : '' }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-envelope-open-text"></i>
 
                             <p>
@@ -217,7 +217,7 @@
                 @endcanany
                 @canany(['isSuperAdmin','isAdmin','isEditor'])
                     <li class="nav-item {{Request::routeIs('admin.settings.index')|| Request::routeIs('admin.company.index') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::routeIs('admin.settings.index')|| Request::routeIs('admin.company.index') ? 'active' : '' }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fas fa-fw fa-cog"></i>
 
                             <p>
@@ -253,7 +253,7 @@
                 @endcanany
                 @canany(['isSuperAdmin','isAdmin'])
                     <li class="nav-item {{Request::routeIs('admin.ads.index') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::routeIs('admin.ads.index') ? 'active' : '' }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon  fas fa-ad"></i>
 
                             <p>
@@ -274,7 +274,7 @@
                         </ul>
                     </li>
                     <li class="nav-item {{Request::routeIs('admin.seo.index') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::routeIs('admin.seo.index') ? 'active' : '' }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-assistive-listening-systems"></i>
 
                             <p>
@@ -295,7 +295,7 @@
                         </ul>
                     </li>
                     <li class="nav-item {{Request::routeIs('admin.social.index') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::routeIs('admin.social.index') ? 'active' : '' }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-share-alt"></i>
 
                             <p>

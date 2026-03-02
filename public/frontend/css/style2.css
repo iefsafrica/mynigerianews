@@ -11026,6 +11026,16 @@ svg {
   .news10-food-news-header {
     padding: 0;
   }
+
+  .news10-nav-right .news10-nav-open,
+  .news10-nav-right .news10-nav-open i {
+    color: #fff !important;
+  }
+
+  .news10-nav-right .news10-nav-open img {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+  }
 }
 /*----------------------------------------*/
 /* banner responsive

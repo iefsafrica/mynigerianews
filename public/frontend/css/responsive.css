@@ -72,6 +72,9 @@ header.sticky-mid-manu .maan-top-bar.sticky {
     padding: 24px 0px;
     background: var(--maan-color-white3);
   }
+  .maan-manu-bar .manu-btn span {
+    background: var(--maan-color-white) !important;
+  }
   .maan-manu-bar .close-btn {
     position: absolute;
     width: 30px;

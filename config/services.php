@@ -39,5 +39,11 @@ return [
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
+    'newsapi_ai' => [
+        'api_key' => env('NEWSAPIAI_API_KEY'),
+        'endpoint' => env('NEWSAPIAI_ENDPOINT', 'https://eventregistry.org/api/v1/article/getArticles'),
+        'default_keyword' => env('NEWSAPIAI_DEFAULT_KEYWORD', 'Nigeria'),
+        'default_lang' => env('NEWSAPIAI_DEFAULT_LANG', 'eng'),
+    ],
 
 ];

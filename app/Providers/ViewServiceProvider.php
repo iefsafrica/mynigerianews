@@ -31,23 +31,27 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (Schema::hasTable('seooptimizations')) {
-            View::share('seooptimization',Seooptimization::first());
-        }
-        if (Schema::hasTable('settings')) {
-            View::share('settings',Settings::first());
-        }
-        if (Schema::hasTable('companies')) {
-            View::share('companyInfo',Company::first());
-        }
-        if (Schema::hasTable('socialshares')) {
-            View::share('socials',Socialshare::take(5)->get());
-        }
-        if (Schema::hasTable('themes')) {
-            View::share('themes',Theme::where('is_active',1)->first());
-        }
-        if (Schema::hasTable('advertisements')) {
-            View::share('advertisement',Advertisement::latest()->first());
+        try {
+            if (Schema::hasTable('seooptimizations')) {
+                View::share('seooptimization',Seooptimization::first());
+            }
+            if (Schema::hasTable('settings')) {
+                View::share('settings',Settings::first());
+            }
+            if (Schema::hasTable('companies')) {
+                View::share('companyInfo',Company::first());
+            }
+            if (Schema::hasTable('socialshares')) {
+                View::share('socials',Socialshare::take(5)->get());
+            }
+            if (Schema::hasTable('themes')) {
+                View::share('themes',Theme::where('is_active',1)->first());
+            }
+            if (Schema::hasTable('advertisements')) {
+                View::share('advertisement',Advertisement::latest()->first());
+            }
+        } catch (\Throwable $e) {
+            // Allow bootstrapping in CLI/deploy contexts when DB is not reachable yet.
         }
     }
 }

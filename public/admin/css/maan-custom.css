@@ -284,4 +284,13 @@
     }
 }
 
+/* Sidebar active color override */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #00a65a !important;
+    color: #fff !important;
+}
+
 

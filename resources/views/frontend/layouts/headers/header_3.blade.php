@@ -9,8 +9,6 @@
                 <ul>
                     <li class="dropdown"><a href="{{route('home')}}">{{ home() }}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{route('home-one')}}">{{__('Home One')}}</a></li>
-                            <li><a href="{{route('home-two')}}">{{__('Home Two')}}</a></li>
 
                         </ul>
                     </li>

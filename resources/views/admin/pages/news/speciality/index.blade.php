@@ -132,7 +132,7 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-    <script src="{{ asset('public/admin/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
     <script  type="text/javascript">
         $(document).ready(function (){
             $('.edit-item').each(function () {
@@ -155,3 +155,4 @@
 
     </script>
 @endsection
+
