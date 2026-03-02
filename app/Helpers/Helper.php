@@ -3,6 +3,7 @@
 //create function for breaking news
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use \App\Models\Theme;
 use \App\Models\News;
 use \App\Models\Photogallery;
@@ -55,6 +56,10 @@ function popularsnews(){
     return $popularsnews;
 }
 function newscategories(){
+    if (! Schema::hasTable('newscategories')) {
+        return collect();
+    }
+
     $newscategories = Newscategory::where('type','news')
         ->orderBy('id')
         ->get();
@@ -118,5 +123,3 @@ function themeActivation(){
       return $activeTheme;
     }
 }
-
-

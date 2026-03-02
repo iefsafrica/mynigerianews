@@ -1,4 +1,8 @@
 @extends('frontend.master')
+@php
+    $assetBase = app()->environment('local') ? '' : 'public/';
+    $fallbackImage = $assetBase.'maan/images/26.png';
+@endphp
 @section('meta_content')
     <meta name="keywords" content="{{ $seooptimization->keywords }}">
     <meta name="title" content="{{ $seooptimization->meta_title }}">
@@ -14,10 +18,14 @@
 @endsection
 @push('styles')
     <!-- home2 -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/style2.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/style2.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/swiper-bundle.min.css') }}">
 @endpush
 @section('main_content')
+    @php
+        $sportsHeadline = $latestnewssports->first();
+        $weeklyReviewHeadline = $latestReviewNews->first();
+    @endphp
     <!-- news10-newtop-news stat -->
     <section class="news10-newtop-news pt-0">
         <div class="container-xxl container-lg">
@@ -27,9 +35,10 @@
                         <a href="@if($lastnews->news_categoryslug) @if(Route::has(strtolower($lastnews->news_categoryslug))){{ route( strtolower($lastnews->news_categoryslug).'.details',['id'=>$lastnews->id,'slug'=>\Illuminate\Support\Str::slug($lastnews->title)]) }} @endif @endif
                             " class="new-card-thumb">
                             @php
-                                $images = json_decode($lastnews->image) ;
+                                $images = json_decode($lastnews->image, true) ?: [];
+                                $imagePath = $images[0] ?? $fallbackImage;
                             @endphp
-                            <img loading="lazy" src="{{asset($images[0])}}" alt="">
+                            <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
                         <div class="card-body">
                             <a href="@if($lastnews->news_categoryslug) @if(Route::has(strtolower($lastnews->news_categoryslug))){{ route( strtolower($lastnews->news_categoryslug),[$lastnews->news_category]) }} @endif @endif
@@ -58,11 +67,10 @@
                         @endif
                         @endif" class="card-thumb">
                             @php
-
-                                $image = json_decode($popularnews->image) ;
-
+                                $image = json_decode($popularnews->image, true) ?: [];
+                                $imagePath = $image[0] ?? $fallbackImage;
                             @endphp
-                            <img loading="lazy" src="{{asset($image[0])}}" alt="">
+                            <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
                         <div class="card-body">
                             <div class="card-meta">
@@ -106,9 +114,9 @@
         <div class="container-xxl container-lg">
             <div class="news10-sec-title">
                 <h3>{{__('sports')}}</h3>
-                <a href="@if($latestnewssports[0]->news_categoryslug)
-                                @if(Route::has(strtolower($latestnewssports[0]->news_categoryslug)))
-                                {{ route( strtolower($latestnewssports[0]->news_categoryslug),$latestnewssports[0]->news_category) }}
+                <a href="@if($sportsHeadline && $sportsHeadline->news_categoryslug)
+                                @if(Route::has(strtolower($sportsHeadline->news_categoryslug)))
+                                {{ route( strtolower($sportsHeadline->news_categoryslug),$sportsHeadline->news_category) }}
                                 @endif
                                 @endif">{{__('Show All')}} <i class="far fa-long-arrow-alt-right"></i></a>
             </div>
@@ -121,9 +129,10 @@
                         @endif
                         @endif" class="card-thumb">
                             @php
-                                $image = json_decode($lastnewssports->image) ;
+                                $image = json_decode($lastnewssports->image, true) ?: [];
+                                $imagePath = $image[0] ?? $fallbackImage;
                             @endphp
-                            <img loading="lazy" src="{{asset($image[0])}}" alt="">
+                            <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                         </a>
                         <div class="card-body">
                             <div class="card-meta">
@@ -156,10 +165,10 @@
     <section class="news10-weekly-review-section news10-data-background" data-background="public/maan/images/bg.jpg">
         <div class="container-xxl container-lg">
             <div class="news10-sec-title">
-                <h3>{{__('Weekly Review') }} {{$latestReviewNews[0]->category->slug}}</h3>
-                <a href=" @if($latestReviewNews[0]->category->slug)
-                                @if(Route::has(strtolower($latestReviewNews[0]->category->slug)))
-                                {{ route( strtolower($latestReviewNews[0]->category->slug),$latestReviewNews[0]->category->name) }}
+                <h3>{{ __('Weekly Review') }} @if($weeklyReviewHeadline && $weeklyReviewHeadline->category) {{ $weeklyReviewHeadline->category->slug }} @endif</h3>
+                <a href=" @if($weeklyReviewHeadline && $weeklyReviewHeadline->category && $weeklyReviewHeadline->category->slug)
+                                @if(Route::has(strtolower($weeklyReviewHeadline->category->slug)))
+                                {{ route( strtolower($weeklyReviewHeadline->category->slug),$weeklyReviewHeadline->category->name) }}
                                 @endif
                                 @endif">{{__('Show All')}} <i class="far fa-long-arrow-alt-right"></i></a>
             </div>
@@ -177,9 +186,10 @@
                                 @endif
                                 @endif" class="card-thumb">
                                     @php
-                                        $image = json_decode($reviewNews->image) ;
+                                        $image = json_decode($reviewNews->image, true) ?: [];
+                                        $imagePath = $image[0] ?? $fallbackImage;
                                     @endphp
-                                    <img loading="lazy" src="{{asset($image[0])}}" alt="">
+                                    <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                                     <span class="news-ctg-link">{{$reviewNews->category->name}}</span>
                                 </a>
                                 <div class="card-body">
@@ -252,11 +262,10 @@
                                         @endif
                                             " class="thumb">
                                             @php
-
-                                                $image = json_decode($feature->image) ;
-
+                                                $image = json_decode($feature->image, true) ?: [];
+                                                $imagePath = $image[0] ?? $fallbackImage;
                                             @endphp
-                                            <img loading="lazy" src="{{asset($image[0])}}" alt="">
+                                            <img loading="lazy" src="{{ asset($imagePath) }}" alt="">
                                         </a>
                                         <div class="discription">
                                             <a href="@if($feature->news_categoryslug)
@@ -281,7 +290,7 @@
                                 {!! advertisement()->sidebar_ads !!}
                             @else
                                 <a href="#" class="new-card-thumb">
-                                    <img loading="lazy" src="{{asset($image[0])}}" alt="">
+                                    <img loading="lazy" src="{{ asset($fallbackImage) }}" alt="">
                                 </a>
                             @endif
                         </div>
@@ -350,13 +359,14 @@
                         @foreach ($newscategory->news->take(4) as $wholenews)
 
                             @php
-                                $image = json_decode($wholenews->image) ;
+                                $image = json_decode($wholenews->image, true) ?: [];
+                                $imagePath = $image[0] ?? $fallbackImage;
                             @endphp
                             @if ($loop->iteration==1)
                                 <div class="card trending-news-card">
                                     <a href="@if($newscategory->slug){{ route( strtolower($newscategory->slug).'.details',['id'=>$wholenews->id,'slug'=>\Illuminate\Support\Str::slug($wholenews->title)]) }} @endif" class="card-thumb">
 
-                                        <img loading="lazy" src="{{asset($image[0])}}" alt="{{$image[0]}}">
+                                        <img loading="lazy" src="{{ asset($imagePath) }}" alt="{{ $wholenews->title }}">
                                     </a>
                                     <div class="card-body">
                                         <a href="@if($newscategory->slug){{ route( strtolower($newscategory->slug).'.details',['id'=>$wholenews->id,'slug'=>\Illuminate\Support\Str::slug($wholenews->title)]) }} @endif" class="news-title">{{$wholenews->title}}</a>
@@ -369,7 +379,7 @@
                                     <li>
                                         <div class="feature-pst-items">
                                             <a href="@if($newscategory->slug){{ route( strtolower($newscategory->slug).'.details',['id'=>$wholenews->id,'slug'=>\Illuminate\Support\Str::slug($wholenews->title)]) }} @endif" class="thumb">
-                                                <img loading="lazy" src="{{asset($image[0])}}" alt="{{$image[0]}}">
+                                                <img loading="lazy" src="{{ asset($imagePath) }}" alt="{{ $wholenews->title }}">
                                             </a>
                                             <div class="discription">
                                                 <a href="@if($newscategory->slug){{ route( strtolower($newscategory->slug).'.details',['id'=>$wholenews->id,'slug'=>\Illuminate\Support\Str::slug($wholenews->title)]) }} @endif" class="news-title">{{$wholenews->title}}</a>
@@ -392,6 +402,6 @@
 @endsection
 @push('scripts')
     <!-- home2 -->
-    <script src="{{ asset('public/frontend/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('public/frontend/js/theme.js') }}"></script>
+    <script src="{{ asset($assetBase.'frontend/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset($assetBase.'frontend/js/theme.js') }}"></script>
 @endpush

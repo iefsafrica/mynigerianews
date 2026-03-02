@@ -3,6 +3,7 @@
 
 <head>
     @php
+    $assetBase = app()->environment('local') ? '' : 'public/';
     $googleanalytics =  googleanalytics();
     $headers =  headers();
     $footer =  footer();
@@ -27,34 +28,34 @@
     <!-- All Device Favicon -->
     <link rel="icon" href="{{ asset($settings->favicon) }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/fontawesome/all.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/fontawesome/all.css') }}">
     <!-- Fonts -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/fonts/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/fonts/fonts.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/fonts/front_clock.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/fonts/front_clock.css') }}">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/bootstrap.min.css') }}">
     <!-- Normalize -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/normalize.css') }}">
     <!-- Default -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/default.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/default.css') }}">
 
     <!-- swiper slider css -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/swiper-bundle.min.css') }}">
     <!-- Slick -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/slick.css') }}">
     <!-- Venobox -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/venobox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/venobox.min.css') }}">
     <!-- Style -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/style.css') }}">
     <!-- Responsive -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/responsive.css') }}">
     <!-- toastr -->
-    <link rel="stylesheet" href="{{ asset('public/admin/plugins/toastr/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'admin/plugins/toastr/toastr.css') }}">
     <!-- Style for maannews-->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/maan_news_style.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/maan_news_style.css') }}">
     <!-- color change for maannews-->
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/color-change.css') }}">
+    <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/color-change.css') }}">
 
     @stack('styles')
 
@@ -125,7 +126,7 @@
             <div></div>
             <div></div>
         </div>
-        <link rel="stylesheet" href="{{ asset('public/frontend/css/loaders.css') }}">
+        <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/loaders.css') }}">
         <!-- Maan news  preloader end -->
 
         <!-- Main Content Start -->
@@ -148,32 +149,32 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{ asset('public/frontend/js/vendor/jquery-3.6.0.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/jquery-3.6.0.min.js') }} "></script>
 <!-- Popper -->
-<script src="{{ asset('public/frontend/js/vendor/popper.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/popper.min.js') }} "></script>
 <!-- Bootstrap -->
-<script src="{{ asset('public/frontend/js/vendor/bootstrap.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/bootstrap.min.js') }} "></script>
 
 <!-- swiper slider -->
 
-<script src="{{ asset('public/frontend/js/swiper-bundle.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/swiper-bundle.min.js') }} "></script>
 <!-- Slick -->
-<script src="{{ asset('public/frontend/js/vendor/slick.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/slick.min.js') }} "></script>
 <!-- Counter Up -->
-<script src="{{ asset('public/frontend/js/vendor/counterup.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/counterup.min.js') }} "></script>
 <!-- Waypoints -->
-<script src="{{ asset('public/frontend/js/vendor/waypoints.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/waypoints.min.js') }} "></script>
 <!-- Venobox -->
-<script src="{{ asset('public/frontend/js/vendor/venobox.min.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/vendor/venobox.min.js') }} "></script>
 <!-- Index -->
 
-<script src="{{ asset('public/frontend/js/index.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/index.js') }} "></script>
 
-<script src="{{ asset('public/frontend/js/theme.js') }} "></script>
+<script src="{{ asset($assetBase.'frontend/js/theme.js') }} "></script>
 <!-- toastr -->
-<script src="{{ asset('public/admin/plugins/toastr/toastr.min.js') }} "></script>
+<script src="{{ asset($assetBase.'admin/plugins/toastr/toastr.min.js') }} "></script>
 {{--lazyloaded--}}
-<script src="{{ asset('public/maan/js/jquery.lazy.min.js') }} "></script>
+<script src="{{ asset($assetBase.'maan/js/jquery.lazy.min.js') }} "></script>
 @stack('scripts')
 
 
@@ -189,4 +190,3 @@
 </body>
 
 </html>
-
