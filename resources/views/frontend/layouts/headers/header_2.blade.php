@@ -59,4 +59,3 @@
     document.getElementById("maan-current-date").innerHTML =date.toLocaleDateString("en-US", options);
 
 </script>
-
