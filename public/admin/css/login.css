@@ -397,5 +397,52 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* primary color override */
+:root {
+  --login-primary: #16a34a;
+  --login-primary-dark: #15803d;
+  --login-primary-soft: #dcfce7;
+}
+
+body,
+.new-login-section {
+  background: #ecfdf3;
+}
+
+.new-login-form h2 span {
+  color: var(--login-primary);
+}
+
+.login-btn {
+  background: var(--login-primary);
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  color: var(--login-primary-dark) !important;
+  border-color: var(--login-primary);
+}
+
+.new-login-form .form-control:focus {
+  border-color: var(--login-primary);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+.new-login-form .forget-pass {
+  color: var(--login-primary-dark);
+}
+
+.new-login-form .forget-pass:hover {
+  color: var(--login-primary);
+}
+
+.remember-check label input[type="checkbox"] {
+  accent-color: var(--login-primary);
+}
+
+.new-login-section .login-form-section {
+  border-color: #d1fadf;
+}
 /* new dgn css end */
 /* login css end */

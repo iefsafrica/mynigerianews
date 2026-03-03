@@ -4,7 +4,7 @@
     <div class="container-xxl container-lg">
         <div class="news10-hdr-wrapper">
             <a class="news10-h-manu-btn d-block d-lg-none" href="#"><i class="fal fa-bars"></i></a>
-            <a href="{{ URL('/') }}" class="header-logo"><img src="{{ asset(settings()->logo) }} " alt="{{ asset(settings()->logo) }}"></a>
+            <a href="{{ URL('/') }}" class="header-logo"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
             <div class="news10-maannews-main-menu">
                 <ul>
                     <li class="dropdown"><a href="{{route('home')}}">{{ home() }}</a>

@@ -41,7 +41,7 @@
         <div class="row align-items-center">
             <div class="col-7 col-lg-2 order-7 order-lg-1">
                 <div class="logo">
-                    <a href="{{ URL('/') }}"><img src="{{ asset(settings()->logo) }}" alt="{{ asset(settings()->logo) }}"></a>
+                    <a href="{{ URL('/') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
                 </div>
             </div>
             <div class="col-lg-8 order-4 order-lg-2">

@@ -1,5 +1,10 @@
 
-@foreach( newscategories() as $newscategory )
+@php
+    $menuCategories = collect(newscategories())->filter(function ($category) {
+        return $category->menu_publish && strtolower(trim($category->name)) !== 'investigation';
+    })->values();
+@endphp
+@foreach($menuCategories as $newscategory)
     @if ($loop->iteration==6)
         <li class="dropdown"><a href="#">{{__('More')}}</a>
             <ul class="dropdown-menu">

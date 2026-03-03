@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-5 d-lg-none">
                 <div class="maan-logo">
-                    <a href="{{ URL('/') }}"><img src="{{ asset(settings()->logo) }}" alt="logo"></a>
+                    <a href="{{ URL('/') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
                 </div>
             </div>
             <div class="col-7 order-lg-2 col-lg-2">

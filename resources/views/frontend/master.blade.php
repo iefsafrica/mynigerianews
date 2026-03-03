@@ -122,9 +122,7 @@
 
         <!-- Maan news  preloader start -->
         <div class="loader-inner ball-scale-multiple">
-            <div></div>
-            <div></div>
-            <div></div>
+            <img src="{{ asset('images/logo.png') }}" alt="logo" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 110px; height: auto; z-index: 999999999;">
         </div>
         <link rel="stylesheet" href="{{ asset($assetBase.'frontend/css/loaders.css') }}">
         <!-- Maan news  preloader end -->
@@ -184,6 +182,11 @@
 <script>
     $( document ).ready(function() {
         $('img').lazyLoad();
+    });
+</script>
+<script>
+    document.querySelectorAll('.current-year').forEach(function (el) {
+        el.textContent = new Date().getFullYear();
     });
 </script>
 

@@ -5,6 +5,7 @@ namespace App\Services;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Carbon;
 
 class NewsApiAiService
 {
@@ -17,7 +18,7 @@ class NewsApiAiService
         $this->endpoint = (string) config('services.newsapi_ai.endpoint');
     }
 
-    public function fetchArticles($limit = 20, $keyword = null): Collection
+    public function fetchArticles($limit = 20, $keyword = null, $sinceHours = null): Collection
     {
         if ($this->apiKey === '' || $this->endpoint === '') {
             Log::warning('NewsAPI import skipped: missing API key or endpoint.');
@@ -26,6 +27,9 @@ class NewsApiAiService
 
         $limit = max(1, min((int) $limit, 100));
         $queryKeyword = trim((string) ($keyword ?: config('services.newsapi_ai.default_keyword', 'Nigeria')));
+        $sinceHours = (int) ($sinceHours ?? config('services.newsapi_ai.default_since_hours', 24));
+        $sinceHours = max(1, min($sinceHours, 168));
+        $dateStart = Carbon::now()->subHours($sinceHours)->format('Y-m-d');
 
         $payload = [
             'apiKey' => $this->apiKey,
@@ -34,11 +38,13 @@ class NewsApiAiService
                     '$and' => [
                         ['keyword' => $queryKeyword],
                         ['lang' => config('services.newsapi_ai.default_lang', 'eng')],
+                        ['dateStart' => $dateStart],
                     ],
                 ],
             ],
             'resultType' => 'articles',
             'articlesSortBy' => 'date',
+            'articlesSortByAsc' => false,
             'articlesCount' => $limit,
             'includeArticleImage' => true,
             'includeArticleBody' => true,

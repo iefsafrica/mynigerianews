@@ -18,6 +18,7 @@ class ImportNewsFromNewsApi extends Command
 {
     protected $signature = 'newsapi:import
                             {--limit=20 : Number of articles to fetch}
+                            {--since-hours=24 : Fetch only recent articles from this many hours back}
                             {--keyword= : Keyword to query in NewsAPI}
                             {--category= : Existing local category name}
                             {--subcategory= : Existing local subcategory name}
@@ -63,7 +64,11 @@ class ImportNewsFromNewsApi extends Command
                     continue;
                 }
 
-                $articles = $service->fetchArticles((int) $this->option('limit'), $keyword);
+                $articles = $service->fetchArticles(
+                    (int) $this->option('limit'),
+                    $keyword,
+                    (int) $this->option('since-hours')
+                );
                 $totalFetched += $articles->count();
 
                 if ($articles->isEmpty()) {
@@ -100,7 +105,11 @@ class ImportNewsFromNewsApi extends Command
             }
 
             $queryKeyword = $keywordOption !== '' ? $keywordOption : $category->name . ' Nigeria';
-            $articles = $service->fetchArticles((int) $this->option('limit'), $queryKeyword);
+            $articles = $service->fetchArticles(
+                (int) $this->option('limit'),
+                $queryKeyword,
+                (int) $this->option('since-hours')
+            );
             $totalFetched += $articles->count();
 
             if ($articles->isEmpty()) {

@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="{{ URL('/') }}"><img src="{{ asset($settings->logo_footer) }}" alt="footer-logo"></a>
+                        <a href="{{ URL('/') }}"><img src="{{ asset('images/logo.png') }}" alt="footer-logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="maan-main-footer">
-                <h6> © 2025 Powered by Walpberry Consult</h6>
+                <h6><strong>{{ date('Y') }} All rights reserved <a href=""> Walpberry </a></strong></h6>
                 <!--<h6> © {!! $companyInfo->copyright !!} </h6>-->
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-sm-3 col-lg-2">
                 <div class="maan-logo">
-                    <a href="{{ URL('/') }}"><img loading="lazy" src="{{ asset($settings->logo) }} " alt="logo"></a>
+                    <a href="{{ URL('/') }}"><img loading="lazy" src="{{ asset('images/logo.png') }}" alt="logo"></a>
                 </div>
             </div>
             <div class="col-sm-8 offset-sm-1 offset-lg-2">

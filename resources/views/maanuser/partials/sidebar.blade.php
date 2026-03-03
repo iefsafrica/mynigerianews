@@ -1,13 +1,26 @@
 <style>
-    .brand-image{
-        opacity: .8;
+    .brand-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+    }
+
+    .brand-image {
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+        float: none;
     }
 </style>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ URL('/admin') }}" class="brand-link">
-        <img src="{{ asset(config('app.icon')) }}" alt="MAALMS icon" class="brand-image img-circle elevation-3">
-        <span class="brand-text font-weight-light">{{ __('MAAN | NEWS') }}</span>
+        <img src="{{ asset('images/logo.png') }}" alt="MNN logo" class="brand-image">
     </a>
 
     <!-- Sidebar -->

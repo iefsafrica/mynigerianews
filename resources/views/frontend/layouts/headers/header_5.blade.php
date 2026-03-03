@@ -4,7 +4,7 @@
     <div class="container">
         <div class="news10-header-wrapper">
             <div class="news10-header-logo">
-                <a class="header-logo"href="{{ URL('/') }}"><img src="{{ asset(settings()->logo) }}" alt="{{ asset(settings()->logo) }}"></a>
+                <a class="header-logo"href="{{ URL('/') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
 
             </div>
             <div class="news10-main-menu-wrapper">

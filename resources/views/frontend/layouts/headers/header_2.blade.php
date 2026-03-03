@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <a href="{{ URL('/') }}" class="new-header-logo"><img src="{{ asset(settings()->logo) }}" alt="{{ asset(settings()->logo) }}"></a>
+                    <a href="{{ URL('/') }}" class="new-header-logo"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
                 </div>
                 <div class="col-md-4 text-right">
                     <ul>

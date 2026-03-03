@@ -24,7 +24,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('newsapi:import --sections --limit=8')->hourly()->withoutOverlapping();
+        $schedule->command('newsapi:import --sections --limit=12 --since-hours=24')
+            ->everyFifteenMinutes()
+            ->withoutOverlapping();
     }
 
     /**

@@ -63,7 +63,7 @@
                 <div class="new-login-form">
                     <form action="{{ route('login') }}" method="post">
                         @csrf
-                        <h2>{{ __('Welcome to') }} <span>{{ __('Maan News') }}</span></h2>
+                        <h2>{{ __('Welcome to') }} <span>{{ __('Mynigerianews') }}</span></h2>
                         <p> {{ __('Welcome back, Please login in to your account') }}</p>
                         <div class="login-input-item">
                             <div class="input-group">
@@ -89,30 +89,6 @@
                             <a href="#" class="forget-pass">{{ __('Forgot Password?') }}</a>
                         </div>
                         <button type="submit" class="login-btn">{{ __('LogIn') }}</button>
-                        <div class="login-button-group">
-                            <a href="#" class="login-btn quick-login-btn" data-email="superadmin21@gmail.com" data-password="superadmin21" data-toggle="tooltip" data-placement="top">
-                                <i class="fas fa-lock"></i>
-                                {{ __('Super Admin') }}
-                            </a>
-
-                            <a href="#" class="login-btn quick-login-btn" data-email="admin21@gmail.com" data-password="admin21" data-toggle="tooltip" data-placement="top">
-                                <i class="fas fa-lock"></i>
-                                {{ __('Admin') }}
-                            </a>
-
-                            <a href="#" class="login-btn quick-login-btn" data-email="editor21@gmail.com" data-password="editor21" data-toggle="tooltip" data-placement="top">
-                                <i class="fas fa-lock"></i>
-                                {{ __('Editor') }}
-                            </a>
-                            <a href="#" class="login-btn quick-login-btn" data-email="reporter21@gmail.com" data-password="reporter21" data-toggle="tooltip" data-placement="top">
-                                <i class="fas fa-lock"></i>
-                                {{ __('Reporter') }}
-                            </a>
-                            <a href="#" class="login-btn quick-login-btn" data-email="accountant21@gmail.com" data-password="accountant21" data-toggle="tooltip" data-placement="top">
-                                <i class="fas fa-lock"></i>
-                                {{ __('Accountant') }}
-                            </a>
-                        </div>
                     </form>
                 </div>
             </div>
