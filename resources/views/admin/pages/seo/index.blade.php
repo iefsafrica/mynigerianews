@@ -171,7 +171,7 @@
                                                                     <tr>
                                                                         <td>{{__('1') }}</td>
 
-                                                                        <td ><a href="{{ asset('public/sitemap.xml') }}" download><i class="fa fa-download" aria-hidden="true"></i></a>  </td>
+                                                                        <td ><a href="{{ asset('sitemap.xml') }}" download><i class="fa fa-download" aria-hidden="true"></i></a>  </td>
 
                                                                     </tr>
 

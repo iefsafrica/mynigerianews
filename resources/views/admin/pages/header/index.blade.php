@@ -64,7 +64,7 @@
                                                     @if($header->image)
                                                         <img src="{{ asset($header->image) }} " alt="{{ $header->user_name }}">
                                                     @else
-                                                        <img src="{{ asset('public/maan/images/user-icon.png') }} " alt="{{ $header->user_name }}">
+                                                        <img src="{{ asset('maan/images/user-icon.png') }} " alt="{{ $header->user_name }}">
                                                     @endif
                                                 </td>
                                                 <td>{{ $header->name }}</td>

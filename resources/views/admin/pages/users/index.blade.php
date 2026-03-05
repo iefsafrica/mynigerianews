@@ -77,7 +77,7 @@
                                                     @if($user->image)
                                                         <img src="{{ asset($user->image) }} " alt="{{ $user->user_name }}">
                                                     @else
-                                                        <img src="{{ asset('public/maan/images/user-icon.png') }} " alt="{{ $user->user_name }}">
+                                                        <img src="{{ asset('maan/images/user-icon.png') }} " alt="{{ $user->user_name }}">
                                                     @endif
                                                 </td>
                                                 <td>{{ $user->first_name }} {{ $user->last_name }}</td>

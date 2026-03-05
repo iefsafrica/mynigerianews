@@ -1,4 +1,4 @@
-<footer class="news10-footer-section maan-travel-news-footer news10-data-background" data-background="{{ asset('public/frontend/img/footer/img1.png') }}">
+<footer class="news10-footer-section maan-travel-news-footer news10-data-background" data-background="{{ asset('frontend/img/footer/img1.png') }}">
     <a href="{{ URL('/') }}" class="footer-logo">
         <img src="{{ asset('images/logo.png') }}" alt="footer-logo">
     </a>

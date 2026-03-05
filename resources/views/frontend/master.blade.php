@@ -3,7 +3,7 @@
 
 <head>
     @php
-    $assetBase = app()->environment('local') ? '' : 'public/';
+    $assetBase = '';
     $googleanalytics =  googleanalytics();
     $headers =  headers();
     $footer =  footer();

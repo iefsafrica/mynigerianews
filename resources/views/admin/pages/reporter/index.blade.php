@@ -73,7 +73,7 @@
                                                     @if($reporter->image)
                                                     <img src="{{ asset($reporter->image) }} " alt="{{ $reporter->user_name }}">
                                                     @else
-                                                        <img src="{{ asset('public/maan/images/user-icon.png') }} " alt="{{ $reporter->user_name }}">
+                                                        <img src="{{ asset('maan/images/user-icon.png') }} " alt="{{ $reporter->user_name }}">
                                                     @endif
                                                 </td>
                                                 <td>{{ $reporter->first_name }} {{ $reporter->last_name }}</td>

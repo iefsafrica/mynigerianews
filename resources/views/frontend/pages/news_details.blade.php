@@ -92,7 +92,7 @@
                                                 {!! advertisement()->before_post_ads !!}
                                             @else
                                                 <a href="https://www.google.com/" target="_blank">
-                                                    <img loading="lazy" src="{{ asset('public/frontend/img/post-add/add.jpg') }}" alt="{{ asset('public/frontend/img/post-add/add.jpg') }}">
+                                                    <img loading="lazy" src="{{ asset('frontend/img/post-add/add.jpg') }}" alt="{{ asset('frontend/img/post-add/add.jpg') }}">
                                                 </a>
                                             @endif
 
@@ -109,7 +109,7 @@
                                 {!! advertisement()->after_post_ads !!}
                             @else
                                 <a href="https://www.google.com/" target="_blank">
-                                    <img loading="lazy" src="{{ asset('public/frontend/img/post-add/add.jpg') }}" alt="{{ asset('public/frontend/img/post-add/add.jpg') }}">
+                                    <img loading="lazy" src="{{ asset('frontend/img/post-add/add.jpg') }}" alt="{{ asset('frontend/img/post-add/add.jpg') }}">
                                 </a>
                             @endif
 

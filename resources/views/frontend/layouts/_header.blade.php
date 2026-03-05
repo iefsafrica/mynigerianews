@@ -12,7 +12,7 @@
                         {!! $advertisement->header_ads !!}
                     @else
                         <a href="  https://www.google.com/ " target="_blank">
-                            <img loading="lazy" src=" {{ asset('public/frontend/img/header-adds/adds.jpg') }} " alt="{{ asset('public/frontend/img/header-adds/adds.jpg') }}">
+                            <img loading="lazy" src=" {{ asset('frontend/img/header-adds/adds.jpg') }} " alt="{{ asset('frontend/img/header-adds/adds.jpg') }}">
                         </a>
                     @endif
 

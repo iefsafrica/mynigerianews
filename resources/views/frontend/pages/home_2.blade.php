@@ -1,6 +1,6 @@
 @extends('frontend.master')
 @php
-    $assetBase = app()->environment('local') ? '' : 'public/';
+    $assetBase = '';
     $fallbackImage = $assetBase.'maan/images/26.png';
     $fallbackVideo = $assetBase.'uploads/videos/videogallery/fallback.mp4';
     $normalizeAssetPath = static function ($path, $fallback) {
@@ -175,7 +175,7 @@
     <!-- sports NEWS end -->
 
     <!-- Weekly Review  start -->
-    <section class="news10-weekly-review-section news10-data-background" data-background="public/maan/images/bg.jpg">
+    <section class="news10-weekly-review-section news10-data-background" data-background="{{ asset('maan/images/bg.jpg') }}">
         <div class="container-xxl container-lg">
             <div class="news10-sec-title">
                 <h3>{{ __('Weekly Review') }} @if($weeklyReviewHeadline && $weeklyReviewHeadline->category) {{ $weeklyReviewHeadline->category->slug }} @endif</h3>

@@ -15,7 +15,7 @@
 <link rel="icon" href="{{ asset(settings()->favicon) }}">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="{{ asset('public/frontend/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
 
 <div class="container">
     <div>
@@ -42,23 +42,23 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{ asset('public/frontend/js/vendor/jquery-3.6.0.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/jquery-3.6.0.min.js') }} "></script>
 <!-- Popper -->
-<script src="{{ asset('public/frontend/js/vendor/popper.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/popper.min.js') }} "></script>
 <!-- Bootstrap -->
-<script src="{{ asset('public/frontend/js/vendor/bootstrap.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/bootstrap.min.js') }} "></script>
 <!-- Slick -->
-<script src="{{ asset('public/frontend/js/vendor/slick.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/slick.min.js') }} "></script>
 <!-- Counter Up -->
-<script src="{{ asset('public/frontend/js/vendor/counterup.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/counterup.min.js') }} "></script>
 <!-- Waypoints -->
-<script src="{{ asset('public/frontend/js/vendor/waypoints.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/waypoints.min.js') }} "></script>
 <!-- Venobox -->
-<script src="{{ asset('public/frontend/js/vendor/venobox.min.js') }} "></script>
+<script src="{{ asset('frontend/js/vendor/venobox.min.js') }} "></script>
 <!-- Index -->
-<script src="{{ asset('public/frontend/js/index.js') }} "></script>
+<script src="{{ asset('frontend/js/index.js') }} "></script>
 <!-- toastr -->
-<script src="{{ asset('public/admin/plugins/toastr/toastr.min.js') }} "></script>
+<script src="{{ asset('admin/plugins/toastr/toastr.min.js') }} "></script>
 
 
 {{--</urlset>--}}

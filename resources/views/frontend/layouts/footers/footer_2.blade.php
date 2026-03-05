@@ -95,8 +95,8 @@
                 <div class="col-lg-4 order-lg-last">
                     <div class="news10-footer-appstore">
                         <ul>
-                            <li><a href="@if (!empty(settings()->play_store_url)){{url(settings()->play_store_url)}}@endif"><img src="{{ asset('public/frontend/img/footer/playstore.png') }}" alt=""></a></li>
-                            <li><a href="@if (!empty(settings()->app_store_url)){{url(settings()->app_store_url)}}@endif"><img src="{{ asset('public/frontend/img/footer/apple.png') }}" alt=""></a></li>
+                            <li><a href="@if (!empty(settings()->play_store_url)){{url(settings()->play_store_url)}}@endif"><img src="{{ asset('frontend/img/footer/playstore.png') }}" alt=""></a></li>
+                            <li><a href="@if (!empty(settings()->app_store_url)){{url(settings()->app_store_url)}}@endif"><img src="{{ asset('frontend/img/footer/apple.png') }}" alt=""></a></li>
                         </ul>
                     </div>
                 </div>

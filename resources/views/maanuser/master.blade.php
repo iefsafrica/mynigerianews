@@ -8,14 +8,14 @@
     <meta name="csrf-token">
     <title>{{ __('MAAN|LMS') }}</title>
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="{{ asset('public/admin/fonts/google-font-sans-pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/fonts/google-font-sans-pro.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('public/admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons 2.0.1 -->
-    <link rel="stylesheet" href="{{ asset('public/admin/fonts/docs/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/fonts/docs/css/ionicons.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('public/admin/dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/admin/css/maan-custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/maan-custom.css') }}">
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -54,14 +54,14 @@
 
 <!-- jQuery -->
 
-<script src="{{ asset('public/admin/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
 
 <!-- Bootstrap 4 -->
-<script src="{{ asset('public/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-<script src="{{ asset('public/admin/dist/js/adminlte.js') }}"></script>
+<script src="{{ asset('admin/dist/js/adminlte.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('public/admin/dist/js/demo.js') }}"></script>
+<script src="{{ asset('admin/dist/js/demo.js') }}"></script>
 
 </body>
 </html>

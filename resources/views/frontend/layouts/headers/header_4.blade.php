@@ -26,7 +26,7 @@
                     <div class="search-btn search-bar">
                         <i class="far fa-search"></i>
                     </div>
-                    <div class="news10-nav-open"><img src="{{ asset('public/frontend/img/icon/nav-bar.svg') }}" alt="{{ asset('public/frontend/img/icon/nav-bar.svg') }}"></div>
+                    <div class="news10-nav-open"><img src="{{ asset('frontend/img/icon/nav-bar.svg') }}" alt="{{ asset('frontend/img/icon/nav-bar.svg') }}"></div>
                 </div>
             </div>
 
