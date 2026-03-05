@@ -80,7 +80,7 @@
                         <div class="maan-post-adds">
                             <a href=" @if (advertisement()) {{advertisement()->leaderboard_url}} @else https://www.google.com/ @endif " target="_blank">
                                 <img loading="lazy" src="
-@if (advertisement()) {{asset(advertisement()->leaderboard_image)}} @else {{ asset('public/frontend/img/post-add/add.jpg') }} @endif " alt="{{ asset('public/frontend/img/post-add/add.jpg') }}">
+@if (advertisement()) {{asset(advertisement()->leaderboard_image)}} @else {{ asset('frontend/img/post-add/add.jpg') }} @endif " alt="{{ asset('frontend/img/post-add/add.jpg') }}">
                             </a>
                         </div>
 

@@ -64,7 +64,7 @@
                                                     @if($menu->image)
                                                         <img src="{{ asset($menu->image) }} " alt="{{ $menu->user_name }}">
                                                     @else
-                                                        <img src="{{ asset('public/maan/images/user-icon.png') }} " alt="{{ $menu->user_name }}">
+                                                        <img src="{{ asset('maan/images/user-icon.png') }} " alt="{{ $menu->user_name }}">
                                                     @endif
                                                 </td>
                                                 <td>{{ $menu->name }}</td>

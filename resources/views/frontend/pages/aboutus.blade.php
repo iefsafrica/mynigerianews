@@ -8,7 +8,7 @@
                 <div class="col-lg-12">
                     <div class="maan-about-wrapper">
                         <div class="maan-about-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/about/01.jpg') }}" alt="Maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/about/01.jpg') }}" alt="Maan">
                         </div>
                         <div class="maan-content">
                             <div class="maan-content-title">
@@ -32,7 +32,7 @@
                                         values. It becomes the criterion by which you measure everything.') }}
                                     </blockquote>
                                     <div class="block-qoute">
-                                        <img loading="lazy" src="{{ asset('public/frontend/img/icon/quote.png') }}" alt="Maan">
+                                        <img loading="lazy" src="{{ asset('frontend/img/icon/quote.png') }}" alt="Maan">
                                     </div>
                                 </div>
                             </div>
@@ -73,37 +73,37 @@
                 <div class="maan-slider-image">
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-1.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-1.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-2.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-2.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-3.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-3.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-4.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-4.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-5.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-5.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-6.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-6.png') }}" alt="maan">
                         </div>
                     </div>
                     <div class="maan-slider">
                         <div class="maan-blog-image">
-                            <img loading="lazy" src="{{ asset('public/frontend/img/blog/blog-1.png') }}" alt="maan">
+                            <img loading="lazy" src="{{ asset('frontend/img/blog/blog-1.png') }}" alt="maan">
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/01.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/01.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">
@@ -164,7 +164,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/02.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/02.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">
@@ -197,7 +197,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/03.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/03.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">
@@ -230,7 +230,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/04.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/04.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">
@@ -263,7 +263,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/05.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/05.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">
@@ -296,7 +296,7 @@
 
                             <div class="maan-image-box">
 
-                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('public/frontend/img/team/06.jpg') }}" alt=""></a>
+                                <figure class="maan-image"><a href=""><img loading="lazy" src="{{ asset('frontend/img/team/06.jpg') }}" alt=""></a>
                                 </figure>
 
                                 <div class="maan-info-box">

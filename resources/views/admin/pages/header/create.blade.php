@@ -53,7 +53,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-md-3 col-form-label" for="exampleInputImage" >{{ __('Image') }}</label>
                                                 <div class="col-sm-8 col-md-8">
-                                                    <img id="previewImg" class="preview-image-rectangular" src="{{ asset('public/maan/images/view-icon.png')}}" alt="image">
+                                                    <img id="previewImg" class="preview-image-rectangular" src="{{ asset('maan/images/view-icon.png')}}" alt="image">
                                                     <p>
                                                         <input type="file" class="form-control" name="image" accept="image/*" onchange="previewFile(this);">
                                                     </p>

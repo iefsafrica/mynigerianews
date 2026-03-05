@@ -64,7 +64,7 @@
                                                     @if($footer->image)
                                                         <img src="{{ asset($footer->image) }} " alt="{{ $footer->user_name }}">
                                                     @else
-                                                        <img src="{{ asset('public/maan/images/user-icon.png') }} " alt="{{ $footer->user_name }}">
+                                                        <img src="{{ asset('maan/images/user-icon.png') }} " alt="{{ $footer->user_name }}">
                                                     @endif
                                                 </td>
                                                 <td>{{ $footer->name }}</td>

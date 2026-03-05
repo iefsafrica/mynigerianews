@@ -1,5 +1,5 @@
 <footer>
-    <section class="maan-info-footer maan-data-background" data-background="{{ asset('public/frontend/img/footer/footer.jpg') }}">
+    <section class="maan-info-footer maan-data-background" data-background="{{ asset('frontend/img/footer/footer.jpg') }}">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
@@ -77,8 +77,8 @@
                         </div>
                     </div>
                     <div class="footer-app-download">
-                        <a href="@if (!empty($settings->play_store_url)){{url($settings->play_store_url)}}@endif" target="_blank" class="app-store"><img src="{{ asset('public/frontend/img/footer/playstore.png') }}" alt=""></a>
-                        <a href="@if (!empty($settings->app_store_url)){{url($settings->app_store_url)}}@endif"  target="_blank" class="app-store"><img src="{{ asset('public/frontend/img/footer/apple.png') }}" alt=""></a>
+                        <a href="@if (!empty($settings->play_store_url)){{url($settings->play_store_url)}}@endif" target="_blank" class="app-store"><img src="{{ asset('frontend/img/footer/playstore.png') }}" alt=""></a>
+                        <a href="@if (!empty($settings->app_store_url)){{url($settings->app_store_url)}}@endif"  target="_blank" class="app-store"><img src="{{ asset('frontend/img/footer/apple.png') }}" alt=""></a>
                     </div>
                     <div class="maan-email">
                         <h4>Subscribe to Our Newsletter!</h4>
