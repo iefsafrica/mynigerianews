@@ -393,7 +393,7 @@ class ImportNewsFromNewsApi extends Command
                 $extension = 'webp';
             }
 
-            $relativePath = 'uploads/images/newsimages/newsapi_' . md5($imageUrl) . '.' . $extension;
+            $relativePath = 'public/uploads/images/newsimages/newsapi_' . md5($imageUrl) . '.' . $extension;
             $absolutePath = base_path($relativePath);
 
             File::ensureDirectoryExists(dirname($absolutePath));

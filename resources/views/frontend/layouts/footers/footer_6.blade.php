@@ -30,7 +30,7 @@
                             @if($images !='')
                                 @foreach($images as $image)
                                     <a href="@if($popularnews->news_categoryslug){{ route(strtolower($popularnews->news_categoryslug).'.details',$popularnews->id) }} @endif" class="post-thumb news10-hover-effect">
-                                        <img src="{{ asset($image) }}" alt="">
+                                        <img src="{{ asset(publicAssetPath($image)) }}" alt="">
                                     </a>
                                 @endforeach
                             @endif
@@ -60,7 +60,7 @@
                                 @endphp
                                 @foreach($photogalleries as $photogallery)
                                     <li>
-                                        <a href="{{ route('photogallery.details',['id'=>$photogallery->id,'slug'=>\Illuminate\Support\Str::slug($photogallery->title)]) }}"><img src="{{ asset($photogallery->image) }}" alt="gallery"></a>
+                                        <a href="{{ route('photogallery.details',['id'=>$photogallery->id,'slug'=>\Illuminate\Support\Str::slug($photogallery->title)]) }}"><img src="{{ asset(publicAssetPath($photogallery->image)) }}" alt="gallery"></a>
                                     </li>
                                 @endforeach
                             </ul>

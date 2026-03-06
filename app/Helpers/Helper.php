@@ -34,6 +34,24 @@ function imageUpload($image, $imageDirectory, $existFileUrl=null,$name=null)
     }
     return $fileUrl;
 }
+function publicAssetPath($path)
+{
+    $path = trim((string) $path);
+    if ($path === '') {
+        return $path;
+    }
+
+    if (preg_match('/^https?:\/\//i', $path) === 1) {
+        return $path;
+    }
+
+    $path = str_replace('\\', '/', ltrim($path, '/'));
+    if (strpos($path, 'public/') === 0) {
+        return substr($path, 7);
+    }
+
+    return $path;
+}
 function breakingnews(){
     $breakingnews = News::join('newssubcategories','news.subcategory_id','=','newssubcategories.id')
         ->join('newscategories','newssubcategories.category_id','=','newscategories.id')
@@ -123,4 +141,3 @@ function themeActivation(){
       return $activeTheme;
     }
 }
-

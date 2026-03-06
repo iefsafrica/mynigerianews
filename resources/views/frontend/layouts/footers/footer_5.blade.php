@@ -46,7 +46,7 @@
                                             @if($images !='')
                                                 @foreach($images as $image)
                                                     <a href="@if($popularnews->news_categoryslug){{ route(strtolower($popularnews->news_categoryslug).'.details',$popularnews->id) }} @endif">
-                                                        <img src="{{ asset($image) }}" alt="list-news-img">
+                                                        <img src="{{ asset(publicAssetPath($image)) }}" alt="list-news-img">
                                                     </a>
                                                 @endforeach
                                             @endif

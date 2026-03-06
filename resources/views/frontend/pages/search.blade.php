@@ -35,7 +35,7 @@
                                             @foreach ($images as $image)
                                                 @if (File::exists($image))
 
-                                                    <a href="{{ route($search->news_categoryslug.'.details',$search->id) }}"><img src="{{ asset($image) }}" alt="top-news"></a>
+                                                    <a href="{{ route($search->news_categoryslug.'.details',$search->id) }}"><img src="{{ asset(publicAssetPath($image)) }}" alt="top-news"></a>
                                                 @endif
                                             @endforeach
                                         @endif
@@ -98,7 +98,7 @@
                                                 @foreach ($images as $image)
                                                     @if (File::exists($image))
 
-                                                        <img src="{{ asset($image) }}" alt="top-news">
+                                                        <img src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                                     @endif
                                                 @endforeach
                                             @endif
@@ -158,7 +158,7 @@
                                                     @foreach ($images as $image)
                                                         @if (File::exists($image))
 
-                                                            <img src="{{ asset($image) }}" alt="list-news-img">
+                                                            <img src="{{ asset(publicAssetPath($image)) }}" alt="list-news-img">
                                                         @endif
                                                     @endforeach
                                                 @endif

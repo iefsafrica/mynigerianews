@@ -47,7 +47,7 @@
                                                 @foreach ($images as $image)
                                                     @if (File::exists($image))
                                                         <a href="{{ route(strtolower($allnewsvalue->news_categoryslug).'.details',['id'=>$allnewsvalue->id,'slug'=>\Illuminate\Support\Str::slug($allnewsvalue->title)]) }}">
-                                                            <img loading="lazy" src="{{ asset($image) }}" alt="top-news">
+                                                            <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                                         </a>
                                                     @endif
                                                 @endforeach
@@ -103,7 +103,7 @@
                                             @foreach ($images as $image)
                                                 @if (File::exists($image))
                                                     <a href="{{ route(strtolower($allnewsall->news_categoryslug).'.details',['id'=>$allnewsall->id,'slug'=>\Illuminate\Support\Str::slug($allnewsall->title)]) }}">
-                                                        <img loading="lazy" src="{{ asset($image) }}" alt="top-news">
+                                                        <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                                     </a>
                                                 @endif
                                             @endforeach
@@ -169,7 +169,7 @@
                                                 @foreach ($images as $image)
                                                     @if (File::exists($image))
                                                         <a href="{{ route($popularnews->news_categoryslug.'.details',['id'=>$popularnews->id,'slug'=>\Illuminate\Support\Str::slug($popularnews->title)]) }}">
-                                                            <img loading="lazy" src="{{ asset($image) }}" alt="top-news">
+                                                            <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                                         </a>
                                                     @endif
                                                 @endforeach
@@ -231,7 +231,7 @@
                                                     @foreach ($images as $image)
                                                         @if (File::exists($image))
                                                             <a href="{{ route($recentallnews->news_categoryslug.'.details',['id'=>$recentallnews->id,'slug'=>\Illuminate\Support\Str::slug($recentallnews->title)]) }}">
-                                                                <img loading="lazy" src="{{ asset($image) }}" alt="list-news-img">
+                                                                <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="list-news-img">
                                                             </a>
                                                         @endif
                                                     @endforeach
