@@ -32,7 +32,7 @@
                                             @if($images !='')
                                                 @foreach($images as $image)
                                                     <a href="@if($popularnews->news_categoryslug){{ route(strtolower($popularnews->news_categoryslug).'.details',$popularnews->id) }} @endif">
-                                                        <img src="{{ asset($image) }}" alt="list-news-img">
+                                                        <img src="{{ asset(publicAssetPath($image)) }}" alt="list-news-img">
                                                     </a>
                                                 @endforeach
                                             @endif
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                    <span class="copy_right text-center"><strong>{{ date('Y') }} All rights reserved <a href=""> Walpberry </a></strong></span>
+                    <span class="copy_right text-center bg-white"><strong>{{ date('Y') }} All rights reserved <a href="/"> Walpberry </a></strong></span>
                     <!--<span class="copy_right text-center">{{__('©')}}{!! $companyInfo->copyright !!}</span>-->
                 </div>
         </div>

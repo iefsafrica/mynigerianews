@@ -9,11 +9,7 @@
             return $fallback;
         }
 
-        if (strpos($path, 'public/') === 0) {
-            return substr($path, 7);
-        }
-
-        return $path;
+        return publicAssetPath($path);
     };
 @endphp
 @section('meta_content')

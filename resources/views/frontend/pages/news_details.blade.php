@@ -12,7 +12,7 @@
     <meta property="og:title" content="{{ $getnews->title }}">
     <meta property="og:description" content="{{ $getnews->meta_description }}">
     <meta property="og:author" content="{{ $getnews->reporter_name }}">
-    <meta property="og:image" content="{{ asset($imagemeta[0]) }}" />
+    <meta property="og:image" content="{{ asset(publicAssetPath($imagemeta[0] ?? 'maan/images/default_image.png')) }}" />
 
 @endsection
 
@@ -48,7 +48,7 @@
                                         @foreach ($images as $image)
                                             @if (File::exists($image))
 
-                                                <img loading="lazy" src="{{ asset($image) }}" alt="top-news">
+                                                <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                             @endif
                                         @endforeach
                                     @endif
@@ -309,7 +309,7 @@
                                         @foreach ($images as $image)
                                             @if (File::exists($image))
                                                 <a href="{{ route($relatednews->news_categoryslug.'.details',['id'=>$relatednews->id,'slug'=>\Illuminate\Support\Str::slug($relatednews->title)]) }}">
-                                                    <img loading="lazy" src="{{ asset($image) }}" alt="top-news">
+                                                    <img loading="lazy" src="{{ asset(publicAssetPath($image)) }}" alt="top-news">
                                                 </a>
                                             @endif
                                         @endforeach
